@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 
 body {
   font-family: 'Fira Sans', serif;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.52;
   background-color: #f8f8f8;
   text-rendering: optimizeLegibility;
@@ -45,17 +45,20 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.6em;
   font-weight: 400;
   line-height: 1.43;
+  padding: 1em;
   margin-bottom: 1.35em;
+  background-color: #b1b9e4;
+  text-transform: uppercase;
 }
 
 h3 {
   font-style: italic;
   text-align: left;
   font-weight: 400;
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin-top: 1.8em;
   margin-bottom: 0.8em;
 }
@@ -81,7 +84,9 @@ hr {
   margin: 1.6em 0;
 }
 
-/* page header */
+
+
+/*--------- PAGE HEADER ---------*/
 
 .header {
   margin: 3em 0 5em;
@@ -97,16 +102,6 @@ hr {
 .header a, .header a:hover {
   text-decoration: none;
   color: #171717;
-}
-
-.header .author {
-  font-family: 'Merriweather', serif;
-  font-variant: small-caps;
-  text-transform: lowercase;
-  text-rendering: auto;
-  text-align: left;
-  font-weight: 400;
-  letter-spacing: 1px;
 }
 
 .header .description {
@@ -127,7 +122,29 @@ body.article-detail > header {
   margin-bottom: 3em;
 }
 
-/* page footer */
+
+
+/*--------- AUTHOR ---------*/
+
+.author {
+  text-rendering: auto;
+  text-align: left;
+  font-weight: 300;
+  background-color: #ccc;
+  border-top: 1px solid gray;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  float: left;
+  margin-right: 2em;
+}
+
+
+
+/*--------- PAGE FOOTER ---------*/
 
 footer {
   margin: 3em 0;
@@ -170,7 +187,9 @@ footer .copy, footer .copy a {
   color: #8e8e8e;
 }
 
-/* article */
+
+
+/*--------- ARTICLE ---------*/
 
 .article {
   margin: 3em 0 4em;
@@ -227,7 +246,9 @@ footer .copy, footer .copy a {
   letter-spacing: 1px;
 }
 
-/* archive */
+
+
+/*--------- ARCHIVE ---------*/
 
 .archive {
   width: 32em;
@@ -290,7 +311,9 @@ footer .copy, footer .copy a {
   margin: 0;
 }
 
-/* code styling */
+
+
+/*--------- CODE STYLING ---------*/
 
 code {
   font-family: 'Anonymous Pro', monospace;
@@ -312,7 +335,9 @@ p code {
   white-space: nowrap;
 }
 
-/* syntax hl stuff */
+
+
+/*--------- SYNTAX HIGHLIGHTING STUFF ---------*/
 
 code.lang-markdown {
   color: #424242;
@@ -340,10 +365,14 @@ code.lang-markdown .bullet {
   color: #bbb;
 }
 
-/* Tomorrow Theme */
+
+
+/*--------- TOMORROW THEME ---------*/
+
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
 .tomorrow-comment, pre .comment, pre .title {
   color: #8e908c;
 }
@@ -376,10 +405,12 @@ code.lang-markdown .bullet {
   color: #8959a8;
 }
 
-/* media queries */
+
+
+/*--------- MEDIA QUERIES ---------*/
 
 @media (min-width: 1600px) {
-  body { font-size: 26px; }
+  body { font-size: 24px; }
 }
 
 @media (max-width: 900px) {

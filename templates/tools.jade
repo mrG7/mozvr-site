@@ -1,0 +1,13 @@
+
+mixin tools(toolList)
+
+	//if tools are listed, create one li for each
+	//else don't do anything
+
+	#tools
+		| Tools
+		ul
+			- for (var i = 0; i < toolList.length; ++i) {
+				li
+					a(href= toolList[i].url)= toolList[i].name
+			- }

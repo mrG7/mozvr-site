@@ -1,0 +1,10 @@
+
+mixin creators(creatorList)
+
+	#creators
+		| Created by
+		ul
+			- for (var i = 0; i < creatorList.length; ++i) {
+				li
+					a(href='http://twitter.com/' + creatorList[i].twitter target='blank')= creatorList[i].name
+			- }
