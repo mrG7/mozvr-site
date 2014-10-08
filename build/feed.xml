@@ -5,13 +5,13 @@
     <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://localhost:8080</link>
     <description>Wherever you go, there you are.</description>
-    <pubDate>Mon, 01 Oct 2012 15:00:00 -0700</pubDate>
+    <pubDate>Sun, 05 Oct 2014 15:00:00 -0700</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>Sechelt</title>
       <link>http://localhost:8080/articles/sechelt/</link>
-      <pubDate>Mon, 01 Oct 2012 15:00:00 -0700</pubDate>
+      <pubDate>Sun, 05 Oct 2014 15:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/sechelt/</guid>
       <author></author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/sechelt/c4d-5.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -135,6 +135,37 @@ loader.load( &lt;span class=&quot;string&quot;&gt;'flightpath-ascii.txt'&lt;/spa
 &lt;p&gt;We tested the results with DK1 and DK2 headsets and random co-workers, trying to find people who were particularly sensitive to the nauseau and disorientation that VR can produce if not properly calibrated.&lt;/p&gt;
 &lt;h3 id=&quot;deployment&quot;&gt;Deployment&lt;/h3&gt;
 &lt;p&gt;For the start of the development process we simple worked out of a Dropbox folder, with Ricardo saving this progress as he went. Our standard process is to use Git, NPM and Gulp track changes, manage dependencies and automate various development tasks, but early in the process we were more concerned with quick results, and with just Ricardo doing the code a simple setup was good enough. Before deploying, however, we organized the code and pushed to GitHub, hosting everything with gh-pages, using &lt;a href=&quot;https://www.npmjs.org/package/gulp-gh-pages&quot;&gt;gulp-gh-pages&lt;/a&gt; to automate the process.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Information Diving</title>
+      <link>http://localhost:8080/articles/infodive/</link>
+      <pubDate>Sat, 04 Oct 2014 22:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/infodive/</guid>
+      <author></author>
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/infodive/artdirection-1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Tatiana Plakhova’s information landscapes are presented in virtual reality using the power of Three.js and GLAM.&lt;/p&gt;
+&lt;!-- tools: [ &quot;Three.js&quot;, &quot;Cinema4D&quot; ] --&gt;
+
+&lt;h2 id=&quot;basic-workflow&quot;&gt;Basic workflow&lt;/h2&gt;
+&lt;p&gt;The high level process that brough Information Diving to life:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Scene modeled in Cinema 4D&lt;/li&gt;
+&lt;li&gt;Primitives created with WebGL and Three.js&lt;/li&gt;
+&lt;li&gt;Glamified&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;pre-production&quot;&gt;Pre Production&lt;/h2&gt;
+&lt;h3 id=&quot;inspiration-and-art-direction&quot;&gt;Inspiration and art direction&lt;/h3&gt;
+&lt;p&gt;ttt&lt;/p&gt;
+&lt;h2 id=&quot;cinema-4d&quot;&gt;Cinema 4D&lt;/h2&gt;
+&lt;p&gt;ttt&lt;/p&gt;
+&lt;h2 id=&quot;three-js-implementation&quot;&gt;Three.js Implementation&lt;/h2&gt;
+&lt;h3 id=&quot;importing-scene-models&quot;&gt;Importing scene models&lt;/h3&gt;
+&lt;p&gt;ttt&lt;/p&gt;
+&lt;h2 id=&quot;testing-optimization&quot;&gt;Testing &amp;amp; Optimization&lt;/h2&gt;
+&lt;h3 id=&quot;adding-vr-headset-support&quot;&gt;Adding VR headset support&lt;/h3&gt;
+&lt;p&gt;Support for VR headsets was implemented with two Three.js components: VRControls and VREffect. These take the scene and…&lt;/p&gt;
+&lt;p&gt;ttt&lt;/p&gt;
 </description>
     </item>
   </channel>

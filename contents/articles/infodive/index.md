@@ -38,7 +38,7 @@ creators: [
     "name": "Josh Carpenter",
     "email": "jcarpenter@mozilla.com",
     "twitter": "joshcarpenter"
-  },
+  }
 ]
 author: josh-carpenter
 ---

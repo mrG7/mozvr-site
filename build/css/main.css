@@ -104,16 +104,6 @@ hr {
   color: #171717;
 }
 
-.header .author {
-  font-family: 'Merriweather', serif;
-  font-variant: small-caps;
-  text-transform: lowercase;
-  text-rendering: auto;
-  text-align: left;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
 .header .description {
   font-size: 1.2em;
   font-style: italic;
@@ -130,6 +120,26 @@ body.article-detail > header h1 {
 
 body.article-detail > header {
   margin-bottom: 3em;
+}
+
+
+
+/*--------- AUTHOR ---------*/
+
+.author {
+  text-rendering: auto;
+  text-align: left;
+  font-weight: 300;
+  background-color: #ccc;
+  border-top: 1px solid gray;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  float: left;
+  margin-right: 2em;
 }
 
 

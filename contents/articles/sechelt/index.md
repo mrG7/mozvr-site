@@ -2,7 +2,7 @@
 title: Sechelt
 date: 2014-10-05 15:00
 template: article.jade
-link: h
+link: https://github.com/potch/JAVRIS
 source: https://github.com/potch/JAVRIS
 tools: [
   {
@@ -23,8 +23,8 @@ creators: [
   {
     "name": "Josh Carpenter",
     "email": "jcarpenter@mozilla.com",
-    "twitter": "joshcarpenhter"
-  },
+    "twitter": "joshcarpenter"
+  }
 ]
 author: josh-carpenter
 repo: https://github.com/jcarpenter/vr-sechelt
