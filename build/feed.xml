@@ -54,7 +54,7 @@ Sketches&lt;/p&gt;
 &lt;h3 id=&quot;exporting-the-cinema-4d-assets&quot;&gt;Exporting the Cinema 4D assets&lt;/h3&gt;
 &lt;p&gt;To exporting the assets from Cinema 4D to Three.js it was important to get several things right, or we found the results were unwieldy, mismatched, slow, etc. The steps we took were to:&lt;/p&gt;
 &lt;h4 id=&quot;1-adjust-the-scale&quot;&gt;1. Adjust the scale&lt;/h4&gt;
-&lt;p&gt;The original scene was modeled to match the actual landscape, in meters. This made the units too massive to easily handle, however, so we scaled the scene down to centimeters before exporting. &lt;/p&gt;
+&lt;p&gt;The original scene was modeled to match the actual landscape, in meters. This made the units too massive to easily handle, however, so we scaled the scene down to centimeters before exporting.&lt;/p&gt;
 &lt;h4 id=&quot;2-reduce-the-number-of-individual-objects-by-merging&quot;&gt;2. Reduce the number of individual objects by merging&lt;/h4&gt;
 &lt;p&gt;In Cinema 4D the trees were dozens of individual objects each with their own instance of the tree material. It is important to reduce the number of unique geometries and materials when working with Three.js, however, for both performance and logistics reasons. So before we exported the scene, we deleted any unused objects and merged the trees into one single object with one material instance.&lt;/p&gt;
 &lt;h4 id=&quot;3-clean-up-the-geometry&quot;&gt;3. Clean up the geometry&lt;/h4&gt;

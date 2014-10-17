@@ -4,8 +4,8 @@ date: 2014-10-04 22:00
 template: article.jade
 link: http://ericrius1.github.io/ViziInfoDive/
 source: https://github.com/ericrius1/ViziInfoDive
-tools: [
-  {
+tools: >
+  [{
     "name": "Three.js",
     "url": "http://threejs.org/"
   },
@@ -16,10 +16,9 @@ tools: [
   {
     "name": "Cinema 4D",
     "url": "http://www.maxon.net/"
-  }
-]
-creators: [
-  {
+  }]
+creators: >
+  [{
     "name": "Tatiana Plakhova",
     "email": "t_plakhova@hotmail.com",
     "twitter": "Plakhova"
@@ -38,8 +37,7 @@ creators: [
     "name": "Josh Carpenter",
     "email": "jcarpenter@mozilla.com",
     "twitter": "joshcarpenter"
-  }
-]
+  }]
 author: josh-carpenter
 ---
 

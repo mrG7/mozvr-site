@@ -4,18 +4,17 @@ date: 2014-10-05 15:00
 template: article.jade
 link: https://github.com/potch/JAVRIS
 source: https://github.com/potch/JAVRIS
-tools: [
-  {
+tools:
+  [{
     "name": "Three.js",
     "url": "http://threejs.org/"
   },
   {
     "name": "Cinema 4D",
     "url": "http://www.maxon.net/"
-  }
-]
-creators: [
-  {
+  }]
+creators:
+  [{
     "name": "Ricardo Cabello",
     "email": "ricardo.cabello@gmail.com",
     "twitter": "mrdoob"
@@ -24,8 +23,7 @@ creators: [
     "name": "Josh Carpenter",
     "email": "jcarpenter@mozilla.com",
     "twitter": "joshcarpenter"
-  }
-]
+  }]
 author: josh-carpenter
 repo: https://github.com/jcarpenter/vr-sechelt
 ---
@@ -97,7 +95,7 @@ To exporting the assets from Cinema 4D to Three.js it was important to get sever
 
 #### 1. Adjust the scale
 
-The original scene was modeled to match the actual landscape, in meters. This made the units too massive to easily handle, however, so we scaled the scene down to centimeters before exporting. 
+The original scene was modeled to match the actual landscape, in meters. This made the units too massive to easily handle, however, so we scaled the scene down to centimeters before exporting.
 
 #### 2. Reduce the number of individual objects by merging
 
