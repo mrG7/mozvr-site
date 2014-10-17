@@ -10,11 +10,11 @@
     <language>en</language>
     <item>
       <title>Sechelt</title>
-      <link>http://localhost:8080/build/articles/sechelt/</link>
+      <link>http://localhost:8080/articles/sechelt/</link>
       <pubDate>Sun, 05 Oct 2014 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/build/articles/sechelt/</guid>
+      <guid isPermaLink="true">http://localhost:8080/articles/sechelt/</guid>
       <author></author>
-      <description>&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/c4d-5.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/sechelt/c4d-5.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.&lt;/p&gt;
 &lt;!-- tools: [ &quot;Three.js&quot;, &quot;Cinema4D&quot; ] --&gt;
 
@@ -36,21 +36,21 @@ Doug Coupland’s take on the coast of BC
 Journey, Shape of the World
 Sketches&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.royhenryvickers.com/&quot;&gt;Roy Henry Vickers&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/artdirection-rhv.png&quot; alt=&quot;Roy Henry Vickers&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sechelt/artdirection-rhv.png&quot; alt=&quot;Roy Henry Vickers&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Douglas Coupland:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/artdirection-dc.png&quot; alt=&quot;Douglas Coupland&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/photo1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sechelt/artdirection-dc.png&quot; alt=&quot;Douglas Coupland&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sechelt/photo1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;scouting-a-location&quot;&gt;Scouting a location&lt;/h3&gt;
 &lt;p&gt;It was important to us to capture the reality of BC’s coastal landscape, with its steep glacier-carved valleys and it’s uncountable forested islands, stretching north from Vancouver to Alaska. To find a location, we used Google Earth to identify promising flight paths and vistas, eventually settling on a path stretching south from a mountain peak to the town of Sechelt.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/googleearth-2.png&quot; alt=&quot;The Sechelt scene &quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/map1.png&quot; alt=&quot;The Motion Camera settings&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sechelt/googleearth-2.png&quot; alt=&quot;The Sechelt scene &quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sechelt/map1.png&quot; alt=&quot;The Motion Camera settings&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;cinema-4d&quot;&gt;Cinema 4D&lt;/h2&gt;
 &lt;h3 id=&quot;modeling-and-lighting&quot;&gt;Modeling and lighting&lt;/h3&gt;
 &lt;p&gt;This landscape was then modeled in Cinema 4D using the sculpt tool. Getting the lighting right was critical to achieving the desired look, and performance was a concern, so we opted to use a shader-based system. There are no lights in the scene. The landscape, water, trees etc are all colored with shaders. The fade of the landscape, from purple to light blue as it stretches into the distance, was achieved with a Gradient shader in the landscape material’s Luminance channel. The shader is a set to 2000cm, and mapped to the position of the camera, making objects close to the camera dark, and objects further away progressively lighter.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/c4d-1.png&quot; alt=&quot;The Cinema 4D setup &quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sechelt/c4d-1.png&quot; alt=&quot;The Cinema 4D setup &quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;camera-animation&quot;&gt;Camera animation&lt;/h3&gt;
 &lt;p&gt;The camera animation was defined with Cinema 4D’s Motion Camera tool. A spline was carefully modeled, sweeping through the scene. The Motion Camera’s path was set to the spline, and the Camera Position then animated from 0 to 100$. At the end I wanted the camera to come to rest in a very precise position, which proved difficult to achieve by tweaking the spline points. So we instead created a second camera, framed it just right, then set the Motion Camera to switch between aligning itself to the spline, and aligning itself to this second camera, at the very end of the sequence. The final effect was seamless.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/c4d-6.png&quot; alt=&quot;The Motion Camera settings&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sechelt/c4d-6.png&quot; alt=&quot;The Motion Camera settings&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;exporting-the-cinema-4d-assets&quot;&gt;Exporting the Cinema 4D assets&lt;/h3&gt;
 &lt;p&gt;To exporting the assets from Cinema 4D to Three.js it was important to get several things right, or we found the results were unwieldy, mismatched, slow, etc. The steps we took were to:&lt;/p&gt;
 &lt;h4 id=&quot;1-adjust-the-scale&quot;&gt;1. Adjust the scale&lt;/h4&gt;
@@ -59,7 +59,7 @@ Sketches&lt;/p&gt;
 &lt;p&gt;In Cinema 4D the trees were dozens of individual objects each with their own instance of the tree material. It is important to reduce the number of unique geometries and materials when working with Three.js, however, for both performance and logistics reasons. So before we exported the scene, we deleted any unused objects and merged the trees into one single object with one material instance.&lt;/p&gt;
 &lt;h4 id=&quot;3-clean-up-the-geometry&quot;&gt;3. Clean up the geometry&lt;/h4&gt;
 &lt;p&gt;If the camera was not going to see something, we deleted it. The meant carving out sections of the landscape, such as the backside of the mountains flanking the vallies.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/build/articles/sechelt/c4d-4.png&quot; alt=&quot;The final Sechelt model landscape model. The white line is the camera&amp;#39;s path. &quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sechelt/c4d-4.png&quot; alt=&quot;The final Sechelt model landscape model. The white line is the camera&amp;#39;s path. &quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;three-js-implementation&quot;&gt;Three.js Implementation&lt;/h2&gt;
 &lt;h3 id=&quot;importing-scene-models&quot;&gt;Importing scene models&lt;/h3&gt;
 &lt;p&gt;We recreated the Cinema 4D scene in Three.js by importing the objects inside the .DAE file with the following:&lt;/p&gt;
@@ -139,11 +139,11 @@ loader.load( &lt;span class=&quot;string&quot;&gt;'flightpath-ascii.txt'&lt;/spa
     </item>
     <item>
       <title>Information Diving</title>
-      <link>http://localhost:8080/build/articles/infodive/</link>
+      <link>http://localhost:8080/articles/infodive/</link>
       <pubDate>Sat, 04 Oct 2014 22:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/build/articles/infodive/</guid>
+      <guid isPermaLink="true">http://localhost:8080/articles/infodive/</guid>
       <author></author>
-      <description>&lt;p&gt;&lt;img src=&quot;/build/articles/infodive/artdirection-1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/infodive/artdirection-1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Tatiana Plakhova’s information landscapes are presented in virtual reality using the power of Three.js and GLAM.&lt;/p&gt;
 &lt;!-- tools: [ &quot;Three.js&quot;, &quot;Cinema4D&quot; ] --&gt;
 

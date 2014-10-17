@@ -34,7 +34,7 @@
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p><img src="/build/articles/sechelt/c4d-5.png" alt=""></p>
+          <section class="content"><p><img src="/articles/sechelt/c4d-5.png" alt=""></p>
 <p>A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D,&nbsp;Three.js.</p>
 <!-- tools: [ "Three.js", "Cinema4D" ] -->
 
@@ -55,21 +55,21 @@ Roy Henry Vickers
 Doug Coupland’s take on the coast of <span class="caps">BC</span>
 Journey, Shape of the World&nbsp;Sketches</p>
 <p><a href="http://www.royhenryvickers.com/">Roy Henry Vickers</a>:</p>
-<p><img src="/build/articles/sechelt/artdirection-rhv.png" alt="Roy Henry Vickers"></p>
+<p><img src="/articles/sechelt/artdirection-rhv.png" alt="Roy Henry Vickers"></p>
 <p>Douglas&nbsp;Coupland:</p>
-<p><img src="/build/articles/sechelt/artdirection-dc.png" alt="Douglas Coupland"></p>
-<p><img src="/build/articles/sechelt/photo1.jpg" alt=""></p>
+<p><img src="/articles/sechelt/artdirection-dc.png" alt="Douglas Coupland"></p>
+<p><img src="/articles/sechelt/photo1.jpg" alt=""></p>
 <h3 id="scouting-a-location">Scouting a&nbsp;location</h3>
 <p>It was important to us to capture the reality of <span class="caps">BC</span>’s coastal landscape, with its steep glacier-carved valleys and it’s uncountable forested islands, stretching north from Vancouver to Alaska. To find a location, we used Google Earth to identify promising flight paths and vistas, eventually settling on a path stretching south from a mountain peak to the town of&nbsp;Sechelt.</p>
-<p><img src="/build/articles/sechelt/googleearth-2.png" alt="The Sechelt scene "></p>
-<p><img src="/build/articles/sechelt/map1.png" alt="The Motion Camera settings"></p>
+<p><img src="/articles/sechelt/googleearth-2.png" alt="The Sechelt scene "></p>
+<p><img src="/articles/sechelt/map1.png" alt="The Motion Camera settings"></p>
 <h2 id="cinema-4d">Cinema&nbsp;4D</h2>
 <h3 id="modeling-and-lighting">Modeling and&nbsp;lighting</h3>
 <p>This landscape was then modeled in Cinema 4D using the sculpt tool. Getting the lighting right was critical to achieving the desired look, and performance was a concern, so we opted to use a shader-based system. There are no lights in the scene. The landscape, water, trees etc are all colored with shaders. The fade of the landscape, from purple to light blue as it stretches into the distance, was achieved with a Gradient shader in the landscape material’s Luminance channel. The shader is a set to 2000cm, and mapped to the position of the camera, making objects close to the camera dark, and objects further away progressively&nbsp;lighter.</p>
-<p><img src="/build/articles/sechelt/c4d-1.png" alt="The Cinema 4D setup "></p>
+<p><img src="/articles/sechelt/c4d-1.png" alt="The Cinema 4D setup "></p>
 <h3 id="camera-animation">Camera&nbsp;animation</h3>
 <p>The camera animation was defined with Cinema 4D’s Motion Camera tool. A spline was carefully modeled, sweeping through the scene. The Motion Camera’s path was set to the spline, and the Camera Position then animated from 0 to 100$. At the end I wanted the camera to come to rest in a very precise position, which proved difficult to achieve by tweaking the spline points. So we instead created a second camera, framed it just right, then set the Motion Camera to switch between aligning itself to the spline, and aligning itself to this second camera, at the very end of the sequence. The final effect was&nbsp;seamless.</p>
-<p><img src="/build/articles/sechelt/c4d-6.png" alt="The Motion Camera settings"></p>
+<p><img src="/articles/sechelt/c4d-6.png" alt="The Motion Camera settings"></p>
 <h3 id="exporting-the-cinema-4d-assets">Exporting the Cinema 4D&nbsp;assets</h3>
 <p>To exporting the assets from Cinema 4D to Three.js it was important to get several things right, or we found the results were unwieldy, mismatched, slow, etc. The steps we took were&nbsp;to:</p>
 <h4 id="1-adjust-the-scale">1. Adjust the&nbsp;scale</h4>
@@ -78,7 +78,7 @@ Journey, Shape of the World&nbsp;Sketches</p>
 <p>In Cinema 4D the trees were dozens of individual objects each with their own instance of the tree material. It is important to reduce the number of unique geometries and materials when working with Three.js, however, for both performance and logistics reasons. So before we exported the scene, we deleted any unused objects and merged the trees into one single object with one material&nbsp;instance.</p>
 <h4 id="3-clean-up-the-geometry">3. Clean up the&nbsp;geometry</h4>
 <p>If the camera was not going to see something, we deleted it. The meant carving out sections of the landscape, such as the backside of the mountains flanking the&nbsp;vallies.</p>
-<p><img src="/build/articles/sechelt/c4d-4.png" alt="The final Sechelt model landscape model. The white line is the camera&#39;s path. "></p>
+<p><img src="/articles/sechelt/c4d-4.png" alt="The final Sechelt model landscape model. The white line is the camera&#39;s path. "></p>
 <h2 id="three-js-implementation">Three.js&nbsp;Implementation</h2>
 <h3 id="importing-scene-models">Importing scene&nbsp;models</h3>
 <p>We recreated the Cinema 4D scene in Three.js by importing the objects inside the .<span class="caps">DAE</span> file with the&nbsp;following:</p>
