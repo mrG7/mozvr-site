@@ -1,4 +1,5 @@
 {
+  "baseUrl": "/build/",
   "locals": {
     "url": "http://localhost:8080",
     "name": "Web VR",
