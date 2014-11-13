@@ -1,21 +1,44 @@
 extends layout
 
 block content
-  include author
-  each article in articles
-    article.article.intro
+
+  include projectTile
+  include articleTile
+
+  ul#indexGrid
+    li 
       header
-        //
-          p.date
-            span= moment.utc(article.date).format('DD. MMMM YYYY')
-        h2
-          a(href=article.url)= article.title
-      section.content
-        if article.intro.length > 0
-          | !{ typogr(article.intro).typogrify() }
-        if article.hasMore
-          p.more
-            a(href=article.url) more
+          | Wherever you go,  
+          br
+          | there you are.
+    li.project
+      mixin projectTile(locals.tiles.hiro)
+    li.project
+      mixin projectTile(locals.tiles.sechelt)
+    li.article
+      mixin articleTile(contents.articles.sechelt["index.md"])
+    li.project
+      mixin projectTile(locals.tiles.polarsea)
+    li.project
+      mixin projectTile(locals.tiles.infodive)
+    li.project
+      mixin projectTile(locals.tiles.panoramaviewer)
+    li.article
+      mixin articleTile(contents.articles.sechelt["index.md"])
+
+
+  //- include author
+  //- each article in articles
+  //-   article.article.intro
+  //-     header
+  //-       h2
+  //-         a(href=article.url)= article.title
+  //-     section.content
+  //-       if article.intro.length > 0
+  //-         | !{ typogr(article.intro).typogrify() }
+  //-       if article.hasMore
+  //-         p.morec
+  //-           a(href=article.url) More
 
 block prepend footer
   div.nav

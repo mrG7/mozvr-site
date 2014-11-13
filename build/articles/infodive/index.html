@@ -4,16 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Information Diving - Web VR
+    <title>Information Diving - Moz VR
     </title>
     <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Wherever you go, there you are.">
-    <link rel="stylesheet" href="http://code.cdn.mozilla.net/fonts/fira.css">
+    <!--link(rel='stylesheet', href='http://code.cdn.mozilla.net/fonts/fira.css')-->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body class="article-detail">
-    <header class="header">
+    <!--
+    header.header
+      div.content-wrap
+        block header
+          div.logo
+            h1
+              a(href=locals.url)= locals.name
+            p.description= locals.description
+    -->
+    <div id="content">
       <div class="content-wrap">
-        <h1>Information Diving</h1>
+        <h1>Information Diving
+        </h1>
+        <p>
+        </p>
                 <div id="creators">Created by
                   <ul>
                     <li><a href="http://twitter.com/undefined" target="blank"></a></li>
@@ -582,10 +595,6 @@
                   </ul>
                 </div>
         <p class="repo"><a href="https://github.com/ericrius1/ViziInfoDive">Source</a></p>
-      </div>
-    </header>
-    <div id="content">
-      <div class="content-wrap">
         <article class="article">
           <section class="content"><p><img src="/articles/infodive/artdirection-1.jpg" alt=""></p>
 <p>Tatiana Plakhova’s information landscapes are presented in virtual reality using the power of Three.js and&nbsp;<span class="caps">GLAM</span>.</p>
@@ -623,25 +632,16 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div class="content-wrap">
-        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
-This footer text can be edited in about.md</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.</p>
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur.</p>
-<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-deserunt mollit anim id est laborum.</p>
-
-        </section>
-        <section class="copy">
-          <p>&copy; 2014 Mozilla Research &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
-          </p>
-        </section>
-      </div>
-    </footer>
+    <!--
+    footer
+      div.content-wrap
+        block footer
+          section.about
+            !=contents['about.md'].html
+          section.copy
+            p &copy; 2014 Mozilla Research &mdash; powered by&nbsp;
+              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+              //- please leave the "powered by" if you use the design
+    -->
   </body>
 </html>

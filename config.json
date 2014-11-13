@@ -1,9 +1,36 @@
 {
   "locals": {
     "url": "http://localhost:8080",
-    "name": "Web VR",
+    "name": "Moz VR",
     "owner": "Mozilla Research",
-    "description": "Wherever you go, there you are."
+    "description": "Wherever you go, there you are.",
+    "tiles": {
+      "hiro": {
+        "name": "Hiro",
+        "thumbnail": "hiro1.png",
+        "url": "http://mozvr.github.io/sechelt"
+      },
+      "sechelt": {
+        "name": "Sechelt",
+        "thumbnail": "sechelt1.png",
+        "url": "http://mozvr.github.io/sechelt"
+      },
+      "polarsea": {
+        "name": "Polar Sea",
+        "thumbnail": "polarsea1.png",
+        "url": "http://mozvr.github.io/eleVR-Web-Player/elevr-player.html"
+      },
+      "infodive": {
+        "name": "Information Diving",
+        "thumbnail": "infodive1.png",
+        "url": "http://mozvr.github.io/ViziInfoDiveScene"
+      },
+      "panoramaviewer": {
+        "name": "Panorama Viewer",
+        "thumbnail": "panoramaviewer1.png",
+        "url": "http://mozvr.github.io/panorama-viewer"
+      }
+    }
   },
   "plugins": [
     "./plugins/paginator.coffee"

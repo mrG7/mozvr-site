@@ -1,0 +1,20 @@
+{
+	"projects": [
+		{
+	    "name": "Polar Sea",
+	    "thumbnail": "polarsea1.png",
+	    "url": "http://mozvr.github.io/eleVR-Web-Player/elevr-player.html"
+  	},
+  	{
+	    "name": "Information Diving",
+	    "thumbnail": "infodive1.png",
+	    "url": "http://vizi.gl/ViziInfoDiveScene/"
+  	},
+  	{
+	    "name": "Information Diving",
+	    "thumbnail": "infodive1.png",
+	    "url": "http://vizi.gl/ViziInfoDiveScene/"
+  	}
+  ],
+  "wizard": "gandalf"
+}

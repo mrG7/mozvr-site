@@ -7,21 +7,16 @@ block append vars
 block prepend title
   | #{ page.title + " - "}
 
-block content
-
+block header
   include creators
   include tools
-
-  h1
-    =page.metadata.title
-  p
-    =page.metadata.intro
-    
+  h1= page.title
   mixin creators(page.metadata.creators)
   mixin tools(page.metadata.tools)
   p.repo
     a(href=page.metadata.source) Source
 
+block content
   include author
   article.article
     section.content!= typogr(page.html).typogrify()

@@ -1,0 +1,11 @@
+mixin articleTile(article)
+
+	a(href=article.url)
+		h3
+			= article.metadata.title
+		p
+			= article.metadata.intro
+
+		img(src=article.metadata.splash)
+	
+

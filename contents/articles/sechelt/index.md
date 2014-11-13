@@ -3,7 +3,7 @@ title: Sechelt
 date: 2014-10-05 15:00
 template: article.jade
 link: https://github.com/potch/JAVRIS
-source: https://github.com/potch/JAVRIS
+source: https://github.com/jcarpenter/vr-sechelt
 tools:
   [{
     "name": "Three.js",
@@ -24,16 +24,11 @@ creators:
     "email": "jcarpenter@mozilla.com",
     "twitter": "joshcarpenter"
   }]
+splash: articles/sechelt/c4d-5.png
+intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
 author: josh-carpenter
 repo: https://github.com/jcarpenter/vr-sechelt
 ---
-
-
-![](c4d-5.png)
-
-A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
-
-<!-- tools: [ "Three.js", "Cinema4D" ] -->
 
 ## Basic workflow
 

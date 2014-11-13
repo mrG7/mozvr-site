@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web VR</title>
+    <title>Moz VR</title>
     <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://localhost:8080</link>
     <description>Wherever you go, there you are.</description>
@@ -14,11 +14,7 @@
       <pubDate>Sun, 05 Oct 2014 15:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/sechelt/</guid>
       <author></author>
-      <description>&lt;p&gt;&lt;img src=&quot;/articles/sechelt/c4d-5.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.&lt;/p&gt;
-&lt;!-- tools: [ &quot;Three.js&quot;, &quot;Cinema4D&quot; ] --&gt;
-
-&lt;h2 id=&quot;basic-workflow&quot;&gt;Basic workflow&lt;/h2&gt;
+      <description>&lt;h2 id=&quot;basic-workflow&quot;&gt;Basic workflow&lt;/h2&gt;
 &lt;p&gt;The high level process that brough Sechelt to life:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Scene modeled in Cinema 4D&lt;/li&gt;
