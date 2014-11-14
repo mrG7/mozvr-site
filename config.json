@@ -33,7 +33,7 @@
     }
   },
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/project-paginator.coffee"
   ],
   "require": {
     "moment": "moment",
@@ -49,5 +49,8 @@
   },
   "paginator": {
     "perPage": 3
-  }
+  },
+  "ignore": [
+    "**/.DS_Store"
+  ]
 }

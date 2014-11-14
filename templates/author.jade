@@ -1,9 +1,9 @@
 
-mixin author(authorName)
-	- var author = contents.authors[authorName + '.json']
+mixin author(name)
+	- var author = contents.people[name + '.json']
 	div.author
 		if author
-			img(src='/authors/' +author.metadata.photo)
+			img(src='/people/'+author.metadata.photo)
 			div
 				b= author.metadata.name
 				p= author.metadata.bio
@@ -12,4 +12,4 @@ mixin author(authorName)
 				div
 					a(href=author.metadata.twitter)= author.metadata.twitter
 		else
-			=authorName
+			=name

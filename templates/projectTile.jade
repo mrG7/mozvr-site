@@ -1,4 +1,20 @@
-mixin projectTile(project)
+mixin projectTile(name)
 
-	a(href=project.url, target="_blank", title=project.name)
-		img(src="/projects/"+project.thumbnail)
+	- var project = contents.projects[name]['index.md']
+
+	a(href=project.url)
+		img(src='/projects/'+name+'/'+project.metadata.splash)
+	.info
+		h4
+			= project.metadata.title
+		p
+			= project.metadata.intro
+
+	//
+		a(href=article.url)
+			h3
+				= article.metadata.title
+			p
+				= article.metadata.intro
+
+			img(src=article.metadata.splash)

@@ -1,4 +1,3 @@
-
 extends layout
 
 block append vars
@@ -7,16 +6,21 @@ block append vars
 block prepend title
   | #{ page.title + " - "}
 
-block header
+block content
+
   include creators
   include tools
-  h1= page.title
+
+  h1
+    =page.metadata.title
+  p
+    =page.metadata.intro
+    
   mixin creators(page.metadata.creators)
   mixin tools(page.metadata.tools)
   p.repo
     a(href=page.metadata.source) Source
 
-block content
   include author
   article.article
     section.content!= typogr(page.html).typogrify()
@@ -24,6 +28,34 @@ block content
   .author
     mixin author(page.metadata.author)
 
-
 block prepend footer
   include author
+
+//
+  extends layout
+
+  block append vars
+    - bodyclass = 'article-detail'
+
+  block prepend title
+    | #{ page.title + " - "}
+
+  block header
+    include creators
+    include tools
+    h1= page.title
+    mixin creators(page.metadata.creators)
+    mixin tools(page.metadata.tools)
+    p.repo
+      a(href=page.metadata.source) Source
+
+  block content
+    include author
+    article.article
+      section.content!= typogr(page.html).typogrify()
+    | By
+    .author
+      mixin author(page.metadata.author)
+
+  block prepend footer
+    include author

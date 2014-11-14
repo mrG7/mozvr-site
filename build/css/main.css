@@ -3,17 +3,16 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
   margin: 0; padding: 0; border: 0;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  line-height: 1.52;
-  background-color: #f8f8f8;
-  text-rendering: optimizeLegibility;
+html {
+  font-size: 100%;
 }
 
-.content-wrap {
-  width: 34em;
-  margin: 0 auto;
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #f8f8f8;
+  text-rendering: optimizeLegibility;
 }
 
 body, a {
@@ -42,15 +41,15 @@ pre {
 h1 {
   font-size: 2em;
   margin-bottom: 1em;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 1.6em;
-  font-weight: 400;
+  font-size: 1.2em;
+  font-weight: 700;
   line-height: 1.43;
-  padding: 1em;
-  margin-bottom: 1.35em;
-  background-color: #b1b9e4;
+  /*padding: 1em;*/
+  margin: 2rem 0 1rem;
   text-transform: uppercase;
 }
 
@@ -64,7 +63,7 @@ h3 {
 }
 
 ol, ul {
-  margin: 0 1.4em 1.4em 4em;
+  margin: 0;
 }
 
 li {
@@ -81,16 +80,143 @@ hr {
   border: 0;
   border-top: 1px dashed #d2d2d2;
   height: 0;
-  margin: 1.6em 0;
+  margin: 4rem 0 8rem;
+}
+
+.content-wrap {
+  width: 34em;
+  margin: 0 auto;
 }
 
 
-/*--------- HOME PAGE GRID ---------*/
 
-#indexGrid {
-  background-color: red;
-  padding: 0;
+/*--------- HOME ---------*/
+
+#header a {
+  text-decoration: none;
+}
+
+#header .logo {
+  width: 6rem;
+  height: 100%;
+  font-size: 0;
+  padding: 0.25rem 0;
+  margin-right: 3rem;
+}
+
+.horizontal-list ul, li {
   margin: 0;
+  padding: 0;
+}
+
+.horizontal-list li {
+  list-style: none;
+  float: left;
+  margin-right: 1rem;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+#intro h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  width: 40%;
+}
+
+#getfirefox {
+  width: 40%;
+}
+
+#getfirefox .download {
+  font-size: 1.5rem;
+  border: 0.35rem solid black;
+  padding: 1rem;
+  margin: 0 0 1rem;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+#getfirefox .download:hover {
+  color: white;
+  background: black;
+}
+
+#getfirefox b {
+  font-weight: 700;
+}
+
+#checklist table {
+  font-family: 'Fira Mono';
+  margin: 2rem 0 0;
+  width: 50%;
+}
+
+#checklist td {
+  line-height: 1.3rem;
+  vertical-align: top;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted #666;
+}
+
+#checklist .number {
+  padding-right: 0rem;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+#checklist .gap {
+  padding: 0.5rem 1rem 0 0;
+  border-bottom: none;
+}
+
+#checklist .comment {
+  color: #999;
+  border-bottom: 1px dotted #ccc;
+}
+
+#checklist .comment a {
+  color: #999;
+  text-decoration: none;
+}
+
+#checklist .comment a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+#checklist .state {
+  padding-right: 0;
+}
+
+#checklist span {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  border-radius: 0.2rem;
+}
+
+#checklist .pending {
+  background: gray
+}
+
+#checklist .positive {
+  background: rgba( 29, 185, 146, 1 );
+}
+
+#projects {
+  width: 100%;
 }
 
 #indexGrid li {
@@ -99,8 +225,8 @@ hr {
   width: 32%;
   height: 25rem;
   padding: 0;
-  margin: 1rem;
-  border: 0px solid rgba( 0, 0, 0, 0.1 );
+  margin: 0rem;
+  border: 0px solid rgba( 0, 0, 0, 0.7 );
   background: rgba( 204, 102, 204, 0 );
   overflow: hidden;
 }
@@ -117,6 +243,51 @@ hr {
   background: gray;
 }
 
+#team li {
+  width: 12rem;
+}
+
+#team img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#team .info {
+  text-align: center;
+}
+
+
+/*--------- PAGE FOOTER ---------*/
+
+footer a, .primary-links a, .social-links a {
+  text-decoration: none;
+}
+
+footer {
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  margin: 2rem 0 0 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .logo {
+  width: 8rem;
+  float: left;
+  opacity: 0.8;
+}
+
+footer .notices {
+  width: 20rem;
+  margin: 0 3rem;
+}
+
+
 
 /*---------- Utilities ----------*/
 
@@ -129,6 +300,7 @@ hr {
 .cf:after {
     clear: both;
 }
+
 
 
 /*--------- ARTICLE ---------*/
@@ -208,15 +380,26 @@ hr {
 }
 
 
+
+
 /*--------- MEDIA QUERIES ---------*/
 
 @media (min-width: 1600px) {
-  body { font-size: 24px; padding: 1rem;}
-  .content-wrap { width: 100%; }
+  html {
+    font-size: 100%;
+  }
+  body { 
+    padding: 4rem;
+  }
+  .content-wrap { 
+    width: 75%;
+  }
 }
 
 @media (max-width: 900px) {
-  body { font-size: 18px; }
+  body { 
+    font-size: 100%;
+  }
 }
 
 @media (max-width: 690px) {
@@ -285,6 +468,10 @@ hr {
 
 
 
+
+
+
+
 /*--------- PAGE HEADER ---------*/
 
 .header {
@@ -322,52 +509,10 @@ body.article-detail > header {
 }
 
 
-/*--------- PAGE FOOTER ---------*/
-
-footer {
-  margin: 3em 0;
-}
-
-footer .nav {
-  text-align: left;
-  margin-top: 5em;
-  margin-bottom: 3.5em;
-}
-
-footer .nav a {
-  padding: 0 0.5em;
-  font-size: 1.2em;
-  text-decoration: none;
-}
-
-footer .about {
-  border-top: 1px dashed #d2d2d2;
-  padding: 2.2em 3em;
-  font-size: 0.7em;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  -ms-column-count: 3;
-  column-count: 3;
-  -webkit-column-gap: 2em;
-  -moz-column-gap: 2em;
-  -ms-column-gap: 2em;
-  column-gap: 2em;
-}
-
-footer .copy {
-  text-align: left;
-  font-size: 0.7em;
-  font-style: italic;
-  margin-top: 1em;
-}
-
-footer .copy, footer .copy a {
-  color: #8e8e8e;
-}
 
 
 /*--------- ARCHIVE ---------*/
-
+/*
 .archive {
   width: 32em;
   margin: 5em auto 6em;
@@ -428,12 +573,12 @@ footer .copy, footer .copy a {
 .archive ul li {
   margin: 0;
 }
-
+*/
 
 /*--------- CODE STYLING ---------*/
 
 code {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Fira Mono', monospace;
   font-size: 0.85em;
   color: #000;
 }

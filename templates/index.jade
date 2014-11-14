@@ -5,27 +5,197 @@ block content
   include projectTile
   include articleTile
 
-  ul#indexGrid
-    li 
-      header
-          | Wherever you go,  
-          br
-          | there you are.
-    li.project
-      mixin projectTile(locals.tiles.hiro)
-    li.project
-      mixin projectTile(locals.tiles.sechelt)
-    li.article
-      mixin articleTile(contents.articles.sechelt["index.md"])
-    li.project
-      mixin projectTile(locals.tiles.polarsea)
-    li.project
-      mixin projectTile(locals.tiles.infodive)
-    li.project
-      mixin projectTile(locals.tiles.panoramaviewer)
-    li.article
-      mixin articleTile(contents.articles.sechelt["index.md"])
+  #header
+      a(href='http://mozvr.com/').left
+        img(src='/home/mozvr-logo.svg' alt='Mozilla').logo
+    .left
+      include primaryLinks
+    .right
+      include socialLinks
 
+  .cf
+  hr
+
+  #intro
+    h1 
+      | We are the Mozilla Research VR team. Our goal is to help bring high performance VR to the web. This is our lab, where we publish experiments and resources.
+
+  #getfirefox
+
+      a(href='downloads.html').download <b>Get Firefox</b> with <b>VR</b>
+      br
+      | Latest release: 
+      a(href='downloads.html') Nov 13 2014, v36.0a1
+
+  hr
+
+  #checklist
+
+    h2 Checklist
+    table
+      tr.row
+        td.number 1
+        td.gap
+        td Use VR-enabled browser
+        //
+          td.state
+            span.positive READY!
+        td.gap
+        td.comment 
+          a(href='downloads.html') Firefox
+          |  or 
+          a(href='downloads.html') Chromium
+          |  supported
+      tr.row
+        td.number 2
+        td.gap
+        td Connect Oculus Rift
+        //
+          td.state
+            span.positive READY!
+        td.gap
+        td.comment TODO: 
+          a(href='' target='_blank') Support for other devices.
+      tr.row
+        td.number 3
+        td.gap
+        td Win: Set display to Extended Desktop, 90° rotation, 60Hz refresh.
+        //
+          td.state
+        td.gap
+        td.comment TODO: 
+          a(href='' target='_blank') Support for Direct-to-Rift and 75Hz refresh.
+      tr.row
+        td.number
+        td.gap
+        td Mac: Set display to Mirror, optimize for Rift, 60Hz refresh.
+        //
+          td.state
+        td.gap
+        td.comment
+      tr.row
+        td.number 4
+        td.gap
+        td Grant fullscreen permission
+        //
+          td.state
+        td.gap
+        td.comment TODO: 
+          a(href='' target='_blank') Remove this step. 
+
+  hr
+
+  #projects
+
+    h2 Projects
+
+    ul
+      li.project
+        mixin projectTile('sechelt')
+      li.project
+        mixin projectTile('polarsea')
+      li.project
+        mixin projectTile('infodive')
+
+    .cf
+
+    a(href='') More
+
+  .cf
+  hr
+
+  #code
+
+    h2 Code
+
+    p To build a WebGL VR site, we currently recommend using Three.js, a framework for WebGL. It comes with two libraries for VR:
+
+    ul
+      li 
+        em VRControls: 
+        | Acquires positional information from connected VR devices and applies  the transformations to a three.js camera object.
+      li
+        em VREffect: 
+        | Handles stereo camera setup and rendering.
+
+    a Example
+    |  | 
+    a Source
+
+    ul
+      li Include:
+        code &lt;script src="js/VRControls.js"&gt;&lt;/script&gt;
+      li Include
+        code &lt;script src="js/VREffect.js"&gt;&lt;/script&gt;
+      li Apply VR headset positional data to camera.
+        code var controls = new THREE.VRControls( camera );
+      li Apply VR stereo rendering to renderer
+        code var effect = new THREE.VREffect( renderer );
+      li Update VR headset position and apply to camera
+        code controls.update();
+      li Render the scene through the VREffect
+        code effect.render( scene, camera );
+      li Listen for user event to enter full-screen VR mode
+        code document.body.addEventListener( 'dblclick', function()
+        code effect.setFullScreen( true );
+        code });
+
+    | More example scenes
+    a https://github.com/MozVR/vr-web-examples
+    | Last update: 
+    a commit b2f8420952, caseyyee, nov 14
+
+    ul
+      li Three.js VR scene
+      li Vanilla WebGL VR scene
+      li CSS VR scene
+      li First person controls
+
+  hr
+
+  #roadmap
+
+    h2 Roadmap
+    
+    h3 Platform
+
+    ul
+      li Remove fullscreen permission prompt: 
+        a bug 585858
+      li Add support for emscripten: 
+        a bug 585858
+      li Add Cardboard support
+        a bug 585858
+
+    h3 Platform
+
+    ul
+      li Remove fullscreen permission prompt: 
+        a bug 585858
+      li Add support for emscripten: 
+        a bug 585858
+      li Add Cardboard support
+        a bug 585858
+
+  hr
+
+  #team
+
+    h2 Team
+
+    include teamMember
+
+    ul.horizontal-list.center
+      li
+        mixin teamMember('joshcarpenter')
+      li
+        mixin teamMember('vladvukicevic')
+      li
+        mixin teamMember('caseyyee')
+      li
+        mixin teamMember('diegomarcos')
+
+  .cf
 
   //- include author
   //- each article in articles
@@ -39,12 +209,3 @@ block content
   //-       if article.hasMore
   //-         p.morec
   //-           a(href=article.url) More
-
-block prepend footer
-  div.nav
-    if prevPage
-      a(href=prevPage.url) « Newer
-    else
-      a(href='/archive.html') « Archives
-    if nextPage
-      a(href=nextPage.url) Next page »

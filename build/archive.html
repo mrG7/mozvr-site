@@ -1,55 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
-    <title>Moz VR
-    </title>
-    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Wherever you go, there you are.">
-    <!--link(rel='stylesheet', href='http://code.cdn.mozilla.net/fonts/fira.css')-->
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body>
-    <!--
-    header.header
-      div.content-wrap
-        block header
-          div.logo
-            h1
-              a(href=locals.url)= locals.name
-            p.description= locals.description
-    -->
-    <div id="content">
-      <div class="content-wrap">
-        <section class="archive">
-          <h2>Archive</h2>
-          <ul>
-            <li><span style="line-height:4.4em" class="year-label">2014</span>
-              <ul style="margin-left:4em">
-                <li><span style="line-height:4.4em" class="month-label">October</span>
-                  <ul style="margin-left:7em">
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/sechelt/">Sechelt</a></li>
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/infodive/">Information Diving</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </div>
-    <!--
-    footer
-      div.content-wrap
-        block footer
-          section.about
-            !=contents['about.md'].html
-          section.copy
-            p &copy; 2014 Mozilla Research &mdash; powered by&nbsp;
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
-              //- please leave the "powered by" if you use the design
-    -->
-  </body>
-</html>
+
+<!--
+extends layout
+//- this logic should be moved to a view at some point
+
+block content
+ - var lineHeight = 2.2;
+ - var archives = _.chain(env.helpers.getArticles(contents)).groupBy(function(item) {
+ -	 return item.date.getFullYear()
+ - }).value()
+ - for (var archive in archives) {
+ -	archives[archive] = _.groupBy(archives[archive], function(item){return item.date.getMonth();})
+ - }
+ - var month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+ section.archive
+  h2 Archive
+  ul
+   - var yearsK = _.chain(archives).keys().reverse().value()
+   - for(var year in yearsK)
+    - months = archives[yearsK[year]]
+    - var yearHeight = lineHeight * _.reduce(months, function(memo,month) { return memo + month.length; }, 0);
+    li
+     span.year-label(style='line-height:' + yearHeight+'em')=yearsK[year]
+     ul(style='margin-left:4em')
+      - var monthsK = _.chain(months).keys().reverse().value()
+      - for(month in monthsK){
+       - var monthHeight = lineHeight * months[monthsK[month]].length
+       li
+        span.month-label(style='line-height:'+monthHeight+'em')=month_names[monthsK[month]]
+        ul(style='margin-left:7em')
+         each item in months[monthsK[month]]
+          li(style='height:'+ lineHeight + 'em;line-height:'+ lineHeight + 'em;')
+           a(href=item.url)=item.title
+      - }
+-->
