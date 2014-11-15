@@ -3,7 +3,8 @@ mixin projectTile(name)
 	- var project = contents.projects[name]['index.md']
 
 	a(href=project.url)
-		img(src='/projects/'+name+'/'+project.metadata.splash)
+		.container
+			img(src='/projects/'+name+'/'+project.metadata.splash)
 	.info
 		h4
 			= project.metadata.title
