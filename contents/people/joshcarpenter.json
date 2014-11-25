@@ -4,5 +4,7 @@
   "twitter": "joshcarpenter",
   "title": "Virtual Reality Researcher, Mozilla",
   "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-  "photo": "josh-2.jpg"
+  "photo": "josh-2.jpg",
+  "location": "San Francisco",
+  "role": "User Experience"
 }

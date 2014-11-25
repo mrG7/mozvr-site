@@ -26,7 +26,7 @@ creators:
     "email": "jcarpenter@mozilla.com",
     "twitter": "joshcarpenter"
   }]
-intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
+intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
 ---
 
 ## Basic workflow

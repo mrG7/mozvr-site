@@ -15,7 +15,7 @@ html(lang='en')
       link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css')
       link(rel='stylesheet', href='/css/main.css')
 
-  body(class=bodyclass)
+  body
     //
       header.header
         div.content-wrap
@@ -24,30 +24,42 @@ html(lang='en')
               h1
                 a(href=locals.url)= locals.name
               p.description= locals.description
+
+    block content
     
-    div.content-wrap
-      block content
-      
-      footer
-        hr
-        a(href='https://www.mozilla.org/en-US/' target='_blank')
-          img(src='/home/mozilla-logo.svg' alt='Mozilla').logo
-        p.notices.left
-          | Except where otherwise noted, content on this site is licensed under the 
-          a(href='http://creativecommons.org/licenses/by-sa/2.5/' target='_blank') Creative Commons Attribution Share-Alike License v3.0
-          | or any later version. Site built with 
-          a(href='http://wintersmith.io/' target='_blank') Wintersmith
-        ul.left
-          li
-            a(href='https://www.mozilla.org/en-US/privacy/websites/' target='_blank') Privacy Policy
-          li
-            a(href='https://www.mozilla.org/en-US/about/legal/' target='_blank') Legal Notices
-          li
-            a(href='https://www.mozilla.org/en-US/about/legal/fraud-report/' target='_blank') Report trademark abuse
-        .right
-          include primaryLinks
-        br
-        br
-        .right
-          include socialLinks
-        .cf
+    footer
+      .grid-container
+        //
+          .row.links
+            .col-6
+              include primaryLinks
+            .col-6.right
+              include socialLinks
+        .row
+          .col-6
+            a(href='https://www.mozilla.org/en-US/' target='_blank').logo
+              img(src='/home/mozilla-logo-white.svg' alt='Mozilla')
+            ul.legal-links.horizontal-list
+              li
+                a(href='https://www.mozilla.org/en-US/privacy/websites/' target='_blank') Privacy Policy
+              li
+                a(href='https://www.mozilla.org/en-US/about/legal/' target='_blank') Legal Notices
+              li
+                a(href='https://www.mozilla.org/en-US/about/legal/fraud-report/' target='_blank') Report trademark abuse
+            br
+            p.license
+              | Except where otherwise noted, content on this site is licensed under the 
+              a(href='http://creativecommons.org/licenses/by-sa/2.5/' target='_blank') Creative Commons Attribution Share-Alike License v3.0 
+              | or any later version. Site built with 
+              a(href='http://wintersmith.io/' target='_blank') Wintersmith
+              | .
+            
+
+  script(src="/scripts/main.js")
+  script(src="/scripts/vendor/three.min.js")
+  script(src="/scripts/vendor/VRControls.js")
+  script(src="/scripts/vendor/VREffect.js")
+  script(src="/scripts/vendor/DeviceOrientationControls.js")
+  script(src="/scripts/vendor/StereoEffect.js")
+  script(src="/scripts/vendor/tween.min.js")
+

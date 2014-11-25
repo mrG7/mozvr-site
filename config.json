@@ -33,7 +33,8 @@
     }
   },
   "plugins": [
-    "./plugins/project-paginator.coffee"
+    "./plugins/project-paginator.coffee",
+    "wintersmith-node-sass"
   ],
   "require": {
     "moment": "moment",

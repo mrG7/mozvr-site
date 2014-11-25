@@ -2,7 +2,11 @@ mixin teamMember(name)
 
 	- var member = contents.people[name + '.json']
 
-	img(src='/people/' +member.metadata.photo)
+	img(src='/people/' +member.metadata.photo).photo
 	.info
-		h4= member.metadata.name
-		a(href='http://www.twitter.com/'+member.metadata.twitter)= '@' + member.metadata.twitter
+		h4
+			= member.metadata.name
+		= member.metadata.role
+		br
+		= member.metadata.location
+	a(href='http://www.twitter.com/'+member.metadata.twitter)= '@' + member.metadata.twitter
