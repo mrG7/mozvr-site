@@ -4,7 +4,7 @@ date: 2014-10-04 22:00
 template: project.jade
 link: https://mozvr.com/infodive
 source: https://github.com/MozVR/infodive
-splash: infodive-1.png
+thumb: project-thumb.png
 author: joshcarpenter
 tools:
   [{

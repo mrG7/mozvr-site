@@ -4,7 +4,7 @@ date: 2014-11-10 15:00
 template: project.jade
 link: https://mozvr.com/sechelt
 source: https://github.com/MozVR/sechelt
-splash: c4d-7.jpg
+thumb: project-thumb.png
 author: joshcarpenter
 tools:
   [{
@@ -28,6 +28,10 @@ creators:
   }]
 intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
 ---
+
+
+![Sechelt](sechelt-vr-1.jpg)
+
 
 ## Basic workflow
 

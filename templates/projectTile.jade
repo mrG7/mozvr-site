@@ -4,15 +4,14 @@ mixin projectTile(name)
 
 	a(href=project.url)
 		.container
-			img(src='/projects/'+name+'/'+project.metadata.splash)
-	.info
+			img(src='/projects/'+name+'/'+project.metadata.thumb)
+	//.info
 		h4
 			= project.metadata.title
 		p
 			= project.metadata.intro
 
-	//
-		a(href=article.url)
+	//a(href=article.url)
 			h3
 				= article.metadata.title
 			p

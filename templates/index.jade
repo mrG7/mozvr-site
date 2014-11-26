@@ -4,37 +4,29 @@ block content
 
   include articleTile
 
-  #header
-    .logo mozvr
-
   #stage
 
-  //
-    #header
-      .grid-container
-        .row
-          .col-6
-            a(href='http://mozvr.com/')
-              img(src='/home/mozvr-logo-white.svg' alt='Mozilla').logo
-          .col-6
-            .right
-              include socialLinks
+  #header.standard-padding
+    include header
+    #enter-vr
+      a(href='')
 
-  #content-start
-    .grid-container.left
-      .row
-        .col-12
-          include primaryLinks
-    #enter-vr.right
-      a(href='http://mozvr.com/')
-    .cf
-      
+
+  //#styleguide
+    h1 A virtual reality website
+    h2 A virtual reality website
+    h3 A virtual reality website
+    h4 A virtual reality website
+    h5 A virtual reality website
+    p 
+      | Here are the 
+      i basic steps 
+      | for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
+
   include projectTile
 
-  #projects
+  #projects.standard-padding
     .grid
-      .project.article
-        | TESTING: Here are the basic steps for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
       .project
         mixin projectTile('sechelt')
       .project
@@ -43,43 +35,15 @@ block content
         mixin projectTile('polarsea')
       .project
         mixin projectTile('polarsea')
-      .project.article
-        | TESTING: Here are the basic steps for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
       .project
         mixin projectTile('sechelt')
       .project
         mixin projectTile('infodive')
-      .project.article
-        | TESTING: Here are the basic steps for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
       .project
         mixin projectTile('polarsea')
     a(href='').more More
 
-  //
-    #projects2
-      .flex-grid
-        .project
-          mixin projectTile('sechelt')
-        .project
-          mixin projectTile('infodive')
-        .project
-          mixin projectTile('polarsea')
-        .project
-          | Here are the basic steps for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
-        .project
-          mixin projectTile('polarsea')
-        .project
-          | Here are the basic steps for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
-        .project
-          mixin projectTile('sechelt')
-        .project
-          mixin projectTile('infodive')
-        .project
-          | Here are the basic steps for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
-        .project
-          mixin projectTile('polarsea')
-
-        
+  //#articles.standard-padding
 
   //
     #getfirefox
@@ -144,8 +108,8 @@ block content
           td.comment TODO: 
             a(href='' target='_blank') Remove this step. 
 
-
-  #code
+  //
+    #code
     .grid-container
       .row
         .col-12
@@ -154,8 +118,6 @@ block content
         .col-4
 
           p Here are the basic steps for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
-
-
 
 
           ul
@@ -217,7 +179,7 @@ block content
 
   include teamMember
 
-  #team
+  #team.standard-padding
     .grid-container
       .row
         .col-12
@@ -234,6 +196,7 @@ block content
           mixin teamMember('caseyyee')
         .col-2
           mixin teamMember('diegomarcos')
+        .col-4
 
 
   //- include author

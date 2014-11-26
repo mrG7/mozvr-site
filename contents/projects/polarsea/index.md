@@ -4,7 +4,7 @@ date: 2014-11-10 15:00
 template: project.jade
 link: https://mozvr.com/polarsea
 source: https://github.com/MozVR/polarsea
-splash: polarsea-1.png
+thumb: project-thumb.png
 author: joshcarpenter
 tools:
   [{

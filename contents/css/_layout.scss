@@ -1,0 +1,180 @@
+/*========= LAYOUT =========*/
+
+
+.standard-padding {
+	padding: 3rem 3rem 3rem 10rem
+}
+
+
+/*--------- GRID ---------*/
+
+/*Using approach from here: http://j4n.co/blog/Creating-your-own-css-grid-system*/
+
+/*Set width of grid*/
+.grid-container {
+  width: 100%;
+  max-width: 1200px;
+  /*background: rgba( 0, 0, 0, 0.1 );*/
+  margin: 0;
+  padding: 0;
+}
+
+/*Use row elements to keep columns from overflowing into other rows*/
+.row:before, 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+	margin-bottom: 2rem;
+}
+
+.row:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/*Use float to position columns. min-height keeps empty columns from stacking on top of each other*/
+[class*='col-'] {
+    float: left;
+    width: 8.33%;
+    padding: 0 2rem 0 0;
+    min-height: 1px;
+    /*outline: 1px solid red;*/
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+/*Using 12 column grid*/
+.col-1{ width: 8.33%; }
+.col-2{ width: 16.66%; }
+.col-3{ width: 25.00%; }
+.col-4{ width: 33.32%; }
+.col-5{ width: 41.65%; }
+.col-6{ width: 50.00%; }
+.col-7{ width: 58.31%; }
+.col-8{ width: 66.64%; }
+.col-9{ width: 75.00%; }
+.col-10{ width: 83.3%; }
+.col-11{ width: 91.63%; }
+.col-12{ width: 100%; }
+
+
+
+/*--------- COMMON ---------*/
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+.flat-list ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.flat-list li {
+  list-style: none;
+  display: inline;
+  margin-right: 1rem;
+}
+
+.flat-list li:last-of-type {
+	margin-right: 0;	
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+/*--------- MEDIA QUERIES ---------*/
+/*
+@media (min-width: 1600px) {
+  html {
+    font-size: 100%;
+  }
+  body { 
+    padding: 0  rem;
+  }
+  .content-wrap { 
+    width: 75%;
+  }
+}
+
+@media (max-width: 900px) {
+  body { 
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 690px) {
+  .content-wrap {
+    width: auto;
+    padding: 0 1em;
+  }
+  .header {
+    margin: 1em 0;
+  }
+  .header h1 {
+    font-size: 1.4em;
+    margin-bottom: 0.6em;
+  }
+  .header .description {
+    font-size: 1em;
+  }
+  .article {
+    margin: 1em 0 2.5em;
+  }
+  .archive {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .archive * {
+    float: none !important;
+    line-height: 1.6 !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: left !important;
+    border: 0 !important;
+    margin: 0 !important;
+  }
+  footer .nav {
+    margin: 1em 0;
+  }
+  footer .about {
+    padding: 0;
+    font-size: 0.9em;
+    padding-top: 1.6em;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    column-count: 1;
+  }
+  footer .about p {
+    margin-bottom: 1em;
+  }
+}
+*/

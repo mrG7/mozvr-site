@@ -1,0 +1,190 @@
+/*========= COMPONENTS =========*/
+
+/*--------- ENTER VR BUTTON ---------*/
+
+#enter-vr {
+
+  a {
+    border: 0.2rem solid white;
+    border-radius: 0.6rem;
+    width: 7rem;
+    height: 4rem;
+    background: url('../images/icon-goggles.svg') center center no-repeat;
+    background-size: 55%;
+    display: block;
+  }
+
+  a:hover {
+    background-color: $blue3;
+    border-color: $blue3;
+  }
+}
+
+
+/*--------- FOOTER ---------*/
+
+#footer {
+  background: $blue5;
+  color: $blue3;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  font-weight: 300;
+}
+
+#footer .logo {
+  width: 7rem;
+  display: block;
+  margin: 0 0 2rem;
+}
+
+#footer .legal-links, footer .links {
+
+  a {
+    color: $blue1;
+  }
+}
+
+#footer .license {
+
+  color: $blue3;
+
+  a, a:visited {
+    color: $blue3;
+  }
+}
+
+#footer a:hover, .primary-links a:hover, .social-links a:hover {
+  text-decoration: underline;
+  color: #d9fbff;
+}
+
+#footer ul {
+  list-style: none;
+  padding: 0 0 1rem;
+}
+
+
+/*--------- HEADER ---------*/
+
+#header {
+
+  background: rgba( 0, 0, 0, 0.7 );
+  width: 100%;
+  height: 5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 2rem;
+  position: relative;
+
+  a {
+    color: white;
+  }
+
+  #enter-vr {
+    position: absolute;
+    right: 2rem;
+    bottom: 7rem;
+  }
+
+  .logo a {
+    width: 8rem;
+    height: 4rem;
+    background: url('../images/mozvr-logo-white.svg') center center no-repeat;
+    background-size: 90%;
+    display: block;
+    margin-right: 2rem;
+  }
+
+  .logo a:hover {
+    background-color: $blue3;
+    border-color: $blue3;
+  }
+}
+
+
+/*--------- PROJECTS GRID ---------*/
+
+#projects {
+
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+
+.project {
+  width: 100% !important;
+  height: auto !important;
+  page-break-inside: avoid;
+  padding: 0 2rem 2rem 0;
+
+  .container:hover {
+    border: 0.7rem solid $blue3;
+  }
+
+}
+
+.project.article {
+  background: gray;
+  padding: 1rem;
+  margin: 0 0 2rem;
+}
+
+#projects .grid {
+
+  width: 100%;
+  -webkit-columns:      6 20rem;
+  -moz-columns:         6 20rem;
+  columns:              6 20rem;
+  -webkit-column-gap:   0em;
+  -moz-column-gap:      0em;
+  column-gap:           0em;
+}
+
+#projects .container {
+  width: 100%;
+  height: 16rem;
+  overflow: hidden;
+
+  img {
+    width: 120%;
+  }
+}
+
+#projects .more {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  background: rgba( 255, 255, 255, 0.2 );
+  padding: 0.75rem;
+  padding-right: 6rem;
+  box-sizing: content-box;
+}
+
+
+/*--------- TEAM ---------*/
+
+#team {
+  background: white;
+}
+
+#team li {
+  width: 12rem;
+}
+
+#team img {
+  width: 100%;
+  /*border-radius: 50%;*/
+}
+
+#team .info {
+  text-align: left;
+}
+
+#team .photo {
+  margin: 0 0 1rem;
+}

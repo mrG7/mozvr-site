@@ -20,7 +20,7 @@ function init() {
 	var geometry = new THREE.SphereGeometry( 500, 60, 40 );
 	geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 	var material = new THREE.MeshBasicMaterial( {
-		map: THREE.ImageUtils.loadTexture( '/home/sechelt-360.png' )
+		map: THREE.ImageUtils.loadTexture( '/images/sechelt-360.png' )
 	} );
 	var background = new THREE.Mesh( geometry, material );
 	scene.add(background);
@@ -75,8 +75,8 @@ function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
 
-	var content = document.getElementById("content-start")
-	document.getElementById("content-start").setAttribute("style","margin-top:"+(window.innerHeight-content.offsetHeight)+"px");
+	var header = document.getElementById("header")
+	header.setAttribute("style","margin-top:"+(window.innerHeight-header.offsetHeight)+"px");
 }
 
 window.addEventListener("load", init, false)
