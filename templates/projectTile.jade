@@ -2,19 +2,12 @@ mixin projectTile(name)
 
 	- var project = contents.projects[name]['index.md']
 
-	a(href=project.url)
-		.container
-			img(src='/projects/'+name+'/'+project.metadata.thumb)
-	//.info
-		h4
-			= project.metadata.title
-		p
-			= project.metadata.intro
-
-	//a(href=article.url)
-			h3
-				= article.metadata.title
-			p
-				= article.metadata.intro
-
-			img(src=article.metadata.splash)
+	.project
+		a(href=project.url)
+			.container
+				img(src='/projects/'+name+'/'+project.metadata.thumb)
+			.info
+				h2
+					= project.metadata.title
+				p
+					= project.metadata.intro

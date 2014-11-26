@@ -1,5 +1,28 @@
 /*========= COMPONENTS =========*/
 
+
+/*--------- BUTTON ---------*/
+
+.button {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  background: rgba( 255, 255, 255, 0.2 );
+  padding: 0.75rem 3rem;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: $blue3;
+  text-decoration: none;
+  color: white;
+}
+
+
 /*--------- ENTER VR BUTTON ---------*/
 
 #enter-vr {
@@ -68,7 +91,7 @@
 
 #header {
 
-  background: rgba( 0, 0, 0, 0.7 );
+  background: rgba( 44, 44, 52, 0.9 );
   width: 100%;
   height: 5rem;
   padding-top: 0;
@@ -102,28 +125,98 @@
 }
 
 
+/*--------- INTRO ---------*/
+
+#intro { 
+  background: rgba( 44, 44, 52, 0.95 );
+  color: white;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 200;
+}
+
+#intro a {
+  color: $blue1;
+}
+
+#intro .button {
+  background-color: $green;
+  color: white;
+}
+
+
 /*--------- PROJECTS GRID ---------*/
+
+$project-padding: 2rem;
 
 #projects {
 
-  background: black;
+  background: rgba( 44, 44, 52, 0.95 );
   color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 0.05rem;
+}
+
+#projects #project-grid {
+
+  width: 100%;
+  -webkit-columns:      4 30rem;
+  -moz-columns:         4 30rem;
+  columns:              4 30rem;
+  -webkit-column-gap:   $project-padding;
+  -moz-column-gap:      $project-padding;
+  column-gap:           $project-padding;
 }
 
 .project {
+
   width: 100% !important;
   height: auto !important;
   page-break-inside: avoid;
-  padding: 0 2rem 2rem 0;
+  margin: 0 0 $project-padding 0;
+  position: relative;
 
-  .container:hover {
-    border: 0.7rem solid $blue3;
+  .container {
+    width: 100%;
+    height: 16rem;
+    overflow: hidden;
+    border-radius: 0.2rem;
+    background-color: rgba( 255, 255, 255, 0.1 );
+
+    img {
+      width: 100%;
+    }
   }
 
+  a:hover {
+
+    .container {
+      // outline: 0.7rem solid $blue3;
+      // outline-offset: -0.69rem;
+    }
+
+    .info {
+      visibility: visible;
+    }
+  }
+
+  .info {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    width: 100%;
+    visibility: hidden;
+    height: 100%;
+    background-color: rgba( 23, 150, 218, 0.2 );
+
+    h2 {
+      margin: 0 0 1rem;
+    }
+
+    p {
+      width: 100%
+    }
+  }
 }
 
 .project.article {
@@ -132,38 +225,6 @@
   margin: 0 0 2rem;
 }
 
-#projects .grid {
-
-  width: 100%;
-  -webkit-columns:      6 20rem;
-  -moz-columns:         6 20rem;
-  columns:              6 20rem;
-  -webkit-column-gap:   0em;
-  -moz-column-gap:      0em;
-  column-gap:           0em;
-}
-
-#projects .container {
-  width: 100%;
-  height: 16rem;
-  overflow: hidden;
-
-  img {
-    width: 120%;
-  }
-}
-
-#projects .more {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 0.05rem;
-  background: rgba( 255, 255, 255, 0.2 );
-  padding: 0.75rem;
-  padding-right: 6rem;
-  box-sizing: content-box;
-}
 
 
 /*--------- TEAM ---------*/

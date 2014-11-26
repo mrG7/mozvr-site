@@ -11,37 +11,30 @@ block content
     #enter-vr
       a(href='')
 
-
-  //#styleguide
-    h1 A virtual reality website
-    h2 A virtual reality website
-    h3 A virtual reality website
-    h4 A virtual reality website
-    h5 A virtual reality website
-    p 
-      | Here are the 
-      i basic steps 
-      | for creating a WebGL. We recommend using the Three.js framework, which includes a few libraries for working with VR head sets.
+  #intro.standard-padding
+    .grid-container
+      .row
+        .col-8
+          | We are the Mozilla Research VR team. Our goal is to bring high performance VR to the web. This is our lab, where we publish experiments and resources. Grab the latest build of <a href=''>Firefox with VR</a>, explore our <a href=''>projects</a>, view <a href=''>source</a>, and start creating virtual worlds!
+          br
+          br
+          a(href='').button Firefox with VR
+          |&nbsp&nbsp
+          a(href='').button GitHub
 
   include projectTile
 
   #projects.standard-padding
-    .grid
-      .project
-        mixin projectTile('sechelt')
-      .project
-        mixin projectTile('infodive')
-      .project
-        mixin projectTile('polarsea')
-      .project
-        mixin projectTile('polarsea')
-      .project
-        mixin projectTile('sechelt')
-      .project
-        mixin projectTile('infodive')
-      .project
-        mixin projectTile('polarsea')
-    a(href='').more More
+    h2 Latest Projects
+    #project-grid
+      mixin projectTile('sechelt')
+      mixin projectTile('infodive')
+      mixin projectTile('polarsea')
+      mixin projectTile('polarsea')
+      mixin projectTile('sechelt')
+      mixin projectTile('infodive')
+      mixin projectTile('polarsea')
+    a(href='').button More
 
   //#articles.standard-padding
 
@@ -180,12 +173,10 @@ block content
   include teamMember
 
   #team.standard-padding
-    .grid-container
-      .row
-        .col-12
-          h2 About Us
+    .grid-container          
       .row
         .col-6
+          h2 About Us
           | The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians working with contributors and partners from around the world.
       .row
         .col-2
