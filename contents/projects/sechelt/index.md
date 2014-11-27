@@ -34,15 +34,6 @@ intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastli
 author: joshcarpenter
 ---
 
-## Basic workflow
-
-The high level process that brough Sechelt to life:
-
-* Scene modeled in Cinema 4D
-* Scene optimized by combinig geometries and eliminating unnecessary materials.
-* Scene models exported from Cinema 4D to Collada .DAE.
-
-
 ![The Sechelt scene ](googleearth-2.png)
 
 ![The Motion Camera settings](map1.png)

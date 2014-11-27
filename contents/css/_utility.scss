@@ -6,9 +6,12 @@ $space-4: 4rem;
 
 /*--------- Typography ---------*/
 
+.f-smaller { font-size: 0.83rem }
 .f-small { font-size: 0.9rem }
-.f-large { font-size: 2rem }
-.f-huge { font-size: 3rem }
+.f-normal { font-size: 1rem }
+.f-medium { font-size: 1.17rem }
+.f-large { font-size: 1.5rem }
+.f-huge { font-size: 2rem }
 
 .light { font-weight: 300; }
 .regular { font-weight: 400; }
@@ -42,6 +45,7 @@ $space-4: 4rem;
 .right { float: right }
 
 .fit { max-width: 100% }
+.fit-imgs img { width: 100% }
 .tenth-width { width: 10% }
 .fifth-width { width: 20% }
 .quarter-width { width: 25% }
