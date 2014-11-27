@@ -1,5 +1,6 @@
 /*========= LAYOUT =========*/
 
+$small-rounding: 0.25rem;
 
 .standard-padding {
 	padding: 3rem 3rem 3rem 10rem
@@ -75,6 +76,11 @@
   transform: translateY(-50%);
 }
 
+.plain-list ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 .flat-list ul, li {
   margin: 0;

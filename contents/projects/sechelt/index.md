@@ -4,35 +4,54 @@ date: 2014-11-10 15:00
 template: project.jade
 link: https://mozvr.com/sechelt
 source: https://github.com/MozVR/sechelt
+splash: project-splash.jpg
 thumb: project-thumb.png
-author: joshcarpenter
 tools:
-  [{
-    "name": "Three.js",
-    "url": "http://threejs.org/"
-  },
-  {
-    "name": "Cinema 4D",
-    "url": "http://www.maxon.net/"
-  }]
+  [
+    {
+      "name": "Three.js",
+      "url": "http://threejs.org/"
+    },
+    {
+      "name": "Cinema 4D",
+      "url": "http://www.maxon.net/"
+    }
+  ]
 creators:
-  [{
-    "name": "Ricardo Cabello",
-    "email": "ricardo.cabello@gmail.com",
-    "twitter": "mrdoob"
-  },
-  {
-    "name": "Josh Carpenter",
-    "email": "jcarpenter@mozilla.com",
-    "twitter": "joshcarpenter"
-  }]
+  [
+    {
+      "name": "Josh Carpenter",
+      "email": "jcarpenter@mozilla.com",
+      "twitter": "joshcarpenter"
+    },
+    {
+      "name": "Mr.DOOB",
+      "email": "ricardo.cabello@gmail.com",
+      "twitter": "mrdoob"
+    }
+  ]
 intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
+author: joshcarpenter
 ---
 
+## Basic workflow
 
-![Sechelt](sechelt-vr-1.jpg)
+The high level process that brough Sechelt to life:
+
+* Scene modeled in Cinema 4D
+* Scene optimized by combinig geometries and eliminating unnecessary materials.
+* Scene models exported from Cinema 4D to Collada .DAE.
 
 
+![The Sechelt scene ](googleearth-2.png)
+
+![The Motion Camera settings](map1.png)
+
+![The final Sechelt model landscape model. The white line is the camera's path. ](c4d-4.png)
+
+![Sechelt](project-splash.jpg)
+
+<!--
 ## Basic workflow
 
 The high level process that brough Sechelt to life:
@@ -206,3 +225,4 @@ We tested the results with DK1 and DK2 headsets and random co-workers, trying to
 ### Deployment
 
 For the start of the development process we simple worked out of a Dropbox folder, with Ricardo saving this progress as he went. Our standard process is to use Git, NPM and Gulp track changes, manage dependencies and automate various development tasks, but early in the process we were more concerned with quick results, and with just Ricardo doing the code a simple setup was good enough. Before deploying, however, we organized the code and pushed to GitHub, hosting everything with gh-pages, using [gulp-gh-pages](https://www.npmjs.org/package/gulp-gh-pages) to automate the process.
+-->

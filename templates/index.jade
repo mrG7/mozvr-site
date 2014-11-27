@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-  include articleTile
+  include post-tile
 
   #stage
 
@@ -15,25 +15,26 @@ block content
     .grid-container
       .row
         .col-8
-          | We are the Mozilla Research VR team. Our goal is to bring high performance VR to the web. This is our lab, where we publish experiments and resources. Grab the latest build of <a href=''>Firefox with VR</a>, explore our <a href=''>projects</a>, view <a href=''>source</a>, and start creating virtual worlds!
+          p We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of <a href=''>Firefox with VR</a>, explore our <a href=''>projects</a>, view <a href=''>source</a>, and start creating virtual worlds!
           br
           br
           a(href='').button Firefox with VR
-          |&nbsp&nbsp
+          |&nbsp&nbsp&nbsp&nbsp
           a(href='').button GitHub
 
-  include projectTile
+  include project-tile
 
   #projects.standard-padding
     h2 Latest Projects
     #project-grid
-      mixin projectTile('sechelt')
-      mixin projectTile('infodive')
-      mixin projectTile('polarsea')
-      mixin projectTile('polarsea')
-      mixin projectTile('sechelt')
-      mixin projectTile('infodive')
-      mixin projectTile('polarsea')
+      mixin project-tile('sechelt')
+      mixin project-tile('infodive')
+      mixin project-tile('polarsea')
+      mixin project-tile('polarsea')
+      mixin project-tile('sechelt')
+      mixin project-tile('infodive')
+      mixin project-tile('polarsea')
+    .cf
     a(href='').button More
 
   //#articles.standard-padding
@@ -170,7 +171,7 @@ block content
               li Add Cardboard support: 
                 a bug 585858
 
-  include teamMember
+  include team-member
 
   #team.standard-padding
     .grid-container          
@@ -180,13 +181,13 @@ block content
           | The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians working with contributors and partners from around the world.
       .row
         .col-2
-          mixin teamMember('joshcarpenter')
+          mixin team-member('joshcarpenter')
         .col-2
-          mixin teamMember('vladvukicevic')
+          mixin team-member('vladvukicevic')
         .col-2
-          mixin teamMember('caseyyee')
+          mixin team-member('caseyyee')
         .col-2
-          mixin teamMember('diegomarcos')
+          mixin team-member('diegomarcos')
         .col-4
 
 

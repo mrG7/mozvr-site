@@ -1,10 +1,9 @@
-mixin tools(toolList)
+mixin project-tools(toolList)
 
 	//if tools are listed, create one li for each
 	//else don't do anything
 
-	#tools
-		| Tools
+	.plain-list
 		ul
 			- for (var i = 0; i < toolList.length; ++i) {
 				li

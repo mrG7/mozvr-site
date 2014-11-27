@@ -1,7 +1,6 @@
-mixin creators(creatorList)
+mixin project-creators(creatorList)
 
-	#creators
-		| Created by
+	.plain-list
 		ul
 			- for (var i = 0; i < creatorList.length; ++i) {
 				li

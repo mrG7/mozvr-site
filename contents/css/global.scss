@@ -6,9 +6,7 @@
 
 
 
-/* 
-
-Structure:
+/* Structure:
 
 1. base: variables, tags, reset styles
 2. layout: floats, grids, margins and padding
@@ -19,8 +17,62 @@ Structure:
 */
 
 
+/* Typography:
 
+Use modular scale. I like this, from normalize:
+http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234
 
+h1,.alpha      { font-size: 2rem; }
+h2,.beta       { font-size: 1.5rem; }
+h3,gamma       { font-size: 1.17rem; }
+h4,delta       { font-size: 1rem; }
+h5,epsilon     { font-size: 0.83rem; }
+h6,zeta        { font-size: 0.75rem; }
+
+p {
+  line-height: 1.5;
+  margin: 0 0 1em;
+}
+
+$link-underline: 1px dotted $blue3;
+
+a, a:visited {
+  text-decoration: none;
+  border-bottom: $link-underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  background-color: $blue1;
+}
+
+strong  { font-weight: bold;  }
+em      { font-style: italic; }
+
+code, pre {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+code {
+  background: $blue1;
+  border-radius: 0.15em;
+}
+
+blockquote {
+  font-style: italic;
+}
+ 
+blockquote:before {
+  content: "\201C";
+  display: inline-block;
+  padding-right: .4em;
+}
+
+*/
 
 
 
