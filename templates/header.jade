@@ -1,11 +1,14 @@
-.logo
-a(href='http://mozvr.com/')
-a(href='/downloads.html').button.button-nav-dark Downloads
-a(href='/downloads.html').button.button-nav-dark Projects
-a(href='/downloads.html').button.button-nav-dark Resources
-a(href='/downloads.html').button.button-nav-dark Blog
-.right
-  a(href='http://github.com/MozVR/' target='_blank').button.button-nav-dark GitHub
-  a(href='http://twitter.com/hashtag/mozvr' target='_blank').button.button-nav-dark Twitter
-  a(href='http://wiki.mozilla.org/IRC' target='_blank').button.button-nav-dark IRC
-  a(href='http://mail.mozilla.org/listinfo/web-vr-discuss' target='_blank').button.button-nav-dark Mailing List
+.table
+  .table-cel
+    a(href=locals.url target='_blank')
+      img(src='/images/logo-mozvr-white.svg' alt='Mozilla').logo.px1.button-nav-dark
+  .table-cell
+    a(href=locals.downloads).button.button-nav-dark Downloads
+    a(href='').button.button-nav-dark Projects
+    a(href='').button.button-nav-dark Resources
+    a(href='').button.button-nav-dark Blog
+  .table-cell.right-align
+    a(href=locals.repo target='_blank').button.button-nav-dark GitHub
+    a(href='http://twitter.com/hashtag/mozvr' target='_blank').button.button-nav-dark Twitter
+    a(href='http://wiki.mozilla.org/IRC' target='_blank').button.button-nav-dark IRC
+    a(href='http://mail.mozilla.org/listinfo/web-vr-discuss' target='_blank').button.button-nav-dark Mailing List

@@ -6,8 +6,14 @@ $space-4: 4rem;
 
 /*--------- Typography ---------*/
 
-.bold { font-weight: 500; }
+.f-small { font-size: 0.9rem }
+.f-large { font-size: 2rem }
+.f-huge { font-size: 3rem }
+
+.light { font-weight: 300; }
 .regular { font-weight: 400; }
+.semi-bold { font-weight: 600; }
+.bold { font-weight: 700; }
 .italic { font-style: italic; }
 .uppercase { text-transform: uppercase; }
 
@@ -36,6 +42,9 @@ $space-4: 4rem;
 .right { float: right }
 
 .fit { max-width: 100% }
+.tenth-width { width: 10% }
+.fifth-width { width: 20% }
+.quarter-width { width: 25% }
 .half-width { width: 50% }
 .full-width { width: 100% }
 
@@ -81,6 +90,13 @@ $space-4: 4rem;
 
 
 /*--------- Padding ---------*/
+
+.p-leftedge { padding-left: 10rem; }
+
+.pr1 { padding-right: $space-1; }
+.pr2 { padding-right: $space-2; }
+.pr3 { padding-right: $space-3; }
+.pr4 { padding-right: $space-4; }
 
 .p1  { padding:       $space-1 }
 .py1 { padding-top:   $space-1; padding-bottom: $space-1 }

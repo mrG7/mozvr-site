@@ -1,9 +1,11 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
+    "url": "http://mozvr.com",
     "name": "MozVR",
     "owner": "Mozilla Research",
-    "description": "A virtual reality website about virtual reality websites"
+    "description": "A virtual reality website about virtual reality websites",
+    "downloads": "http://mozvr.com/downloads",
+    "repo": "http://github.com/MozVR"
   },
   "plugins": [
     "./plugins/project-paginator.coffee",

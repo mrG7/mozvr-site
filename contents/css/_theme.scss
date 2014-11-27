@@ -1,8 +1,6 @@
 /*
 TODO:
-- Add borders
-- Add button-nav styles
-
+- Add transforms for rollovers
 */
 
 $white: #FFFFFF;
@@ -18,10 +16,15 @@ $red: #e04540;
 $orange: #fd9426;
 $pink: #c21983;
 
-$roundborder1: 0.2rem;
-$roundborder2: 0.5rem;
-$roundborder3: 1rem;
-$roundborder-full: 4rem;
+$bg-lighten1: rgba( 255, 255, 255, 0.062 );
+$bg-lighten2: rgba( 255, 255, 255, 0.125 );
+$bg-lighten3: rgba( 255, 255, 255, 0.25 );
+$bg-lighten4: rgba( 255, 255, 255, 0.5 );
+$bg-darken1: rgba( 0, 0, 0, 0.062 );
+$bg-darken2: rgba( 0, 0, 0, 0.125 );
+$bg-darken3: rgba( 0, 0, 0, 0.25 );
+$bg-darken4: rgba( 0, 0, 0, 0.5 );
+
 
 /*--------- Colors ---------*/
 
@@ -54,26 +57,40 @@ $roundborder-full: 4rem;
 .bg-red { background-color: $red; }
 .bg-orange { background-color: $orange; }
 .bg-purple { background-color: $pink; }
-.bg-lighten1 { background-color: rgba( 255, 255, 255, 0.062 ); }
-.bg-lighten2 { background-color: rgba( 255, 255, 255, 0.125 ); }
-.bg-lighten3 { background-color: rgba( 255, 255, 255, 0.25 ); }
-.bg-lighten4 { background-color: rgba( 255, 255, 255, 0.5 ); }
-.bg-darken1 { background-color: rgba( 0, 0, 0, 0.062 ); }
-.bg-darken2 { background-color: rgba( 0, 0, 0, 0.125 ); }
-.bg-darken3 { background-color: rgba( 0, 0, 0, 0.25 ); }
-.bg-darken4 { background-color: rgba( 0, 0, 0, 0.5 ); }
+.bg-lighten1 { background-color: $bg-lighten1; }
+.bg-lighten2 { background-color: $bg-lighten2; }
+.bg-lighten3 { background-color: $bg-lighten3; }
+.bg-lighten4 { background-color: $bg-lighten4; }
+.bg-darken1 { background-color: $bg-darken1; }
+.bg-darken2 { background-color: $bg-darken2; }
+.bg-darken3 { background-color: $bg-darken3; }
+.bg-darken4 { background-color: $bg-darken4; }
 
 
 /*--------- Borders ---------*/
 
+$rounded1: 0.2rem;
+$rounded2: 0.5rem;
+$rounded3: 1rem;
+$rounded4: 10rem;
+$circle: 50%;
 
+.rounded1 	{ border-radius: $rounded1; }
+.rounded2 	{ border-radius: $rounded2; }
+.rounded3 	{ border-radius: $rounded3; }
+.rounded4		{ border-radius: $rounded4; }
+.circle			{ border-radius: $circle; }
+
+.bb1 { border-width: 0 0 0.1rem 0 }
+.b-dotted { border-style: dotted; }
+.b-blue1 { border-color: $blue1; }
 
 
 /*--------- Buttons ---------*/
 
 .button-green1 {
 	background-color: $green1;
-	border-radius: $roundborder-full;
+	border-radius: $rounded4;
 }
 
 .button-green1:hover {
@@ -82,13 +99,13 @@ $roundborder-full: 4rem;
 
 .button-blue4 {
 	background-color: $blue4;
-	border-radius: $roundborder-full;
+	border-radius: $rounded4;
 }
 
 .button-blue4:hover {
 	opacity: 0.85;
 }
 
-.button-nav-light:hover { background: rgba( 0, 0, 0, 0.1 ); }
-.button-nav-dark:hover { background: rgba( 255, 255, 255, 0.1 ); }
+.button-nav-light:hover { background: rgba( 0, 0, 0, 0.1 ); border-radius: $rounded1; }
+.button-nav-dark:hover { background: rgba( 255, 255, 255, 0.1 ); border-radius: $rounded1; }
 

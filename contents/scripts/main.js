@@ -9,9 +9,9 @@ function init() {
 	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, 10000 );
 	scene = new THREE.Scene();
 
-	//cube
-	var geometry = new THREE.BoxGeometry( 4, 4, 4 );
-	var material = new THREE.MeshBasicMaterial( { color: 0xb4f2fe } );
+	//sphere
+	var geometry = new THREE.SphereGeometry( 8, 40, 40 );
+	var material = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe:true, transparent: true, opacity: 0.2 } );
 	var mesh = new THREE.Mesh( geometry, material );
 	mesh.position.set( 0, 0, -6 );
 	scene.add( mesh );
@@ -20,7 +20,7 @@ function init() {
 	var geometry = new THREE.SphereGeometry( 500, 60, 40 );
 	geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 	var material = new THREE.MeshBasicMaterial( {
-		map: THREE.ImageUtils.loadTexture( '/images/sechelt-360.png' )
+		map: THREE.ImageUtils.loadTexture( '/images/bg-sechelt.png' )
 	} );
 	var background = new THREE.Mesh( geometry, material );
 	scene.add(background);

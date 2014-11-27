@@ -1,10 +1,15 @@
 /*========= LAYOUT =========*/
 
-$small-rounding: 0.25rem;
-
-.standard-padding {
-	padding: 3rem 3rem 3rem 10rem
+.table {
+  display: table;
+  width: 100%;
 }
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 
 
 /*--------- GRID ---------*/
@@ -68,6 +73,7 @@ $small-rounding: 0.25rem;
 
 /*--------- COMMON ---------*/
 
+/*
 .vertical-align {
   position: relative;
   top: 50%;
@@ -101,13 +107,14 @@ $small-rounding: 0.25rem;
 
 .cf:before,
 .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table;
 }
 
 .cf:after {
     clear: both;
 }
+*/
 
 
 /*--------- MEDIA QUERIES ---------*/

@@ -28,27 +28,24 @@ html(lang='en')
 
     block content
     
-    #footer.standard-padding.blue
+    // Footer
+    .light.p-leftedge.py3.pr4.bg-darkblue1
       .grid-container
         .row
-          .col-6
-            a(href='https://www.mozilla.org/en-US/' target='_blank').logo
-              img(src='/images/mozilla-logo-white.svg' alt='Mozilla')
-            ul.legal-links.flat-list
-              li
-                a(href='https://www.mozilla.org/en-US/privacy/websites/' target='_blank') Privacy Policy
-              li
-                a(href='https://www.mozilla.org/en-US/about/legal/' target='_blank') Legal Notices
-              li
-                a(href='https://www.mozilla.org/en-US/about/legal/fraud-report/' target='_blank') Report trademark abuse
-            br
-            p.license
+          .col-8
+            a(href='https://www.mozilla.org/en-US/' target='_blank')
+              img(src='/images/logo-mozilla-white.svg' alt='Mozilla').logo.mt3.mb2
+            p.f-small
+              a(href='https://www.mozilla.org/en-US/privacy/websites/' target='_blank').pr2.blue1 Privacy Policy
+              a(href='https://www.mozilla.org/en-US/about/legal/' target='_blank').pr2.blue1 Legal Notices
+              a(href='https://www.mozilla.org/en-US/about/legal/fraud-report/' target='_blank').pr2.blue1 Report Trademark Abuse
+            p.f-small.blue3
               | Except where otherwise noted, content on this site is licensed under the 
-              a(href='http://creativecommons.org/licenses/by-sa/2.5/' target='_blank') Creative Commons Attribution Share-Alike License v3.0 
+              a(href='http://creativecommons.org/licenses/by-sa/2.5/' target='_blank').blue3 Creative Commons Attribution Share-Alike License v3.0 
               | or any later version. Site built with 
-              a(href='http://wintersmith.io/' target='_blank') Wintersmith
+              a(href='http://wintersmith.io/' target='_blank').blue3 Wintersmith
               | .
-            
+          .col-4
 
   script(src="/scripts/main.js")
   script(src="/scripts/vendor/three.min.js")

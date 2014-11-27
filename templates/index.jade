@@ -21,62 +21,84 @@ extends layout
 
 block content
 
-  //stage for canvas
-  #stage.fixed.top-0.right-0.bottom-0.left-0.z-1
+  // Container for canvas
+  .fixed.top-0.right-0.bottom-0.left-0.z-1#stage
+    a(href=locals.url target='_blank')
+      img(src='/images/icon-goggles.svg' alt='Enter VR').entervr.absolute.p2
 
 
-  #header.py2.white.bg-darkblue2-transparent
+  // Header
+  .p-leftedge.py2.pr1.white.bg-darkblue2-transparent#header
     include header
-    #enter-vr
-      a(href='')
 
   // Intro
-  .standard-padding.white.bg-darkblue2
+  .p-leftedge.py3.pr4.white.bg-darkblue2
     .grid-container
       .row
         .col-8
-          h1 We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of <a href='' class='blue1'>Firefox with VR</a>, explore our <a href='' class='blue1'>projects</a>, view <a href='' class='blue1'>source</a>, and start creating virtual worlds!
+          h1 We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of 
+            a(href='').blue1.bb1.b-dotted.b-blue1 Firefox with VR
+            |  explore our 
+            a(href='').blue1.bb1.b-dotted.b-blue1 projects
+            |  , view 
+            a(href='').blue1.bb1.b-dotted.b-blue1 source
+            |  , and start creating virtual worlds!
           br
           br
-          a(href='').button.button-green1.px3.mr2
+          a(href=locals.downloads).button.button-green1.px3.mr2
             | Firefox with VR
           a(href='').button.button-green1.px3
             | GitHub
 
   include project-tile
 
-  #projects.standard-padding.white.bg-darkblue2
+  // Projects
+  .p-leftedge.py3.pr4.white.bg-darkblue2
     h2 Latest Projects
-    #project-grid
-      mixin project-tile('sechelt')
-      mixin project-tile('infodive')
-      mixin project-tile('polarsea')
-      mixin project-tile('polarsea')
-      mixin project-tile('sechelt')
-      mixin project-tile('infodive')
-      mixin project-tile('polarsea')
-    .cf
-    a(href='').button More
-
-include post-tile
-
-#posts.standard-padding.dark
-  h2 Latest posts
+    //#project-grid
     .grid-container
       .row
+        .col-4 
+          mixin project-tile('sechelt')
+        .col-4 
+          mixin project-tile('infodive')
         .col-4
-        .col-4
-        .col-4
+          mixin project-tile('polarsea')
+      .row
+        .col-4 
+          mixin project-tile('polarsea')
+        .col-4 
+          mixin project-tile('sechelt')
+        .col-4 
+          mixin project-tile('infodive')
+      .row
+        .col-4 
+          mixin project-tile('polarsea')
+    a(href='').px3.button.button-blue4.white More
 
 
-include team-member
+  include post-tile
 
-  #team.standard-padding.light
+  // Posts
+
+    .p-leftedge.py3.pr4.darkblue2.bg-white
+      h2 Latest posts
+      .grid-container
+        .row
+          .col-4
+          .col-4
+          .col-4
+
+
+  include team-member
+
+  // Team
+  .p-leftedge.py3.pr4.darkblue2.bg-white
+    h2 About Us
     .grid-container
       .row
         .col-6
-          h2 About Us
-          | The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians working with contributors and partners from around the world.
+          p The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians working with contributors and partners from around the world.
       .row
         .col-2
           mixin team-member('joshcarpenter')
@@ -86,7 +108,7 @@ include team-member
           mixin team-member('caseyyee')
         .col-2
           mixin team-member('diegomarcos')
-        .col-4
+
 
 
   //#articles.standard-padding

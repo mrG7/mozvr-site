@@ -5,9 +5,9 @@ mixin project-tile(name)
 	.project
 		a(href=project.url)
 			.container
-				img(src='/projects/'+name+'/'+project.metadata.thumb)
-			.info
-				h2
+				img(src='/projects/'+name+'/'+project.metadata.thumb).rounded1
+			.white
+				h4.regular
 					= project.metadata.title
-				p
+				p.f-small.blue1
 					= project.metadata.intro
