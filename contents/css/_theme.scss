@@ -1,10 +1,94 @@
+/*
+TODO:
+- Add borders
+- Add button-nav styles
+
+*/
+
+$white: #FFFFFF;
 $blue1: #b4f2fe;
 $blue2: #22caf0;
 $blue3: #1796da;
 $blue4: #09559d;
-$blue5: #134a77;
-$green: #1db992;
+$darkblue1: #134a77;
+$darkblue2: #2c2c34;
+$green1: #1db992;
 $yellow: #f8bc4a;
 $red: #e04540;
 $orange: #fd9426;
-$purple: #c21983;
+$pink: #c21983;
+
+$roundborder1: 0.2rem;
+$roundborder2: 0.5rem;
+$roundborder3: 1rem;
+$roundborder-full: 4rem;
+
+/*--------- Colors ---------*/
+
+.white { color: $white; }
+.blue1 { color: $blue1; }
+.blue2 { color: $blue2; }
+.blue3 { color: $blue3; }
+.blue4 { color: $blue4; }
+.darkblue1 { color: $darkblue1; }
+.darkblue2 { color: $darkblue2; }
+.green1 { color: $green1; }
+.yellow { color: $yellow; }
+.red { color: $red; }
+.orange { color: $orange; }
+.purple { color: $pink; }
+
+
+/*--------- Background Colors ---------*/
+
+.bg-white { background-color: $white; }
+.bg-blue1 { background-color: $blue1; }
+.bg-blue2 { background-color: $blue2; }
+.bg-blue3 { background-color: $blue3; }
+.bg-blue4 { background-color: $blue4; }
+.bg-darkblue1 { background-color: $darkblue1; }
+.bg-darkblue2 { background-color: $darkblue2; }
+.bg-darkblue2-transparent { background-color: rgba( 44, 44, 52, 0.9 ) }
+.bg-green1 { background-color: $green1; }
+.bg-yellow { background-color: $yellow; }
+.bg-red { background-color: $red; }
+.bg-orange { background-color: $orange; }
+.bg-purple { background-color: $pink; }
+.bg-lighten1 { background-color: rgba( 255, 255, 255, 0.062 ); }
+.bg-lighten2 { background-color: rgba( 255, 255, 255, 0.125 ); }
+.bg-lighten3 { background-color: rgba( 255, 255, 255, 0.25 ); }
+.bg-lighten4 { background-color: rgba( 255, 255, 255, 0.5 ); }
+.bg-darken1 { background-color: rgba( 0, 0, 0, 0.062 ); }
+.bg-darken2 { background-color: rgba( 0, 0, 0, 0.125 ); }
+.bg-darken3 { background-color: rgba( 0, 0, 0, 0.25 ); }
+.bg-darken4 { background-color: rgba( 0, 0, 0, 0.5 ); }
+
+
+/*--------- Borders ---------*/
+
+
+
+
+/*--------- Buttons ---------*/
+
+.button-green1 {
+	background-color: $green1;
+	border-radius: $roundborder-full;
+}
+
+.button-green1:hover {
+	opacity: 0.85;
+}
+
+.button-blue4 {
+	background-color: $blue4;
+	border-radius: $roundborder-full;
+}
+
+.button-blue4:hover {
+	opacity: 0.85;
+}
+
+.button-nav-light:hover { background: rgba( 0, 0, 0, 0.1 ); }
+.button-nav-dark:hover { background: rgba( 255, 255, 255, 0.1 ); }
+

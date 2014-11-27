@@ -13,9 +13,9 @@ block content
   include project-creators
   include project-tools
 
-  .splash.standard-padding
+  .standard-padding.white.bg-darkblue2
     a(href=page.metadata.creators)
-      img(src=page.metadata.splash)
+      img(src=page.metadata.splash).fit.mb3
     .grid-container
       .row
         .col-4
@@ -33,10 +33,28 @@ block content
     article
       =page.metadata.intro
       br
-      br
-      a(href=page.metadata.source).button GitHub
+      a(href=page.metadata.source).button.button-green1.mt3
+        | GitHub
 
-      section.content!= typogr(page.html).typogrify()
+
+      h1 Typography
+      h2 Typography
+      h3 Typography
+      h4 Typography
+      h5 Typography
+
+      p
+        | Testing out the formatting of 
+        code THREE.CicleGeometry
+        |  code elements
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      p
+        | Sed ut perspiciatis unde omnis iste natus error sit 
+        a(href='http://www.joshcarpenter.ca') voluptatem
+        |  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+      //section.content!= typogr(page.html).typogrify()
 
   include author
 

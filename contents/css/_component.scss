@@ -1,28 +1,6 @@
 /*========= COMPONENTS =========*/
 
 
-/*--------- BUTTON ---------*/
-
-.button {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  background: rgba( 255, 255, 255, 0.2 );
-  padding: 0.75rem 3rem;
-  border-radius: 2rem;
-  text-align: center;
-  font-size: 1.1rem;
-  white-space: nowrap;
-  display: inline-block;
-}
-
-.button:hover {
-  background: $blue3;
-  text-decoration: none;
-  color: white;
-}
-
 
 /*--------- ENTER VR BUTTON ---------*/
 
@@ -48,8 +26,6 @@
 /*--------- FOOTER ---------*/
 
 #footer {
-  background: $blue5;
-  color: $blue3;
   font-size: 0.9rem;
   line-height: 1.3rem;
   font-weight: 300;
@@ -121,7 +97,7 @@
   }
 
   .logo a:hover {
-    background-color: $blue5;
+    background-color: $blue4;
   }
 }
 
@@ -152,7 +128,7 @@
 }
 
 #intro .button {
-  background-color: $green;
+  background-color: $green1;
   color: white;
 }
 

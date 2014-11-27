@@ -1,30 +1,51 @@
 extends layout
 
+//
+  TODO:
+  * Integrate locals. eg: locals.description and locals.name.
+  * Use locals for home link, for all download links, etc.
+  * Structure CSS
+    - Per http://www.basscss.com/docs/guides/basics/
+    - Remove id's?
+  * Lock in responsiveness
+  * Check for compatibility across browsers
+  * Clean up globals
+  * Finish project template
+  * Create post template
+  * Integrate comments
+  * Integrate SEO
+  * Review structure with Casey (of CSS, etc)
+  * Add animations for rollovers, etc.
+  * Figure out pagination (do manually for now?)
+
+
 block content
 
-  include post-tile
+  //stage for canvas
+  #stage.fixed.top-0.right-0.bottom-0.left-0.z-1
 
-  #stage
 
-  #header.standard-padding
+  #header.py2.white.bg-darkblue2-transparent
     include header
     #enter-vr
       a(href='')
 
-  #intro.standard-padding
+  // Intro
+  .standard-padding.white.bg-darkblue2
     .grid-container
       .row
         .col-8
-          p We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of <a href=''>Firefox with VR</a>, explore our <a href=''>projects</a>, view <a href=''>source</a>, and start creating virtual worlds!
+          h1 We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of <a href='' class='blue1'>Firefox with VR</a>, explore our <a href='' class='blue1'>projects</a>, view <a href='' class='blue1'>source</a>, and start creating virtual worlds!
           br
           br
-          a(href='').button Firefox with VR
-          |&nbsp&nbsp&nbsp&nbsp
-          a(href='').button GitHub
+          a(href='').button.button-green1.px3.mr2
+            | Firefox with VR
+          a(href='').button.button-green1.px3
+            | GitHub
 
   include project-tile
 
-  #projects.standard-padding
+  #projects.standard-padding.white.bg-darkblue2
     h2 Latest Projects
     #project-grid
       mixin project-tile('sechelt')
@@ -36,6 +57,37 @@ block content
       mixin project-tile('polarsea')
     .cf
     a(href='').button More
+
+include post-tile
+
+#posts.standard-padding.dark
+  h2 Latest posts
+    .grid-container
+      .row
+        .col-4
+        .col-4
+        .col-4
+
+
+include team-member
+
+  #team.standard-padding.light
+    .grid-container
+      .row
+        .col-6
+          h2 About Us
+          | The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians working with contributors and partners from around the world.
+      .row
+        .col-2
+          mixin team-member('joshcarpenter')
+        .col-2
+          mixin team-member('vladvukicevic')
+        .col-2
+          mixin team-member('caseyyee')
+        .col-2
+          mixin team-member('diegomarcos')
+        .col-4
+
 
   //#articles.standard-padding
 
@@ -171,24 +223,6 @@ block content
               li Add Cardboard support: 
                 a bug 585858
 
-  include team-member
-
-  #team.standard-padding
-    .grid-container          
-      .row
-        .col-6
-          h2 About Us
-          | The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians working with contributors and partners from around the world.
-      .row
-        .col-2
-          mixin team-member('joshcarpenter')
-        .col-2
-          mixin team-member('vladvukicevic')
-        .col-2
-          mixin team-member('caseyyee')
-        .col-2
-          mixin team-member('diegomarcos')
-        .col-4
 
 
   //- include author
