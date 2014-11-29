@@ -77,14 +77,31 @@ $rounded3: 1rem;
 $rounded4: 10rem;
 $circle: 50%;
 
+$b1: 0.1rem;
+$b4: 0.4rem;
+
 .rounded1 	{ border-radius: $rounded1; }
 .rounded2 	{ border-radius: $rounded2; }
 .rounded3 	{ border-radius: $rounded3; }
 .rounded4		{ border-radius: $rounded4; }
 .circle			{ border-radius: $circle; }
 
-.bb1 { border-width: 0 0 0.1rem 0 }
+.b1 { border-width: $b1; }
+.bt1 { border-width: $b1 0 0 0 }
+.br1 { border-width: 0 $b1 0 0 }
+.bb1 { border-width: 0 0 $b1 0 }
+.bl1 { border-width: 0 0 0 $b1 }
+
+.b4 { border-width: $b4 }
+.bt4 { border-width: $b4 0 0 0 }
+.br4 { border-width: 0 $b4 0 0 }
+.bb4 { border-width: 0 0 $b4 0 }
+.bl4 { border-width: 0 0 0 $b4 }
+
+
 .b-dotted { border-style: dotted; }
+.b-solid { border-style: solid; }
+
 .b-blue1 { border-color: $blue1; }
 
 

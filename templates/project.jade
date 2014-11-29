@@ -8,7 +8,7 @@ block prepend title
 
 block content
 
-  .p-leftedge.py2.pr1.darkblue2.bg-white#header
+  .p-leftedge.py2.pr1.white.bg-darkblue2
     include header
 
   include project-creators
@@ -16,7 +16,7 @@ block content
 
   // Splash
   .p-leftedge.py3.pr4.white.bg-darkblue2
-    .relative.p0.mb3
+    .grid-container.relative.p0.mb3
       img(src=page.metadata.splash).fit.rounded1
       a(href=page.metadata.link)
         img(src='/images/icon-goggles.svg' alt='Enter VR').entervr.absolute.bottom-0.right-0.p2.m3
@@ -47,28 +47,8 @@ block content
         .col-4
       .row
         .col-12.fit-imgs
-
-          //
-            h1 Typography
-            h2 Typography
-            h3 Typography
-            h4 Typography
-            h5 Typography
-
-            p
-              | Testing out the formatting of 
-              code THREE.CicleGeometry
-              |  code elements
-              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-            p
-              | Sed ut perspiciatis unde omnis iste natus error sit 
-              a(href='http://www.joshcarpenter.ca') voluptatem
-              |  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
-          // Content from body of project
-
-          != typogr(page.html).typogrify()
+          if page.html
+            != typogr(page.html).typogrify()
 
   include author
 

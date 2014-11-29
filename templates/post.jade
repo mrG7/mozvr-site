@@ -1,32 +1,74 @@
 extends layout
 
 block append vars
-  - bodyclass = 'article-detail'
+  - bodyclass = 'post-detail'
 
 block prepend title
   | #{ page.title + " - "}
 
+
 block content
 
-  include project-creators
-  include project-tools
+  .p-leftedge.py2.pr1.white.bg-darkblue2
+    include header
 
-  h1
-    =page.metadata.title
-  p
-    =page.metadata.intro
-    
-  mixin project-creators(page.metadata.creators)
-  mixin project-tools(page.metadata.tools)
-  p.repo
-    a(href=page.metadata.source) Source
+  // Splash
+    .p-leftedge.py3.pr4.white.bg-darkblue2
+      .grid-container.relative.p0.mb3
+        img(src=page.metadata.splash).fit.rounded1
+
+  // Content
+  .p-leftedge.py3.pr4.darkblue2.bg-white
+    .grid-container
+      .row
+        .col-8.fit-imgs
+          h1.semi-bold
+            = page.metadata.title
+          p.f-large.py3
+            = page.metadata.intro
+          != typogr(page.html).typogrify()
+        .col-4
+
+          
 
   include author
-  article.article
-    section.content!= typogr(page.html).typogrify()
-  | By
-  .author
+
+  // Author
+  .p-leftedge.py3.pr4.darkblue2.bg-white
+    h4 About the author
     mixin author(page.metadata.author)
 
 block prepend footer
   include author
+
+
+
+
+
+
+//
+
+  block content
+
+    include project-creators
+    include project-tools
+
+    h1
+      =page.metadata.title
+    p
+      =page.metadata.intro
+      
+    mixin project-creators(page.metadata.creators)
+    mixin project-tools(page.metadata.tools)
+    p.repo
+      a(href=page.metadata.source) Source
+
+    include author
+    article.article
+      section.content!= typogr(page.html).typogrify()
+    | By
+    .author
+      mixin author(page.metadata.author)
+
+  block prepend footer
+    include author

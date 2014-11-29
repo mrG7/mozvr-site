@@ -1,15 +1,19 @@
-
 mixin author(name)
+
 	- var author = contents.people[name + '.json']
-	div.author
-		if author
-			img(src='/people/'+author.metadata.photo)
-			div
-				b= author.metadata.name
-				p= author.metadata.bio
-				div
-					a(href='mailto:'+author.metadata.email)= author.metadata.email
-				div
-					a(href=author.metadata.twitter)= author.metadata.twitter
-		else
-			=name
+
+	.grid-container
+		.row
+			.col-2
+				img(src='/people/' +author.metadata.photo).fit.rounded1.left
+			.col-4
+				h3.regular
+					= author.metadata.name
+				p.f-small
+					a(href='http://www.twitter.com/'+author.metadata.twitter).blue3= '@' + author.metadata.twitter
+					br
+					= author.metadata.role
+					br
+					= author.metadata.location
+					br
+					= author.metadata.bio

@@ -48,11 +48,12 @@
     width: 8.33%;
     padding: 0 2rem 0 0;
     min-height: 1px;
+    box-sizing: border-box;
     /*outline: 1px solid red;*/
 }
 
 [class*='col-']:last-of-type {
-  padding-right: 0;
+  /*padding-right: 0;*/
 }
 
 /*Using 12 column grid*/

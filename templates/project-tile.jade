@@ -2,12 +2,10 @@ mixin project-tile(name)
 
 	- var project = contents.projects[name]['index.md']
 
-	.project
-		a(href=project.url)
-			.container
-				img(src='/projects/'+name+'/'+project.metadata.thumb).rounded1
-			.white
-				h4.regular
-					= project.metadata.title
-				p.f-small.blue1
-					= project.metadata.intro
+	a(href=project.url)
+		.overflow-hidden.rounded1
+			img(src='/projects/'+name+'/'+project.metadata.thumb).fit
+		h3.regular.white
+			= project.metadata.title
+		p.f-small.blue1
+			= project.metadata.intro

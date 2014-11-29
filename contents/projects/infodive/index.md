@@ -40,7 +40,7 @@ creators:
     "email": "t_plakhova@hotmail.com",
     "twitter": "Plakhova"
   }]
-intro: A visualization of data as art inspired by the work of artist Tatiana Plakhova and built using the Vizi framework.
+intro: A visualization of data as art, inspired by the work of artist Tatiana Plakhova and built using the Vizi framework.
 ---
 
 

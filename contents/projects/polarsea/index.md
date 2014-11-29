@@ -4,6 +4,7 @@ date: 2014-11-10 15:00
 template: project.jade
 link: https://mozvr.com/polarsea
 source: https://github.com/MozVR/polarsea
+splash: project-splash.png
 thumb: project-thumb.png
 author: joshcarpenter
 tools:
@@ -24,8 +25,3 @@ creators:
   }]
 intro: A documentary by DEEP that takes users to the Arctic in 360° VR video, powered by eleVR’s WebGL VR video player.
 ---
-
-
-## Basic workflow
-
-The high level process that brough Sechelt to life:

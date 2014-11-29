@@ -42,7 +42,9 @@ block content
             a(href='').blue1.bb1.b-dotted.b-blue1 projects
             |  , view 
             a(href='').blue1.bb1.b-dotted.b-blue1 source
-            |  , and start creating virtual worlds!
+            |  , and 
+            a(href='').blue1.bb1.b-dotted.b-blue1 start creating 
+            |  virtual worlds!
           br
           br
           a(href=locals.downloads).button.button-green1.px3.mr2
@@ -58,22 +60,22 @@ block content
     //#project-grid
     .grid-container
       .row
-        .col-4 
+        .col-3 
           mixin project-tile('sechelt')
-        .col-4 
+        .col-3 
           mixin project-tile('infodive')
-        .col-4
+        .col-3
           mixin project-tile('polarsea')
+        .col-3
+          mixin project-tile('panorama-viewer')
       .row
-        .col-4 
-          mixin project-tile('polarsea')
-        .col-4 
-          mixin project-tile('sechelt')
-        .col-4 
-          mixin project-tile('infodive')
-      .row
-        .col-4 
-          mixin project-tile('polarsea')
+        .col-3 
+          mixin project-tile('construct')
+        .col-3 
+          mixin project-tile('leap-collage')
+        .col-3 
+          mixin project-tile('talkchatshow-ep4')
+        .col-3
     a(href='').px3.button.button-blue4.white More
 
 

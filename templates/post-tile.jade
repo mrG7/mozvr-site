@@ -1,9 +1,11 @@
-mixin post-tile(article)
+mixin post-tile(name)
 
-	a(href=article.url)
-		h3
-			= article.metadata.title
-		p
-			= article.metadata.intro
+	- var post = contents.posts[name]['index.md']
 
-		img(src=article.metadata.splash)
+	a(href=post.url)
+		.overflow-hidden
+			img(src='/posts/'+name+'/'+post.metadata.thumb).rounded1.fit
+		h3.regular.white
+			= post.metadata.title
+		p.f-small.blue1
+			= post.metadata.intro
