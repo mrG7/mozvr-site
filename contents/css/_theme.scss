@@ -102,29 +102,14 @@ $b4: 0.4rem;
 .b-dotted { border-style: dotted; }
 .b-solid { border-style: solid; }
 
+.b-white { border-color: $white; }
 .b-blue1 { border-color: $blue1; }
 
 
 /*--------- Buttons ---------*/
 
-.button-green1 {
-	background-color: $green1;
-	border-radius: $rounded4;
-}
-
-.button-green1:hover {
-	opacity: 0.85;
-}
-
-.button-blue4 {
-	background-color: $blue4;
-	border-radius: $rounded4;
-}
-
-.button-blue4:hover {
-	opacity: 0.85;
-}
-
-.button-nav-light:hover { background: rgba( 0, 0, 0, 0.1 ); border-radius: $rounded1; }
-.button-nav-dark:hover { background: rgba( 255, 255, 255, 0.1 ); border-radius: $rounded1; }
+.hover-dark:hover { background: rgba( 0, 0, 0, 0.1 ); }
+.hover-light:hover { background: rgba( 255, 255, 255, 0.1 ); }
+.hover-green1:hover { background: $green1; border-color: $green1; }
+.hover-blue3:hover { background: $blue3; border-color: $blue3; }
 

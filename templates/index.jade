@@ -23,9 +23,9 @@ block content
 
   // Container for canvas
   .fixed.top-0.right-0.bottom-0.left-0.z-1#stage
-    a(href='' target='_blank')
-      img(src='/images/icon-goggles.svg' alt='Enter VR').entervr.absolute.p2
-
+    //Enter VR buttons and prompts
+    .absolute.right-2.bottom-8
+      include entervr
 
   // Header
   .p-leftedge.py2.pr1.white.bg-darkblue2-transparent#header
@@ -47,9 +47,9 @@ block content
             |  virtual worlds!
           br
           br
-          a(href=locals.downloads).button.button-green1.px3.mr2
+          a(href=locals.downloads).button.bg-green1.px3.mr2
             | Firefox with VR
-          a(href='').button.button-green1.px3
+          a(href='').button.bg-green1.px3
             | GitHub
 
   include project-tile
@@ -76,7 +76,7 @@ block content
         .col-3 
           mixin project-tile('talkchatshow-ep4')
         .col-3
-    a(href='').px3.button.button-blue4.white More
+    a(href='').px3.button.bg-lighten2.white More
 
 
   include post-tile
