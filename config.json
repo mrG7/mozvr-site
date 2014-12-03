@@ -11,6 +11,7 @@
     "build_mac_size": "93MB",
     "build_windows": "http://people.mozilla.org/~vladimir/vr/5/firefox-36.0a1.en-US.win64-x86_64.zip",
     "build_windows_size": "42MB",
+    "build_chrome": "https://drive.google.com/a/google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&usp=sharing#list",
     "projects": "/projects",
     "repo": "http://github.com/MozVR"
   },
