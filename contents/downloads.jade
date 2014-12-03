@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+  // Header
+  .p-leftedge.py2.pr1.white.bg-darkblue2-transparent#header
+    include header
+
+  // Intro
+  .p-leftedge.py3.pr4.darkblue2.bg-white
+    h1 Experimental Firefox builds with VR interfaces.
+    h2 Version 36.0a1 (2014-11-09) 
+    h3 Configuration notes:
+    p Windows: Configure your DK2 in "Extended Desktop" mode, with 90-degree ("Portrait") rotation, and a 60Hz refresh rate (not 75Hz). Support for Direct-to-Rift and 75Hz refresh is coming soon.
+    p Mac: Please configure your DK2 for a 60Hz refresh rate at 1080p, with 90-degree rotation. 
+    .grid-container
+      .row
+        .col-8
+          p Download Firefox with VR

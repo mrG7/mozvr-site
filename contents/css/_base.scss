@@ -12,7 +12,7 @@
 
 .logo {
   width: 8rem;
-  height: 4rem;
+  // height: 4rem;
 }
 
 .entervr {
@@ -118,6 +118,7 @@ p {
 
 li {
   margin-bottom: 0.5em;
+  line-height: 1.2em;
 }
 
 blockquote {
@@ -138,7 +139,7 @@ hr {
 
 /*--------- CODE ---------*/
 
-code {
+code, .code {
   font-family: 'Fira Mono', monospace;
   font-size: 0.85em;
   color: #000;

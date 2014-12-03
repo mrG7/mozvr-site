@@ -1,24 +1,5 @@
 extends layout
 
-//
-  TODO:
-  * Integrate locals. eg: locals.description and locals.name.
-  * Use locals for home link, for all download links, etc.
-  * Structure CSS
-    - Per http://www.basscss.com/docs/guides/basics/
-    - Remove id's?
-  * Lock in responsiveness
-  * Check for compatibility across browsers
-  * Clean up globals
-  * Finish project template
-  * Create post template
-  * Integrate comments
-  * Integrate SEO
-  * Review structure with Casey (of CSS, etc)
-  * Add animations for rollovers, etc.
-  * Figure out pagination (do manually for now?)
-
-
 block content
 
   // Container for canvas
@@ -37,11 +18,11 @@ block content
       .row
         .col-8
           h1 We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of 
-            a(href='').blue1.bb1.b-dotted.b-blue1 Firefox with VR
+            a(href=locals.downloads).blue1.bb1.b-dotted.b-blue1 Firefox with VR
             |  explore our 
-            a(href='').blue1.bb1.b-dotted.b-blue1 projects
+            a(href=locals.projects).blue1.bb1.b-dotted.b-blue1 projects
             |  , view 
-            a(href='').blue1.bb1.b-dotted.b-blue1 source
+            a(href=locals.repo).blue1.bb1.b-dotted.b-blue1 source
             |  , and 
             a(href='').blue1.bb1.b-dotted.b-blue1 start creating 
             |  virtual worlds!
@@ -49,7 +30,7 @@ block content
           br
           a(href=locals.downloads).button.bg-green1.px3.mr2
             | Firefox with VR
-          a(href='').button.bg-green1.px3
+          a(href=locals.repo).button.bg-green1.px3
             | GitHub
 
   include project-tile
@@ -76,7 +57,7 @@ block content
         .col-3 
           mixin project-tile('talkchatshow-ep4')
         .col-3
-    a(href='').px3.button.bg-lighten2.white More
+    a(href=locals.projects).px3.button.bg-lighten2.white More
 
 
   include post-tile

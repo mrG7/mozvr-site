@@ -1,0 +1,83 @@
+extends layout
+
+block content
+
+  // Header
+  .p-leftedge.py2.pr1.white.bg-darkblue2-transparent#header
+    include header
+
+  // Intro
+  .p-leftedge.py4.pr4.bg-white
+    .grid-container
+      .row
+        .col-8
+          h1 Firefox with VR
+          h3 These are experimental builds of Firefox Desktop with support for new VR interfaces.
+      .row.mb0
+        .col-12
+          h3.py2.mt2.mb0.inline-block.bt1.b-dotted.b-gray3
+            span.black.semi-bold 
+              =locals.build_version 
+            span.gray6.light.italic
+              |  — 
+              =locals.build_date
+           a(href=locals.build_windows).mt2.p2.sizing-borderbox.rounded3.inline-block.full-width.bg-green1
+            .table
+              .table-cell
+                h3.m0.white.regular Windows 64-bit (Standard)
+                h5.m0.gray2 
+                  = locals.build_windows_size
+                  |  EXE
+              .table-cell.right-align
+                img(src='/images/icon-download.svg' alt='Mozilla').w2.m2
+           a(href=locals.build_mac).mt2.p2.sizing-borderbox.rounded3.inline-block.full-width.bg-green1
+            .table
+              .table-cell
+                h3.m0.white.regular Mac
+                h5.m0.gray2 
+                  = locals.build_mac_size
+                  |  DMG
+              .table-cell.right-align
+                img(src='/images/icon-download.svg' alt='Mozilla').w2.m2
+          .gray3.mt2.p2.rounded2.bg-gray1.code
+            h5.m0.bold Release notes
+            ul.px2
+              li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              li Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              li Tempor incididunt ut labore et dolore magna aliqua.
+      .row
+        .col-12
+          h1 Display configuration
+          h3 For optimal performance, configure your displays as follows.
+          h4.semi-bold.my2 Windows:
+          .bg-gray1.p2.rounded2.f-small
+            ul.light.m0.list-reset
+              li.semi-bold Display
+                span.gray5.light.px1 &gt;
+                | Screen Resolution:
+              li Orientation: 90° rotation
+              li Multiple displays:  Extended desktop
+            ul.light.mt2.list-reset
+              li.semi-bold Display
+                span.gray5.light.px1 &gt;
+                | Screen Resolution:
+              li Refresh: 60Hz
+          h4.semi-bold.my2 Mac:
+          .bg-gray1.p2.rounded2.f-small
+            ul.light.m0.list-reset
+              li.semi-bold System Preferences
+                span.gray5.light.px1 &gt;
+                | Displays 
+                span.gray5.light.px1 &gt;
+                | Display:
+              li Optimize for: Rift
+              li Rotation: 90°
+              li Refresh: 60Hz
+            ul.light.mt2.list-reset
+              li.semi-bold System Preferences
+                span.gray5.light.px1 &gt; 
+                | Displays
+                span.gray5.light.px1 &gt;
+                | Arrangement:
+              li Arrangement: Mirrored
+
