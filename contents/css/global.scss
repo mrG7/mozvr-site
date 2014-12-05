@@ -1,7 +1,8 @@
-@import "theme";
-@import "base";
-@import "utility";
-@import "layout";
+@import "styles/theme";
+@import "styles/base";
+@import "styles/utility";
+@import "styles/layout";
+
 //@import "component";
 
 
@@ -46,9 +47,8 @@ Declare classes on elements in following order:
 
 
 /*--------- HOME ---------*/
-
+/*
 #splash {
-  /*background: rgba( 0, 0, 0, 0.5 );*/
   color: #fff;
   position: absolute;
   top: 0;
@@ -64,6 +64,7 @@ Declare classes on elements in following order:
   text-decoration: none;
   color: white;
 }
+*/
 
 /*
 @media (max-width: 900px) {
