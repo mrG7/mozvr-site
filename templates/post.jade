@@ -9,7 +9,7 @@ block prepend title
 
 block content
 
-  .p-leftedge.py2.pr1.white.bg-darkblue2
+  .py2.white.bg-darkblue2
     include header
 
   // Splash
@@ -18,25 +18,20 @@ block content
         img(src=page.metadata.splash).fit.rounded1
 
   // Content
-  .p-leftedge.py3.pr4.darkblue2.bg-white
-    .grid-container
-      .row
-        .col-8.fit-imgs
+  .py3.darkblue2.bg-white
+    .container
+      .clearfix
+        .col.col-12.m-col-8.fit-imgs
           h1.semi-bold
             = page.metadata.title
           p.f-large.py3
             = page.metadata.intro
           != typogr(page.html).typogrify()
-        .col-4
-
-          
-
-  include author
-
-  // Author
-  .p-leftedge.py3.pr4.darkblue2.bg-white
-    h4 About the author
-    mixin author(page.metadata.author)
+        .col.m-col-4
+      .clearfix
+        include author
+        h4 About the author
+        mixin author(page.metadata.author)
 
 block prepend footer
   include author

@@ -5,6 +5,7 @@
     "owner": "Mozilla Research",
     "description": "A virtual reality website about virtual reality websites",
     "downloads": "/downloads",
+    "blog": "/blog"
     "build_version": "Version 36.0a1",
     "build_date": "2014-11-09",
     "build_mac": "http://people.mozilla.org/~vladimir/vr/5/firefox-36.0a1.en-US.mac.dmg",
@@ -35,6 +36,6 @@
     "perPage": 3
   },
   "ignore": [
-    "**/.DS_Store"
+    "**/.DS_Store",
   ]
 }

@@ -3,6 +3,15 @@ TODO:
 - Add transforms for rollovers
 */
 
+/*--------- Breakpoints ---------*/
+
+$breakpoint-sm: 40em;
+$breakpoint-m: 52em;
+$breakpoint-l: 64em;
+
+
+/*--------- Colors ---------*/
+
 $white: #FFFFFF;
 $black: #111111;
 $blue1: #b4f2fe;
@@ -25,17 +34,16 @@ $gray6: #5f5f5f;
 $gray7: #4d4d4d;
 $gray8: #333333;
 
+$bg-transparent: rgba( 0, 0, 0, 0 );
 $bg-lighten1: rgba( 255, 255, 255, 0.062 );
 $bg-lighten2: rgba( 255, 255, 255, 0.125 );
 $bg-lighten3: rgba( 255, 255, 255, 0.25 );
 $bg-lighten4: rgba( 255, 255, 255, 0.5 );
+$bg-lighten5: rgba( 255, 255, 255, 0.7 );
 $bg-darken1: rgba( 0, 0, 0, 0.062 );
 $bg-darken2: rgba( 0, 0, 0, 0.125 );
 $bg-darken3: rgba( 0, 0, 0, 0.25 );
 $bg-darken4: rgba( 0, 0, 0, 0.5 );
-
-
-/*--------- Colors ---------*/
 
 .white { color: $white; }
 .black { color: $black; }
@@ -58,9 +66,10 @@ $bg-darken4: rgba( 0, 0, 0, 0.5 );
 .gray6 { color: $gray6; }
 .gray7 { color: $gray7; }
 .gray8 { color: $gray8; }
+.lighten4 { color: $bg-lighten4; }
+.lighten5 { color: $bg-lighten5; }
 
-/*--------- Background Colors ---------*/
-
+.bg-transparent { background-color: $bg-transparent; }
 .bg-white { background-color: $white; }
 .bg-blue1 { background-color: $blue1; }
 .bg-blue2 { background-color: $blue2; }
@@ -83,11 +92,11 @@ $bg-darken4: rgba( 0, 0, 0, 0.5 );
 .bg-gray7 { background-color: $gray7; }
 .bg-gray8 { background-color: $gray8; }
 
-
 .bg-lighten1 { background-color: $bg-lighten1; }
 .bg-lighten2 { background-color: $bg-lighten2; }
 .bg-lighten3 { background-color: $bg-lighten3; }
 .bg-lighten4 { background-color: $bg-lighten4; }
+.bg-lighten5 { background-color: $bg-lighten5; }
 .bg-darken1 { background-color: $bg-darken1; }
 .bg-darken2 { background-color: $bg-darken2; }
 .bg-darken3 { background-color: $bg-darken3; }
@@ -123,7 +132,6 @@ $b4: 0.4rem;
 .bb4 { border-width: 0 0 $b4 0 }
 .bl4 { border-width: 0 0 0 $b4 }
 
-
 .b-dotted { border-style: dotted; }
 .b-solid { border-style: solid; }
 
@@ -137,6 +145,7 @@ $b4: 0.4rem;
 
 /*--------- Buttons ---------*/
 
+.hover-lighten:hover { opacity: 0.8; }
 .hover-dark:hover { background: rgba( 0, 0, 0, 0.1 ); }
 .hover-light:hover { background: rgba( 255, 255, 255, 0.1 ); }
 .hover-green1:hover { background: $green1; border-color: $green1; }

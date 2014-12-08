@@ -15,20 +15,67 @@
   // height: 4rem;
 }
 
-.entervr {
-  position: absolute;
-  right: 2rem;
-  bottom: 9rem;
-  //border: 0.2rem solid white;
-  //border-radius: $rounded2  ;
+.basiclink {
+  border-width: 0 0 1px 0;
+  border-style: dotted;
 }
 
-.entervr:hover {  
-  background-color: $blue3;
+.basiclink-white {
+  @extend .basiclink;
+  color: $white;
+  border-color: $white;
+}
+
+.basiclink-white:hover {
+  color: $white;
+  background-color: $bg-lighten3;
+  text-decoration: none;
+}
+
+.basiclink-blue {
+  @extend .basiclink;
+  color: $blue3;
   border-color: $blue3;
 }
 
+.basiclink-blue:hover {
+  color: $white;
+  background-color: $blue3;
+  text-decoration: none;
+}
 
+.basiclink-green {
+  @extend .basiclink;
+  color: $green1;
+  border-color: $green1;
+}
+
+.basiclink-green:hover {
+  color: $white;
+  background-color: $green1;
+  text-decoration: none;
+}
+
+.outline-white {
+  box-sizing: border-box;
+  outline: 1rem solid rgba( 0, 0, 0, 0 );
+  outline-offset: -1rem;
+
+}
+
+.outline-white:hover {
+  outline-color: $bg-lighten3;
+}
+
+.outline-green {
+  box-sizing: border-box;
+  outline: 1rem solid rgba( 0, 0, 0, 0 );
+  outline-offset: -1rem;
+}
+
+.outline-green:hover {
+  outline-color: $green1;
+}
 
 /*--------- Elements ---------*/
 
@@ -61,16 +108,11 @@ a:hover {
 }
 
 a, a:visited {
-  // color: $blue3;
-  text-decoration: none;
-}
-
-a:hover {
   text-decoration: none;
 }
 
 a:active {
-  background-color: $bg-lighten1;
+  
 }
 
 
@@ -82,7 +124,7 @@ h5,.h5 { font-size: 0.83rem; }
 h6,.h6 { font-size: 0.75rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.25em;
   margin-top: 1em;
   margin-bottom: 0.5em;

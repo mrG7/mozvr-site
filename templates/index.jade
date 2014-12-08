@@ -2,126 +2,162 @@ extends layout
 
 block content
 
+
+  //.container.bg-transparent
+    .absolute.top-0.py4
+      .clearfix
+        .col.col-6
+          h1.bold.uppercase Making Sechelt
+          p Using Cinema 4D and Three.js to create a fly through of a gradient landscape.
+
+
   // Container for canvas
   .fixed.top-0.right-0.bottom-0.left-0.z-1#stage
-    //Enter VR buttons and prompts
+
+    //"Enter VR" buttons and prompts
+    .absolute.right-2.bottom-8
+      include entervr
     .absolute.right-2.bottom-8
       include entervr
 
   // Header
-  .p-leftedge.py2.pr1.white.bg-darkblue2-transparent#header
+  .py2.white.bg-darkblue2-transparent#header
     include header
 
   // Intro
-  .p-leftedge.py3.pr4.white.bg-darkblue2
-    .grid-container
-      .row
-        .col-8
-          h1 We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of 
-            a(href=locals.downloads).blue1.bb1.b-dotted.b-blue1 Firefox with VR
+  .py3.white.bg-darkblue2
+    .container
+      .clearfix
+        .col.col-10
+          h1.light
+            | We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of 
+            a(href=locals.downloads).basiclink-green Firefox with VR
             |  explore our 
-            a(href=locals.projects).blue1.bb1.b-dotted.b-blue1 projects
+            a(href=locals.projects).basiclink-green projects
             |  , view 
-            a(href=locals.repo).blue1.bb1.b-dotted.b-blue1 source
+            a(href=locals.repo).basiclink-green source
             |  , and 
-            a(href='').blue1.bb1.b-dotted.b-blue1 start creating 
+            a(href='').basiclink-green start creating 
             |  virtual worlds!
-          br
-          br
-          a(href=locals.downloads).button.bg-green1.px3.mr2
-            | Firefox with VR
-          a(href=locals.repo).button.bg-green1.px3
+        .col.col-2
+      .clearfix
+        .col.col-12.mt3
+          a(href=locals.downloads).mr2.px3.button.bg-green1.hover-lighten
+            | Get Firefox with VR
+          a(href=locals.repo).px3.button.bg-green1.hover-lighten
             | GitHub
 
   include project-tile
 
   // Projects
-  .p-leftedge.py3.pr4.white.bg-darkblue2
-    h2 Latest Projects
-    //#project-grid
-    .grid-container
-      .row
-        .col-3 
+  .py3.white.bg-darkblue2
+    .container
+      .clearfix
+        .col.col-6.m-col-3
+          h3 Latest Projects
+      .clearfix.mxn2.py2
+        .col.col-6.m-col-3.px2
           mixin project-tile('sechelt')
-        .col-3 
+        .col.col-6.m-col-3.px2
           mixin project-tile('infodive')
-        .col-3
+        .col.col-6.m-col-3.px2
           mixin project-tile('polarsea')
-        .col-3
+        .col.col-6.m-col-3.px2
           mixin project-tile('panorama-viewer')
-      .row
-        .col-3 
-          mixin project-tile('construct')
-        .col-3 
-          mixin project-tile('leap-collage')
-        .col-3 
-          mixin project-tile('talkchatshow-ep4')
-        .col-3
-    a(href=locals.projects).px3.button.bg-lighten2.white More
+      .clearfix
+        .col.col-12
+          a(href=locals.projects).px3.button.white.bg-lighten2.hover-lighten.mb3 More Projects
 
 
   include post-tile
 
   // Posts
 
-    .p-leftedge.py3.pr4.darkblue2.bg-white
-      h2 Latest posts
-      .grid-container
-        .row
-          .col-4
-          .col-4
-          .col-4
+  .py3.darkblue2.bg-white
+    .container
+      .clearfix
+        .col.col-12
+          h2 Latest Posts
+      .clearfix.mxn3
+        .col.col-6.m-col-4.px3
+          mixin post-tile('making-sechelt')
+        .col.col-6.m-col-4.px3
+          mixin post-tile('making-sechelt')
+        .col.col-6.m-col-4.px3
+          mixin post-tile('making-sechelt')
+      .clearfix.mxn3
+        .col.col-6.m-col-4.px3
+          h1 Making Sechelt
+          p Support for other headsets is coming soon. We are using the Rift as our initial test and development HMD because it the best supported and most widely-distributed headset on the market (over 200,000 DK1 and DK2 units shipped). We are deeply committed to device-agnostic Web VR, and are next working on support for Google Cardboard and other devices.
+        .col.col-6.m-col-4.px3
+          h1 Fast Prototypes for web VR
+          p Support for other headsets is coming soon. We are using the Rift as our initial test and development HMD because it the best supported and most widely-distributed headset on the market (over 200,000 DK1 and DK2 units shipped). We are deeply committed to device-agnostic Web VR, and are next working on support for Google Cardboard and other devices.
+        .col.col-6.m-col-4.px3
+          h1 Why do I need an Oculus Rift? Will you add support for other headsets?
+          p Support for other headsets is coming soon. We are using the Rift as our initial test and development HMD because it the best supported and most widely-distributed headset on the market (over 200,000 DK1 and DK2 units shipped). We are deeply committed to device-agnostic Web VR, and are next working on support for Google Cardboard and other devices.
+      .clearfix
+        .col.col-12
+          a(href=locals.blog).px3.button.white.bg-lighten2.hover-lighten.mb3 More Posts
 
-  // Projects
 
-  .p-leftedge.py3.pr4.darkblue2.bg-white
-    h2 Frequently Asked Questions
-    .grid-container
-      .row
-        .col-8
-          ul
-            li
-              h4 Why do I need an Oculus Rift? Will you add support for other headsets?
-              p Yes. Support for other headsets is coming soon. We are you using the Rift as our initial test and development HMD because it the best supported VR HMD on the market and has shipped over 200k units to developers around the world. We are deeply committed to device-agnostic Web VR, however, and are working on support for Google Cardboard and other devices.
-            li
-              h4 The demos run slow or choppy for me. How can I improve performance?
-              p Start by follow our display setup tips. VR is very new technology, and a few settings can make the difference between a smooth or choppy experience.
-            li
-              h4 Why do I need Firefox Nightly? Can I use normal desktop Firefox?
-              p VR web support is very new, and we want to test it thoroughly before we ship to all Firefox users. Our intention is to ship VR support in standard desktop Firefox as soon as it's ready.
-            li
-              h4 Can I use Chrome?
-              p Yes, mozvr.com works with VR-enabled experimental builds of Chrome being created by Brandon Jones of the Chrome team. Those builds are available 
-                a(href=locals.build_chrome target='_blank') here.
-            li
-              h4 Is Firefox for Android support coming?
-              p Yes, we are currently working to bring Web VR support to Firefox for Android.
-            li
-              h4 Can I build Web VR experiences with HTML and CSS?
-              p Current builds of Firefox with VR support WebGL VR only, but we are working on adding support for CSS VR. Placing DOM elements into VR scenes presents significant rendering and performance challenges for the browser and will take time to do right, but we believe strongly in the importance of doing so.
-            li
-              h4 Can I build Web VR experiences with HTML and CSS?
-              p Current builds of Firefox with VR support WebGL VR only, but we are working on adding support for CSS VR. Placing DOM elements into VR scenes presents significant rendering and performance challenges for the browser and will take time to do right, but we believe strongly in the importance of doing so.
-        .col-4
+
+  // FAQ
+
+  .py3.darkblue2.bg-gray1
+    .container
+      //.clearfix
+        .col.col-12
+          h2 FAQ
+      .clearfix.mxn3.py2
+        .col.col-6.px3
+
+          h4.semi-bold.py2 Why do I need an Oculus Rift? Will you add support for other headsets?
+          p.gray5.bl1.b-dotted.b-gray3.pl2 Support for other headsets is coming soon. We are using the Rift as our initial test and development HMD because it the best supported and most widely-distributed headset on the market (over 200,000 DK1 and DK2 units shipped). We are deeply committed to device-agnostic Web VR, and are next working on support for Google Cardboard and other devices.
+
+          h4.semi-bold.py2 The demos run slow or choppy for me. How can I improve performance?
+          p.gray5.bl1.b-dotted.b-gray3.pl2 Start by follow our display setup tips. VR is very new technology, and a few settings can make the difference between a smooth or choppy experience.
+
+          h4.semi-bold.py2 Why do I need Firefox Nightly? Can I use normal desktop Firefox?
+          p.gray5.bl1.b-dotted.b-gray3.pl2 VR web support is very new, and we want to test it thoroughly before we ship to all Firefox users. Our intention is to ship VR support in standard desktop Firefox as soon as it's ready.
+
+        .col.col-6.px3
+
+          h4.semi-bold.py2 Can I use Chrome?
+          p.gray5.bl1.b-dotted.b-gray3.pl2 
+            | Yes, mozvr.com works with VR-enabled 
+            a(href=locals.build_chrome target='_blank').basiclink-blue experimental builds
+            |  of Chrome being created by 
+            a(href='https://twitter.com/Tojiro' target='_blank').basiclink-blue Brandon Jones 
+            |  of the Chrome team.
+
+          h4.semi-bold.py2 Is Firefox for Android support coming?
+          p.gray5.bl1.b-dotted.b-gray3.pl2 Yes, we are currently working to bring Web VR support to Firefox for Android.
+
+          h4.semi-bold.py2 Can I build Web VR experiences with HTML and CSS?
+          p.gray5.bl1.b-dotted.b-gray3.pl2 Current builds of Firefox with VR support WebGL VR only, but we are working on adding support for CSS VR. Placing DOM elements into VR scenes presents significant rendering and performance challenges for the browser and will take time to do right, but we believe strongly in the importance of doing so.
+
 
   include team-member
 
   // Team
-  .p-leftedge.py3.pr4.darkblue2.bg-white
-    h2 About Us
-    .grid-container
-      .row
-        .col-6
-          p The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians working with contributors and partners from around the world.
-      .row
-        .col-2
+  .py3.darkblue2.bg-white
+    .container
+      .clearfix
+        .col.col-12
+          h2 Our Team
+      .clearfix.mxn2
+        .col.col-8.px2
+          p The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians, and we work with partners and contributors from around the world.
+      .clearfix.mxn2
+        .col.col-3.m-col-2.px2
           mixin team-member('joshcarpenter')
-        .col-2
+        .col.col-3.m-col-2.px2
           mixin team-member('vladvukicevic')
-        .col-2
+        .col.col-3.m-col-2.px2
           mixin team-member('caseyyee')
-        .col-2
+        .col.col-3.m-col-2.px2
           mixin team-member('diegomarcos')
+        .col.col-0.m-col-4.px2
 
 
 

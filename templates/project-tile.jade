@@ -3,9 +3,9 @@ mixin project-tile(name)
 	- var project = contents.projects[name]['index.md']
 
 	a(href=project.url)
-		.overflow-hidden.rounded1
-			img(src='/projects/'+name+'/'+project.metadata.thumb).fit
-		h3.regular.white
+		img(src='/projects/'+name+'/'+project.metadata.thumb).fit.rounded1.outline-green
+	h3
+		a(href=project.url).basiclink-green 
 			= project.metadata.title
-		p.f-small.blue1
-			= project.metadata.intro
+	p.f-small.lighten5
+		= project.metadata.intro

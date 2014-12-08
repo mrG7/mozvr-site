@@ -1,8 +1,33 @@
 //
-.relative
-  a(href='' target='_blank').inline-block.b-solid.b-white.hover-blue3.rounded2
-    img(src='/images/icon-goggles.svg' alt='Enter VR').w4.p2
-  .absolute.top-0.right-0.translate-ny100
+.relative.right-align
+  //#enterVR.p2
+    .table
+      a(href='' target='_blank').inline-block.b-solid.b-white.hover-blue3.rounded2
+        img(src='/images/icon-goggles-2.svg' alt='Enter VR').w6
+  #getVR.white.p2.bg-purple.rounded3
+    .table
+      .table-cell.left-align.pr2.f-small
+        span.light.nowrap Your browser does not support virtual reality.
+          br
+          | Use 
+          a(href=locals.downloads).semi-bold.nowrap.basiclink-white Firefox with VR
+          |  and an Oculus Rift 
+          br 
+          | to enter the full VR web experience.
+      .table-cell
+        a(href='' target='_blank').inline-block.b-solid.b-white.hover-blue3.rounded2
+          img(src='/images/icon-goggles-2.svg' alt='Enter VR').w6
+    
+
+
+  //a(href='').absolute.top-50p.left-0.translate-nx100y50.mr4
+    .white.bg-purple.px2.py1.rounded2.mr1
+      span.light.nowrap VR Browser not detected
+      br
+      span.semi-bold.nowrap Get Firefox with VR
+      //.notch.bg-purple.absolute.right-0.top-50p
+
+  //.absolute.top-0.right-0.translate-ny100
     .center-align.white.bg-purple.p2.rounded3
       p.mb1
         span.semi-bold This is a virtual reality website.

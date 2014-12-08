@@ -8,36 +8,37 @@ block prepend title
 
 block content
 
-  .p-leftedge.py2.pr1.white.bg-darkblue2
+  .py2.white.bg-darkblue2
     include header
 
   include project-creators
   include project-tools
 
   // Splash
-  .p-leftedge.py3.pr4.white.bg-darkblue2
-    .grid-container.relative.p0.mb3
-      img(src=page.metadata.splash).fit.rounded1
-      a(href=page.metadata.link)
-        img(src='/images/icon-goggles.svg' alt='Enter VR').entervr.absolute.bottom-0.right-0.p2.m3
-    .grid-container
-      .row
-        .col-3
+  .py3.white.bg-darkblue2
+    .container
+      .clearfix.relative.p0.mb3
+        .col.col-12
+          img(src=page.metadata.splash).fit.rounded1
+          .absolute.right-2.bottom-2
+            include entervr
+      .clearfix
+        .col.col-3
           h5 Project
           h1
             =page.metadata.title
-        .col-2
+        .col.col-2
           h5 Creators
           mixin project-creators(page.metadata.creators)
-        .col-2
+        .col.col-2
           h5 Tools
           mixin project-tools(page.metadata.tools)
-        .col-5
+        .col.col-5
 
   // Content
-  .p-leftedge.py3.pr4.darkblue2.bg-white
-    .grid-container
-      .row
+  .py3.darkblue2.bg-white
+    .container
+      .clearfix
         .col-8
           p.f-large
             =page.metadata.intro
@@ -45,7 +46,7 @@ block content
             a(href=page.metadata.source).button.button-green1.mt3.px3
               | GitHub
         .col-4
-      .row
+      .clearfix
         .col-12.fit-imgs
           if page.html
             != typogr(page.html).typogrify()

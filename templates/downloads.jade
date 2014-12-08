@@ -3,18 +3,18 @@ extends layout
 block content
 
   // Header
-  .p-leftedge.py2.pr1.white.bg-darkblue2-transparent#header
+  .py2.white.bg-darkblue2-transparent#header
     include header
 
   // Intro
-  .p-leftedge.py4.pr4.bg-white
-    .grid-container
-      .row
-        .col-8
+  .py4.bg-white
+    .container
+      .clearfix
+        .col.col-12.m-col-8
           h1 Firefox with VR
           h3 These are experimental builds of Firefox Desktop with support for new VR interfaces.
-      .row.mb0
-        .col-12
+      .clearfix
+        .col.col-12
           h3.py2.mt2.mb0.inline-block.bt1.b-dotted.b-gray3
             span.black.semi-bold 
               =locals.build_version 
@@ -45,8 +45,8 @@ block content
               li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               li Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               li Tempor incididunt ut labore et dolore magna aliqua.
-      .row
-        .col-12
+      .clearfix
+        .col.col-12
           h1 Display configuration
           h3 For optimal performance, configure your displays as follows.
           h4.semi-bold.my2 Windows:
