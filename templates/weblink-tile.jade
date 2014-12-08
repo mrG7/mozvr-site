@@ -1,0 +1,18 @@
+mixin weblink-tile(number)
+
+  - var link = contents.weblinks['weblinks.json'].metadata.weblinks[number]
+
+  h3.mt0
+    a(href=link.url).gray7
+      = link.title
+  p
+    span.gray3.italic
+      |  By  
+      = link.publication
+      |  - 
+      = link.date
+    br
+    span.darkblue2
+      = link.intro
+
+//a(href='http://twitter.com/@'+contents.people[post.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue

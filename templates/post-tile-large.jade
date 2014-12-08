@@ -1,0 +1,27 @@
+mixin post-tile(name)
+
+	- var post = contents.posts[name]['index.md']
+  
+	h1.semi-bold
+		a(href='/posts/'+name+'/'+post.metadata.thumb).gray7
+			= post.metadata.title
+	a(href=post.url)
+		img(src='/posts/'+name+'/'+post.metadata.thumb).fit.rounded1.outline-green
+	p
+		span.gray3.italic
+			|  By  
+			a(href=contents.people[post.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue
+				= contents.people[post.metadata.author + '.json'].metadata.name
+			|  - 
+			= post.metadata.date
+		br
+		span.darkblue2
+			= post.metadata.intro
+
+	//a(href=post.url)
+		.overflow-hidden
+			img(src='/posts/'+name+'/'+post.metadata.thumb).rounded1.fit
+		h3.regular.white
+			= post.metadata.title
+		p.f-small.blue1
+			= post.metadata.intro
