@@ -12,22 +12,41 @@ block content
   .py2.white.bg-darkblue2
     include header
 
-  // Splash
-    .p-leftedge.py3.pr4.white.bg-darkblue2
-      .grid-container.relative.p0.mb3
-        img(src=page.metadata.splash).fit.rounded1
+  // Splash + Title
+  div(style="background-image: url('"+page.metadata.splash+"'); background-size: cover; background-position: 50% 50%").h40.py3.white.bg-darkblue2.relative
+    //img(src=page.metadata.splash).fit.rounded1
+    .absolute.bottom-2.full-width
+      .container
+        .clearfix
+         .col.col-12.m-col-8
+            h1
+              span.postTitle
+                = page.metadata.title
 
-  // Content
+
   .py3.darkblue2.bg-white
     .container
+      //Author
+      .table.mt3
+        .table-cell.col-1
+          a(href='http://twitter.com/@'+contents.people[page.metadata.author + '.json'].metadata.twitter target='_blank').hover-lighten
+            img(src='/people/'+contents.people[page.metadata.author + '.json'].metadata.photo).circle.fit.w5
+        .table-cell.col-11.gray5.light.px2
+          |  By  
+          a(href='http://twitter.com/@'+contents.people[page.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue.regular
+            = contents.people[page.metadata.author + '.json'].metadata.name
+          |  • 
+          span.italic 
+            = page.metadata.date
+      //Body
       .clearfix
-        .col.col-12.m-col-8.fit-imgs
-          h1.semi-bold
-            = page.metadata.title
-          p.f-large.py3
+        .col.col-12.m-col-10.fit-imgs
+
+          p.f-huge.py3.gray6
             = page.metadata.intro
           != typogr(page.html).typogrify()
-        .col.m-col-4
+
+        .col.m-col-2
       .clearfix
         include author
         h4 About the author

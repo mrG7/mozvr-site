@@ -1,11 +1,11 @@
 ---
 title: Quick VR Mockups with Illustrator or Photoshop
-date: 2014-12-10 15:00
+date: 2014-12-10
 template: post.jade
 project-profile: sechelt
 project-link: http://mozvr.github.io/sechelt
 project-source: http://github.io/MozVR/sechelt
-splash: post-splash.jpg
+splash: post-splash.png
 thumb: post-thumb.png
 intro: Designing for web VR is completely unlike designing for the desktop and mobile web. Even the process of mocking up and testing a layout must be rethought. With a few smart measurements, templates, and our favorite layout apps, it can actually be easy, though. And tons of fun.
 author: joshcarpenter

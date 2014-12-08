@@ -1,6 +1,6 @@
 ---
-title: Making Sechelt
-date: 2014-12-10 15:00
+title: Making Sechelt With Three.js and Cinema4D
+date: 2014-12-10
 template: post.jade
 project-profile: sechelt
 project-link: http://mozvr.github.io/sechelt

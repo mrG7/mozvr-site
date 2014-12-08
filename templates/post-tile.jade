@@ -12,14 +12,15 @@ mixin post-tile(name)
   .clearfix
     .col.col-8
       p.f-large
-        span.gray3.italic.f-medium
+        span.gray4.f-medium
           |  By  
           a(href='http://twitter.com/@'+contents.people[post.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue
             = contents.people[post.metadata.author + '.json'].metadata.name
           |  - 
-          = post.metadata.date
+          span.italic 
+            = post.metadata.date
         br
-        span.darkblue2
+        span.gray5
           = post.metadata.intro
     .col.col-4.pl3
       a(href=post.url).w8

@@ -15,9 +15,33 @@
   // height: 4rem;
 }
 
+.postTitle {
+  color: $white;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 0.02rem;
+  line-height: 7rem;
+  background-color: $pink;
+  padding: 1rem 0rem;
+}
+
 .basiclink {
   border-width: 0 0 1px 0;
   border-style: dotted;
+}
+
+.basiclink-darkblue2 {
+  @extend .basiclink;
+  color: $darkblue2;
+  border-color: $darkblue2;
+}
+
+.basiclink-darkblue2:hover {
+  color: $white;
+  background-color: $darkblue2;
+  text-decoration: none;
 }
 
 .basiclink-white {
