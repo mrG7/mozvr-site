@@ -11,6 +11,56 @@ intro: Designing for web VR is completely unlike designing for the desktop and m
 author: joshcarpenter
 ---
 
+Overview
+
+* Part of the fun of VR is designing experiences that wrap around the user
+* That's part of the challenge too, though. How can designers use the tools they know, like Illustrator and Photoshop, to create VR mockups quickly and easily? Here's a technique we've been using on our team that uses simple cylinders and Three.js.
+* Quick and easy way to get layouts into VR (to test for legibility, color, viewing angles, etc)
+* Create mockups @ 360 x 90cm
+* Drop into Three.js cylinder with 
+
+* Challenges of designing for virtual reality
+* Measurements we need to keep in mind
+  - 60° color
+  - 30° shapes
+  - 10° text
+  - Real world units
+* Illustator:
+  - Create a canvas 360cm x 90cm
+  - I like to set grid to 1cm w/ 4 subdividers.
+* Why metric? Sorry Americans and Burmese. Time to get with the program.
+* Create our Three.js scene (can use the one provided)
+* Taking it further: add prev/next handlers, loop through mockups, etc
+* Tips for typography sizes
+* Add more cylinders for a layered look!
+* Background image to provide some visual relief
+* Adding multiple cylinders to test separation
+* Playing with scale to test distances
+* Sizes vis-a-vis Cinema display
+
+Assets:
+
+* Image of guidelines (closeup of Illustrator file)
+* Screencap animated GIF of user leaning in to read text more closely
+* Download
+  - Illustrator template (save as Illustrator 8 to ensure accessibility)
+  - Three.js & VR libs (latest)
+  - Code (final scene)
+* Link to end result (open in VR mode)
+
+TODO: 
+
+* Check for VR browser. If not detected, present mono mode.
+* 
+* Where do we host assets? Wintersmith repo? GH tutorial repo? GH boilerplate repo?
+* Use "r" to zero sensor?
+
+
+
+
+
+
+
 ![The Cinema 4D setup ](c4d-1.png)
 
 ## Basic workflow
