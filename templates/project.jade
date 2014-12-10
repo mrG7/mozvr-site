@@ -6,16 +6,14 @@ block append vars
 block prepend title
   | #{ page.title + " - "}
 
-block content
-
-  .py2.white.bg-darkblue2
-    include header
+block content   
 
   include project-creators
   include project-tools
 
   // Splash
-  .py3.white.bg-darkblue2
+  .py3.white.bg-blue4
+    include header
     .container
       .clearfix.relative.p0.mb3
         .col.col-12
