@@ -4,7 +4,9 @@
     "name": "MozVR",
     "owner": "Mozilla Research",
     "description": "A virtual reality website about virtual reality websites",
+    "home": "/",
     "downloads": "/downloads",
+    "projects": "/projects",
     "blog": "/blog",
     "build_version": "Version 36.0a1",
     "build_date": "2014-11-09",
@@ -13,7 +15,6 @@
     "build_windows": "http://people.mozilla.org/~vladimir/vr/5/firefox-36.0a1.en-US.win64-x86_64.zip",
     "build_windows_size": "42MB",
     "build_chrome": "https://drive.google.com/a/google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&usp=sharing#list",
-    "projects": "/projects",
     "repo": "http://github.com/MozVR"
   },
   "plugins": [

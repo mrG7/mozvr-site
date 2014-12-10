@@ -6,13 +6,13 @@ mixin post-tile(name)
 
   .clearfix
     .col.col-8
-      h1.semi-bold.mt0
+      h3.mt0
         a(href=post.url).gray7
           = post.metadata.title
   .clearfix
     .col.col-8
-      p.f-large
-        span.gray4.f-medium
+      p
+        span.gray4
           |  By  
           a(href='http://twitter.com/@'+contents.people[post.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue
             = contents.people[post.metadata.author + '.json'].metadata.name

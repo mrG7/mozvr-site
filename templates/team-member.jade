@@ -4,9 +4,9 @@ mixin team-member(name)
 
 	a(href='http://www.twitter.com/'+member.metadata.twitter)
 		img(src='/people/' +member.metadata.photo).fit.rounded1.outline-white
-	h3.regular
+	h4
 		= member.metadata.name
-	p.f-small
+	p.h6
 		= member.metadata.role
 		br
 		= member.metadata.location

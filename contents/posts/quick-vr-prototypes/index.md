@@ -11,7 +11,7 @@ intro: Designing for web VR is completely unlike designing for the desktop and m
 author: joshcarpenter
 ---
 
-Overview
+# Quick VR Mockups with Illustrator or Photoshop
 
 * Part of the fun of VR is designing experiences that wrap around the user
 * That's part of the challenge too, though. How can designers use the tools they know, like Illustrator and Photoshop, to create VR mockups quickly and easily? Here's a technique we've been using on our team that uses simple cylinders and Three.js.

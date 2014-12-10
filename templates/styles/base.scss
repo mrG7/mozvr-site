@@ -1,3 +1,7 @@
+.headlinks {
+  letter-spacing: 0.15em;
+}
+
 .notch {
   width: 1rem;
   height: 1rem;
@@ -15,7 +19,26 @@
   // height: 4rem;
 }
 
-.postTitle {
+.posttest { 
+  padding: 2px 0; 
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
+}
+.posttest span { 
+  background-color: #c0c;
+  color: #fff; 
+  display: inline;
+  line-height: 1.8;
+  padding: 0.4rem 0.85rem;
+  
+  /* Needs prefixing */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.post {
   color: $white;
   font-style: italic;
   text-transform: uppercase;
@@ -32,6 +55,7 @@
   border-style: dotted;
 }
 
+/*
 .basiclink-darkblue2 {
   @extend .basiclink;
   color: $darkblue2;
@@ -43,6 +67,8 @@
   background-color: $darkblue2;
   text-decoration: none;
 }
+*/
+
 
 .basiclink-white {
   @extend .basiclink;
@@ -52,43 +78,55 @@
 
 .basiclink-white:hover {
   color: $white;
-  background-color: $bg-lighten3;
+  background-color: $lighten3;
   text-decoration: none;
 }
 
+
 .basiclink-blue {
   @extend .basiclink;
-  color: $blue3;
-  border-color: $blue3;
+  color: $blue1;
+  border-color: $blue1;
 }
 
 .basiclink-blue:hover {
   color: $white;
-  background-color: $blue3;
+  background-color: $blue1;
   text-decoration: none;
 }
 
+
 .basiclink-green {
   @extend .basiclink;
-  color: $green1;
-  border-color: $green1;
+  color: $green2;
+  border-color: $green2;
 }
 
 .basiclink-green:hover {
   color: $white;
-  background-color: $green1;
+  background-color: $green2;
   text-decoration: none;
+}
+
+
+.outline-blue1 {
+  box-sizing: border-box;
+  outline: 1rem solid rgba( 0, 0, 0, 0 );
+  outline-offset: -1rem;
+}
+
+.outline-blue1:hover {
+  outline-color: $blue1;
 }
 
 .outline-white {
   box-sizing: border-box;
   outline: 1rem solid rgba( 0, 0, 0, 0 );
   outline-offset: -1rem;
-
 }
 
 .outline-white:hover {
-  outline-color: $bg-lighten3;
+  outline-color: $lighten3;
 }
 
 .outline-green {
@@ -98,21 +136,14 @@
 }
 
 .outline-green:hover {
-  outline-color: $green1;
+  outline-color: $green2;
 }
+
+
+
 
 /*--------- Elements ---------*/
 
-/*
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-} 
-*/
 
 
 html {
@@ -120,7 +151,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -140,35 +171,37 @@ a:active {
 }
 
 
-h1,.h1 { font-size: 2rem; }
-h2,.h2 { font-size: 1.5rem; }
-h3,.h2 { font-size: 1.17rem; }
-h4,.h4 { font-size: 1rem; }
-h5,.h5 { font-size: 0.83rem; }
-h6,.h6 { font-size: 0.75rem; }
+h1,.h1 { font-size: 2.07rem; }
+h2,.h2 { font-size: 1.72rem; }
+h3,.h2 { font-size: 1.44rem; }
+h4,.h4 { font-size: 1.2rem; }
+h5,.h5 { font-size: 1rem; }
+h6,.h6 { font-size: 0.83rem; }
+.h7 { font-size: 0.69rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25em;
+  letter-spacing: -0.02em;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
 .button, button {
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 400;
   text-decoration: none;
   display: inline-block;
   box-sizing: border-box;
   line-height: 1.125;
   margin: 0;
-  padding: 0.75rem 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   text-align: center;
   height: auto;
   color: white;
   white-space: nowrap;
-  font-size: 1.1rem;
-  border-radius: $rounded4;
+  text-transform: uppercase;
+  // border-radius: $rounded1;
 }
 
 .button:hover, button:hover {

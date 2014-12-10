@@ -9,22 +9,22 @@ block prepend title
 
 block content
 
-  .py2.white.bg-darkblue2
+  .py2.white.bg-blue3
     include header
 
   // Splash + Title
-  div(style="background-image: url('"+page.metadata.splash+"'); background-size: cover; background-position: 50% 50%").h40.py3.white.bg-darkblue2.relative
+  div(style="background-image: url('"+page.metadata.splash+"'); background-size: cover; background-position: 50% 50%").height40.py3.white.bg-darkblue2.relative
     //img(src=page.metadata.splash).fit.rounded1
     .absolute.bottom-2.full-width
       .container
         .clearfix
          .col.col-12.m-col-8
-            h1
-              span.postTitle
+            h1.posttest
+              span
                 = page.metadata.title
 
 
-  .py3.darkblue2.bg-white
+  .py3.gray8.bg-white
     .container
       //Author
       .table.mt3

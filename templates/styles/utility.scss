@@ -6,17 +6,35 @@ $space-4: 4rem;
 
 /*--------- Typography ---------*/
 
+/*
 .f-smaller { font-size: 0.83rem }
 .f-small { font-size: 0.9rem }
 .f-normal { font-size: 1rem }
 .f-medium { font-size: 1.17rem }
-.f-large { font-size: 1.3rem }
-.f-huge { font-size: 2rem }
+.f-large { font-size: 1.3rem; letter-spacing: -0.01em; }
+.f-huge { font-size: 2rem; letter-spacing: -0.01em; }
+*/
 
+/*Open Sans weights*/
+/*
 .light { font-weight: 300; }
 .regular { font-weight: 400; }
 .semi-bold { font-weight: 600; }
 .bold { font-weight: 700; }
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }
+*/
+
+/*Fira Sans weights*/
+.hair { font-weight: 100; }
+.ultralight { font-weight: 200; }
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.medium { font-weight: 500; }
+.semi-bold { font-weight: 600; }
+.bold { font-weight: 700; }
+.extrabold { font-weight: 800; }
+.heavy { font-weight: 900; }
 .italic { font-style: italic; }
 .uppercase { text-transform: uppercase; }
 
@@ -64,16 +82,16 @@ $space-4: 4rem;
 .w6 { width: 6rem; }
 .w8 { width: 8rem; }
 
-.h1 { height: 1rem; }
-.h2 { height: 2rem; }
-.h3 { height: 3rem; }
-.h4 { height: 4rem; }
-.h5 { height: 5rem; }
-.h6 { height: 6rem; }
-.h8 { height: 8rem; }
-.h16 { height: 16rem; }
-.h32 { height: 32rem; }
-.h40 { height: 40rem; }
+.height1 { height: 1rem; }
+.height2 { height: 2rem; }
+.height3 { height: 3rem; }
+.height4 { height: 4rem; }
+.height5 { height: 5rem; }
+.height6 { height: 6rem; }
+.height8 { height: 8rem; }
+.height16 { height: 16rem; }
+.height32 { height: 32rem; }
+.height40 { height: 40rem; }
 
 .fit { max-width: 100% }
 .fit-imgs img { width: 100% }
