@@ -55,7 +55,7 @@ To help us keep track of what our users can see, it's helpful to set up a few gu
   <img src="visual-field-template.png" alt="Mockup of a 360x90cm layout template with overlays for important field of view measurements.">
 </figure>
 
-We also need to remember that current VR headsets have a fairly limited field of view. The DK2, for example, has an effective horizontal field of view of approximately 90°. This crops what the visible area (without turning our head) to the following:
+We also need to remember that current VR headsets have a fairly limited field of view. The DK2, for example, has an effective horizontal field of view of approximately 90°. This crops what we can see in the headset without turning our heads to the following:
 
 <figure>
   <img src="visual-field-DK2.png" alt="Diagram of Oculus Rift DK2 field of veiw. Source: Extron.">
