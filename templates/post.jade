@@ -8,19 +8,18 @@ block prepend title
 
 
 block content
-
-  .py2.white.bg-blue4
-    include header
+    
 
   // Splash + Title
-  div(style="background-image: url('"+page.metadata.splash+"'); background-size: cover; background-position: 50% 50%").height40.py3.white.bg-darkblue2.relative
-    //img(src=page.metadata.splash).fit.rounded1
+  div(style="background-image: url('"+page.metadata.splash+"'); background-size: cover; background-position: 50% 50%").height40.py0.white.bg-darkblue2.relative
+    .py2.white.bg-darken5
+      include header
     .absolute.bottom-2.full-width
       .container
         .clearfix
          .col.col-12.m-col-8
-            h1.posttest.italic.light.py1.uppercase
-              span
+            h1.title.italic.ultralight.uppercase.mxn3
+              span.p2.bg-yellow.black
                 = page.metadata.title
 
 
@@ -28,25 +27,31 @@ block content
     .container
       //Author
       .table.mt3
-        .table-cell.col-1
+        .table-cell.col-1.pr1
           a(href='http://twitter.com/@'+contents.people[page.metadata.author + '.json'].metadata.twitter target='_blank').hover-lighten
-            img(src='/people/'+contents.people[page.metadata.author + '.json'].metadata.photo).circle.fit.w5
-        .table-cell.col-11.gray5.light.px2
+            img(src='/people/'+contents.people[page.metadata.author + '.json'].metadata.photo).circle.fit.w4
+        .table-cell.col-11.gray5.light
           |  By  
           a(href='http://twitter.com/@'+contents.people[page.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue.regular
             = contents.people[page.metadata.author + '.json'].metadata.name
           |  • 
           span.italic 
-            = page.metadata.date
+            = moment(page.metadata.date).format("dddd MMM DD, YYYY")
       //Body
       .clearfix
-        .col.col-12.m-col-10.fit-imgs
+        .col.col-12.m-col-8.fit-imgs
 
-          p.f-huge.py3.gray6
+          p.regular.h2.py3.black.m0
             = page.metadata.intro
+
+          .bt1.b-dotted.b-gray3.mb3
+          
           != typogr(page.html).typogrify()
 
         .col.m-col-2
+
+  .py3.gray8.bg-blue0
+    .container
       .clearfix
         include author
         h4 About the author

@@ -66,12 +66,11 @@ block content
           mixin project-tile('panorama-viewer')
       .clearfix
         .col.col-12
-          a(href=locals.projects).px3.button.bg-lighten3.hover-lighten.mb3 More Projects
+          a(href=locals.projects).px2.button.rounded1.bg-lighten3.hover-lighten.mb3 More Projects
 
 
   include post-tile-large
   include post-tile
-  include weblink-tile
 
   // Posts
 
@@ -88,8 +87,15 @@ block content
           mixin post-tile('quick-vr-prototypes')
       .clearfix
         .col.col-12
-          a(href=locals.blog).px3.button.bg-darken3.hover-lighten.mb1 More Posts
-          .b-solid.b-gray2.bt4.my3
+          a(href=locals.blog).px2.button.rounded1.bg-darken3.hover-lighten.mb1 More Posts
+  
+
+  include weblink-tile
+
+  // Web links
+  
+  .py3.darkblue2.bg-gray1
+    .container
       .clearfix
         .col.col-12
           h3 Around the Web
@@ -113,7 +119,7 @@ block content
 
   // FAQ
 
-  .py3.darkblue2.bg-gray1
+  .py3.darkblue2.bg-white
     .container
       .clearfix
         .col.col-12
@@ -150,7 +156,7 @@ block content
   include team-member
 
   // Team
-  .py3.darkblue2.bg-white
+  .py3.blue4.bg-blue0
     .container
       .clearfix
         .col.col-12

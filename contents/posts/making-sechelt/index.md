@@ -7,7 +7,7 @@ project-link: http://mozvr.github.io/sechelt
 project-source: http://github.io/MozVR/sechelt
 splash: post-splash.jpg
 thumb: post-thumb.png
-intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
+intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
 author: joshcarpenter
 ---
 

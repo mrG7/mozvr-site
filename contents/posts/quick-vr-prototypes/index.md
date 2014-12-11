@@ -7,233 +7,204 @@ project-link: http://mozvr.github.io/sechelt
 project-source: http://github.io/MozVR/sechelt
 splash: post-splash.png
 thumb: post-thumb.png
-intro: Designing for web VR is completely unlike designing for the desktop and mobile web. Even the process of mocking up and testing a layout must be rethought. With a few smart measurements, templates, and our favorite layout apps, it can actually be easy, though. And tons of fun.
+intro: Designing for web VR is completely unlike designing for the desktop and mobile web. Even the process of mocking up and testing an interface must be rethought. But with a few measurements and templates we can quickly create layouts in our favorite 2D design apps and test them in web VR.
 author: joshcarpenter
 ---
 
-# Quick VR Mockups with Illustrator or Photoshop
+<!--The magic of designing for VR is creating experiences that wrap around the user. But the tools we use are two dimensional. We could use 3D content creation apps like Cinema 4D and export models into our web VR scenes, but for all their modeling, texturing and rendering power, 3D apps are not optimized for creating type and content-heavy layouts.-->
 
-* Part of the fun of VR is designing experiences that wrap around the user
-* That's part of the challenge too, though. How can designers use the tools they know, like Illustrator and Photoshop, to create VR mockups quickly and easily? Here's a technique we've been using on our team that uses simple cylinders and Three.js.
-* Quick and easy way to get layouts into VR (to test for legibility, color, viewing angles, etc)
-* Create mockups @ 360 x 90cm
-* Drop into Three.js cylinder with 
+After years of bouncing between Photoshop and Keynote I've happily settled on Illustrator as my primary interface design tool. I'm good with 3D apps like Cinema4D, but for all their power, they're painful to use for typography, interface layout, etc. So when it came time to design a VR web navigation UI, I wanted a workflow that let me rapidly iterate from mockups created in Illustrator to wrap-around web VR test scenes.
 
-* Challenges of designing for virtual reality
-* Measurements we need to keep in mind
-  - 60° color
-  - 30° shapes
-  - 10° text
-  - Real world units
-* Illustator:
-  - Create a canvas 360cm x 90cm
-  - I like to set grid to 1cm w/ 4 subdividers.
-* Why metric? Sorry Americans and Burmese. Time to get with the program.
-* Create our Three.js scene (can use the one provided)
-* Taking it further: add prev/next handlers, loop through mockups, etc
-* Tips for typography sizes
-* Add more cylinders for a layered look!
-* Background image to provide some visual relief
-* Adding multiple cylinders to test separation
-* Playing with scale to test distances
-* Sizes vis-a-vis Cinema display
+<!--UI design requires tons of iterations. VR design doubly so, because it's so alien from the design arenas we're used to.-->
 
-Assets:
+<div class="tldr">
+<h2>In Brief</h2>
+<ol>
+  <li>Create your layout in a 2D design app and export as a bitmap.</li>
+  <li>Create cylinder mesh in Three.js with a circumference/height ratio that matches the width/height ratio of the bitmap.</li>
+  <li>Apply the bitmap as a texture to the cylinder and flip the cylinder faces.</li>
+  <li>View in VR!</li>
+</ol>
+</div>
 
-* Image of guidelines (closeup of Illustrator file)
-* Screencap animated GIF of user leaning in to read text more closely
-* Download
+We start in our preferred 2D design app. In my case, Illustrator. We create a canvas that is **360cm x 90cm**. When later viewed in the Rift, this canvas will wrap around us, mapped onto a cylinder which we (or the WebGL camera, more accurately) are in the center of. Like the following:
+
+<figure>
+  <img src="mockup1.png" alt="Top: our Illustrator layout. Bottom: our layout mapped ontp a WebGL cylinder.">
+  <figcaption>
+    Our 360x90cm Illustrator layout will be mapped onto a WebGL cylinder with a 360cm circumference and 90cm height.
+  </figcaption>
+</figure>
+
+Working with real world units is important because sense of scale is integral to virtual reality, and the scale your users will perceive will be determined primarily by size of the elements in your scene relative to the distance between the user's eyes. A distance which is defined in real world measurements (meters, to be precise). Working in real world units throughout our pipeline ensures we don't encounter any weird surprises, like text blocks that suddenly appear 10 stories tall (unless of course you _want_ that). <!--That measurement is the refered as the interpupilary distance, and it is 60mm on average in adults. The Rift reports this to the browser as 0.064 meters. by the . A VR HMD is displaying a different image to each eye,  rendering of virtual reality creates the perception of genuine scale. Your eyes can perceive the difference between a virtual cup a table versus a mountain miles away.-->
+
+As we create our layouts, it's also important that we know where on the cylinder our elements will eventually appear. That's why a 360cm width is convenient: each centimeter on the horizontal of our composition will equal one degree on the circumference of the 3D cylinder. The center of our layout (180cm/180°) will appear directly in front of the viewer, while the left and right edges will appear behind them.
+
+But wait! How much of our layout will be visible to the user? Human field of view is [limited](http://xkcd.com/1080/), after all. We wouldn't want to make our users turn their heads 90° to read an important status indicator. The following diagram from Extron gives us some idea of what we have to work with.
+
+<figure>
+  <img src="human-visual-field.jpg" alt="Diagram of human visual field. Source: Extron.">
+  <figcaption>
+    Human field of vision is approximately 180° horizontal, but our ability to read text is limited to just the center 10°, and our ability to perceive symbols to the center 60°.
+  </figcaption>
+</figure>
+
+To help us keep track of what our users can see, it's helpful to set up a few guides in our layout template that express these values. Most importantly, the center 60°, 30° and 10° of our vision, within which we can see color, shape and text, respectively.
+
+<figure>
+  <img src="visual-field-template.png" alt="Mockup of a 360x90cm layout template with overlays for important field of view measurements.">
+</figure>
+
+We also need to remember that current VR headsets have a fairly limited field of view. The DK2, for example, has an effective horizontal field of view of approximately 90°. This crops what the visible area (without turning our head) to the following:
+
+<figure>
+  <img src="visual-field-DK2.png" alt="Diagram of Oculus Rift DK2 field of veiw. Source: Extron.">
+</figure>
+
+Once we have a layout ready, we want to export it as a bitmap. We can scale at export-time as much as we need, so long as we do not change the same layout's width/height ratio. 
+
+## Viewing our layout in VR
+
+The good news is we don't need much JS to create our WebGL VR scene. The following scene is built on the MozVR Three.js web VR boilerplate, available from our [vr-web-examples repo](https://github.com/MozVR/vr-web-examples). It uses [Three.js](https://github.com/mrdoob/three.js) and two extra libraries that handle detecting, communicating and rendering to an attached VR headset.
+
+To preview our mockup, we simply copy the bitmap we saved into the `/images` directory and rename it `mockup.png`, overwriting the existing file. We then load `index.html` into our VR-enabled browser (like [Firefox with VR](http://mozvr.com/downloads)), and enter VR mode by pressing `F` or double-clicking. In our headset the scene the browser should render our scene, and we should see our layout wrapped around us on a cylinder.
+
+### The code
+
+Let's look at `index.html` to see how this works. Most of the code is standard boilerplate for a Three.js scene with VR support. To add our layouts, we need to: 
+
+1. Create a cylinder geometry with a circumference/height ratio that matches the width/height ratio of the bitmap.
+1. Create a material and load our mockup as a texture
+1. Flip the cylinder geometry to ensure the mockup displays correctly (facing "inwards")
+1. Create a mesh from our geometry and material and add it to the scene so it renders.
+
+To do this we first set up a few variables for our cylinder geometry:
+
+```javascript
+/*
+Set up the key measurements of the cylinder that will display our mockup image. It is important to match these measurements to the size of the image, or the surface area of the cylinder will be different from the image, causing it to appear squished or stretched. We start with the circumference of the cylinder. Set it to match the width of the image. Remember that the standard unit of measurement for VR scenes is meters. If our mockup canvas is 360 centimeters wide, for example, we set the circumference value to be 3.6 (360/100).
+*/
+
+var circumference = 3.6;
+
+/*
+Set up the radius of the cylinder. We derive the radius from the circumference.
+*/
+
+var radius = circumference / 3.14 / 2;
+
+/*
+Set up the height of the cylinder. As with the circumference, we match this value to the height of our mockup, and convert to meters (from 90cm to 0.9 meters)
+*/
+
+var height = 0.9;
+
+```
+
+We then create a cylinder geometry instance using the variables, and invert it's faces:
+
+```javascript
+/*
+Create the geometry for the cylinder object that will display our mockups.
+The cylinder constructor takes the following arguments: CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded). We add 60 radiusSegments to make the cylinder smooth, and leave the top and bottom openEnded.
+*/
+
+var geometry = new THREE.CylinderGeometry( radius, radius, height, 60, 1, true );
+
+/*
+Invert the scale of the geometry on the X axis. This flips the faces of the cylinder so they faces inwards, which has the visible effect of displaying the mockups as we expect: facing inwards and in the correct orientation. Try removing this line to see what happens without flipping the scale.
+*/
+
+geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
+
+```
+
+We then create a material for our mesh:
+
+```javascript
+/*
+Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to THREE.DoubleSide, so our material renders facing both inwards and outwards, relative to the  direction of the faces of the cylinder object). By default, materials and the faces of Three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visibile no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
+*/
+
+var material = new THREE.MeshBasicMaterial( { 
+  transparent: true, 
+  side: THREE.DoubleSide,
+  map: THREE.ImageUtils.loadTexture( 'images/mockup.png' )
+});
+```
+
+Next, we create the mesh and add it to our scene:
+
+```javascript
+/*
+Create the mesh of our cylinder object from the geometry and material.
+*/
+
+var mesh = new THREE.Mesh( geometry, material );
+
+/*
+Add our cylinder object to the scene. The default position of elements added to a Three.js scene is 0,0,0, which is also the default position of our scene's camera. So our camera sits inside our cylinder.
+*/
+
+scene.add( mesh );
+```
+
+0ur cylinder should now render in the scene, with us positioned at it's center.
+
+## Experimenting further
+
+With our layout loaded, there's lots more we can optionally do.
+
+### 1. Change the radius of our cylinder
+
+This has the effect of bringing the mockup closer or further from the user. By default, a cylinder with a circumference of 3.6m has a radius of 0.573 meters (22.5 inches). This is about the average distance that most of us view our desktop or laptop displays from. Using your VR headset, you can adjust the mesh scale to see what feels right for your layout. Make sure to set the same value for the X,Y and Z, or the cylinder will be stretched.
+
+```javascript
+/*
+To adjust the distance between our mockups and the user, we can optionally scale our mesh. If we apply 0.5 to the X,Y,Z, for example, the radius shrinks by half, and the mockups become twice as close to our eyes. Because we are scaling proportionally (equal on X,Y,Z) the mockups do not _appear_ any larger, but the stereo effect of the VR headset tells us they are closer. Play with this setting to find a value that you like.
+*/
+
+mesh.scale.set( 0.5, 0.5, 0.5 );
+```
+
+As you experiment, also consider the potential for other objects in your scene to come between your layout and the user. If I design a heads up display-style navigation interface with a 0.5 meter radius, for example, and my avatar in the VR world walks up to a wall, the geometry of the wall is probably going to come closer than the interface, thereby occluding it. My loading indicator suddenly disappearing into brick.
+
+The [Oculus Best Practices Guide](http://static.oculus.com/sdk-downloads/documents/Oculus_Best_Practices_Guide.pdf) (which is required reading for any creator of VR content) suggests the following:
+
+> "Bringing UIs in closer (eg 20cm) can help prevent occlusion (where in-world objects come closer to the user than HUD objects), but require the user to "...shift their focus between the close-up HUD and the much more distant scene whenever they check the HUD. These kinds of shifts in eye convergence and accomm odation (eye lens focus) can quickly lead to fatigue and eyestrain."
+
+### 2. Add a background image
+
+
+
+### 3. Create multiple layers at different depths
+
+Depth is a fundamental element of design for virtual reality. Through the two separate eyes of a VR headset we can perceive even slight differences in z-position between elements. We can see  a glowing button is hovering 0.5cm above the surface of it's parent dialothatgue, for example, or that a UI stretches off into the horizon. Depth in VR does naturally what drop shadows do skeumorphically in 2D layouts: create visual contrast between stacked layers.
+
+Adding additional layers to our scene is easy. We create additional meshes and load a different bitmaps into their materials.
+
+* Copy and paste the code above, not including the variables for circumference, radius, and height (they only need to be specified once).
+* In the new material, specify a different bitmap, eg `THREE.ImageUtils.loadTexture( 'images/mockup-background.png' )`
+* Tweak the mesh scale values to push the layout closer or further, as desired. This creates separation between layers.
+
+My tactic in creating the Mozvr.com layout was to start by building my layouts in a single Illustrator layer without thinking too much about 3D composition, and then group the elements into new layers towards the end of the process, with each layer representing a different depth. I then saved each layer individually as a bitmap with transparency. Each of these I then loaded into it's own cylinder mesh, which I then tweaked the scale of to find the desired separations. I found quickly that Depth is particularly spectacular when combined with the DK2's 3D camera, which enables us to instantly perceive the parallax effect between layers as we lean our bodies around inside the virtual world.
+
+## Have fun
+
+This technique enables us to bridge the workflows we know with the new world of virtual reality. It's a quick a simple way to iterate rapidly. Start hacking and have fun!
+
+## TODO
+
+* Update author section
+* Update splash and thumbnail
+* Add screenshots of progress and result to code section
+* Update layouts shown to HIRO interface
+* Add "add background image" section
+* Create assets download section
+  - Firefox with VR
   - Illustrator template (save as Illustrator 8 to ensure accessibility)
   - Three.js & VR libs (latest)
   - Code (final scene)
+* Create GIF of user leaning in to HIRO, showing depth effect
 * Link to end result (open in VR mode)
-
-TODO: 
-
-* Check for VR browser. If not detected, present mono mode.
-* 
-* Where do we host assets? Wintersmith repo? GH tutorial repo? GH boilerplate repo?
-* Use "r" to zero sensor?
-
-
-
-
-
-
-
-![The Cinema 4D setup ](c4d-1.png)
-
-## Basic workflow
-
-The high level process that brough Sechelt to life:
-
-* Scene modeled in Cinema 4D
-* Scene optimized by combinig geometries and eliminating unnecessary materials.
-* Scene models exported from Cinema 4D to Collada .DAE.
-* DAE file opened in [Three.js Editor](http://threejs.org/editor/)
-* Scene setup, animation, interactivity and sound created in [Three.js](http://threejs.org)
-* VR support implemented with VRControls and VREffect Three.js extras.
-
-## Pre Production
-
-### Inspiration and art direction
-
-Sechelt as location using Google Earth
-Roy Henry Vickers
-Doug Coupland's take on the coast of BC
-Journey, Shape of the World
-Sketches
-
-[Roy Henry Vickers](http://www.royhenryvickers.com/):
-
-![Roy Henry Vickers](artdirection-rhv.png)
-
-Douglas Coupland:
-
-![Douglas Coupland](artdirection-dc.png)
-
-![](photo1.jpg)
-
-### Scouting a location
-
-It was important to us to capture the reality of BC's coastal landscape, with its steep glacier-carved valleys and it's uncountable forested islands, stretching north from Vancouver to Alaska. To find a location, we used Google Earth to identify promising flight paths and vistas, eventually settling on a path stretching south from a mountain peak to the town of Sechelt.
-
-![The Sechelt scene ](googleearth-2.png)
-
-![The Motion Camera settings](map1.png)
-
-
-## Cinema 4D
-
-### Modeling and lighting
-
-This landscape was then modeled in Cinema 4D using the sculpt tool. Getting the lighting right was critical to achieving the desired look, and performance was a concern, so we opted to use a shader-based system. There are no lights in the scene. The landscape, water, trees etc are all colored with shaders. The fade of the landscape, from purple to light blue as it stretches into the distance, was achieved with a Gradient shader in the landscape material's Luminance channel. The shader is a set to 2000cm, and mapped to the position of the camera, making objects close to the camera dark, and objects further away progressively lighter.
-
-![The Cinema 4D setup ](c4d-1.png)
-
-### Camera animation
-
-The camera animation was defined with Cinema 4D's Motion Camera tool. A spline was carefully modeled, sweeping through the scene. The Motion Camera's path was set to the spline, and the Camera Position then animated from 0 to 100$. At the end I wanted the camera to come to rest in a very precise position, which proved difficult to achieve by tweaking the spline points. So we instead created a second camera, framed it just right, then set the Motion Camera to switch between aligning itself to the spline, and aligning itself to this second camera, at the very end of the sequence. The final effect was seamless.
-
-![The Motion Camera settings](c4d-6.png)
-
-### Exporting the Cinema 4D assets
-
-To exporting the assets from Cinema 4D to Three.js it was important to get several things right, or we found the results were unwieldy, mismatched, slow, etc. The steps we took were to:
-
-#### 1. Adjust the scale
-
-The original scene was modeled to match the actual landscape, in meters. This made the units too massive to easily handle, however, so we scaled the scene down to centimeters before exporting.
-
-#### 2. Reduce the number of individual objects by merging
-
-In Cinema 4D the trees were dozens of individual objects each with their own instance of the tree material. It is important to reduce the number of unique geometries and materials when working with Three.js, however, for both performance and logistics reasons. So before we exported the scene, we deleted any unused objects and merged the trees into one single object with one material instance.
-
-#### 3. Clean up the geometry
-
-If the camera was not going to see something, we deleted it. The meant carving out sections of the landscape, such as the backside of the mountains flanking the vallies.
-
-![The final Sechelt model landscape model. The white line is the camera's path. ](c4d-4.png)
-
-
-## Three.js Implementation
-
-### Importing scene models
-
-We recreated the Cinema 4D scene in Three.js by importing the objects inside the .DAE file with the following:
-
-```javascript
-var loader = new THREE.ObjectLoader();
-loader.load( 'c4d-scene.json', function ( object ) {
-
-  var landscape = object.getObjectByName( 'lanscape' );
-
-  var reflection = new THREE.Mesh( landscape.geometry, landscape.material.clone() );
-  reflection.material.side = THREE.BackSide;
-  reflection.position.y = 7.7;
-  reflection.scale.y = -1;
-  landscape.parent.add( reflection );
-
-  scene.add( object );
-
-} );
-```
-
-To create the effect of the lanscape reflecting on the "water", Ricardo actually duplicated the landscape, inverted it on the Y-axis, and moved it down. This seems more convoluted than simply created a water surface with a reflection shader (as we did in the original Cinema 4D scene), but within WebGL this approach is faster and enables finer control over the look of the reflection by modifying the reflection object's materials and other scene objects.
-
-### Ambient sounds
-
-As the user moves through the scene they hear waves, wildlife, and wind. These sounds are mapped to the environment itself, helping to create a sense of immersion within the 3D world. This effect was achieved by Ricardo, who created null objects in the 3D world, mapped sounds to them, and mapped the playback volume of the sounds to the distance of the user. Sound clips were sourced from [Freesound.org](http://www.freesound.org).
-
-```javascript
-var listener = new THREE.AudioListener();
-camera.add( listener );
-
-var sound = new THREE.Audio( listener );
-sound.load( 'sounds/78389__inchadney__seagulls.ogg' );
-sound.position.set( 475, 50, 850 );
-sound.setLoop( true );
-sound.setRefDistance( 100 );
-scene.add( sound );
-```
-
-### Camera system
-
-We were inspired by the app Eden River to implement a control scheme that was completely hands free and intuitive. As users fly through the Sechelt scene, their position travels along the path that was defined in Cinema 4D. By tilting their head, however, they can "bank" the camera, like a plane, to steer left and right, deviating slightly in the direction they wish to go. This feels a bit like flying a plane. We love this control scheme because 1) it takes advantage of the head set's innate head tracking capabilities, 2) it is entirely optional, with new users able to enjoy their experience even if they never discover the head-tilt mechanic, 3) it does not require an external input device, and 4) it is so satisfying.
-
-Ricardo implemented this control scheme in Three.js by creating a dolly system that tracks both the user's headset data and the position of the camera on the pre-defined path, and then averages them.
-
-```javascript
-if ( cameraPath !== undefined ) {
-
-  var time = ( performance.now() / 40000 ) % 1;
-
-  var pointA = cameraPath.getPointAt( time );
-  var pointB = cameraPath.getPointAt( Math.min( time + 0.015, 1 ) );
-
-  pointA.z = -pointA.z;
-  pointB.z = -pointB.z;
-
-  dolly.position.copy( pointA );
-  dolly.lookAt( pointB );
-
-  dolly.rotateY( Math.PI ); // look forward
-
-}
-
-controls.update();
-
-sky.position.copy( dolly.position );
-
-water.position.x = dolly.position.x;
-water.position.z = dolly.position.z;
-
-effect.render( scene, camera );
-```
-
-To bring camera data from Cinema 4D into Three.js, we exported the individual points that define the camera path in C4D as ASCII text, and then imported them into Three.js using an importer that Ricardo wrote:
-
-```javascript
-var loader = new THREE.C4DLineLoader();
-loader.load( 'flightpath-ascii.txt', function ( line ) {
-
-  cameraPath = line;
-
-} );
-```
-
-
-## Testing & Optimization
-
-### Adding VR headset support
-
-Support for VR headsets was implemented with two Three.js components: VRControls and VREffect. These take the scene and...
-
-### Testing
-
-We tested the results with DK1 and DK2 headsets and random co-workers, trying to find people who were particularly sensitive to the nauseau and disorientation that VR can produce if not properly calibrated.
-
-### Deployment
-
-For the start of the development process we simple worked out of a Dropbox folder, with Ricardo saving this progress as he went. Our standard process is to use Git, NPM and Gulp track changes, manage dependencies and automate various development tasks, but early in the process we were more concerned with quick results, and with just Ricardo doing the code a simple setup was good enough. Before deploying, however, we organized the code and pushed to GitHub, hosting everything with gh-pages, using [gulp-gh-pages](https://www.npmjs.org/package/gulp-gh-pages) to automate the process.
 

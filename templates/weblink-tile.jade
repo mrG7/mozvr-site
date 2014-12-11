@@ -2,19 +2,22 @@ mixin weblink-tile(number)
 
   - var link = contents.weblinks['weblinks.json'].metadata.weblinks[number]
 
-  .b-solid.b-gray1.bt3.my3
+  .b-dotted.b-gray3.bt1.my3
 
   h4.mt0
     a(href=link.url).gray7
       = link.title
   p
-    span.gray3.italic
-      |  By  
-      = link.publication
+    span.gray4
+      |  By 
+      a(href=link.publicationURL target='_blank').basiclink-blue
+        = link.publication
       |  - 
-      = link.date
+      span.italic 
+        = moment(link.date).format("MMM DD, YYYY")
     br
-    span.darkblue2
+    span.gray5
       = link.intro
+
 
 //a(href='http://twitter.com/@'+contents.people[post.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue

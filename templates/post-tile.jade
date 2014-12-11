@@ -18,7 +18,7 @@ mixin post-tile(name)
             = contents.people[post.metadata.author + '.json'].metadata.name
           |  - 
           span.italic 
-            = post.metadata.date
+            = moment(post.metadata.date).format("dddd MMM DD, YYYY")
         br
         span.gray5
           = post.metadata.intro

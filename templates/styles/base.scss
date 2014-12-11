@@ -1,13 +1,35 @@
+.tldr {
+  // color: $white;
+  background-color: $gray1;
+  padding: 0.5rem 2rem;
+  margin: 3rem 0;
+  border-left: 0.8rem solid $yellow;
+  font-style: italic;
+
+  ol {
+    padding: 1rem;
+    font-weight: 300;
+  }
+
+  li {
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+
+}
+
 .headlinks {
   letter-spacing: 0.15em;
 }
 
+/*
 .notch {
   width: 1rem;
   height: 1rem;
   transform: scale( 1.0 ) scaleZ( 1.0 ) rotateZ( 45deg ) translateY( -70% );
   transform-origin: 50% 50%;
 }
+*/
 
 .list-reset { 
   list-style: none;
@@ -17,54 +39,23 @@
 .logo {
   width: 8rem;
   // height: 4rem;
-
 }
 
-.posttest { 
+.title { 
   font-size: 4rem;
 }
-.posttest span { 
-  background-color: #c0c;
-  color: #fff; 
+
+.title span { 
   display: inline;
-  line-height: 1.8;
-  padding: 0.4rem 0.85rem;
-  
-  /* Needs prefixing */
+  line-height: 1.65;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-}
-
-.post {
-  color: $white;
-  font-style: italic;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 3rem;
-  letter-spacing: 0.02rem;
-  line-height: 7rem;
-  background-color: $pink;
-  padding: 1rem 0rem;
 }
 
 .basiclink {
   border-width: 0 0 1px 0;
   border-style: dotted;
 }
-
-/*
-.basiclink-darkblue2 {
-  @extend .basiclink;
-  color: $darkblue2;
-  border-color: $darkblue2;
-}
-
-.basiclink-darkblue2:hover {
-  color: $white;
-  background-color: $darkblue2;
-  text-decoration: none;
-}
-*/
 
 
 .basiclink-white {
@@ -139,6 +130,10 @@
 
 
 
+
+
+
+
 /*--------- Elements ---------*/
 
 
@@ -167,7 +162,6 @@ a:active {
   
 }
 
-
 h1,.h1 { font-size: 2.07rem; }
 h2,.h2 { font-size: 1.72rem; }
 h3,.h2 { font-size: 1.44rem; }
@@ -179,7 +173,7 @@ h6,.h6 { font-size: 0.83rem; }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.25em;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
@@ -218,8 +212,7 @@ li {
 }
 
 blockquote {
-  margin: 1.2em 3em;
-  padding-left: 1em;
+  margin: 1.2em 2em;
   font-style: italic;
 }
 
@@ -230,7 +223,18 @@ hr {
   margin: 2rem 0 2rem;
 }
 
+figure {
+  margin: 0;
+}
 
+figcaption {
+  color: $gray4;
+  margin: 1rem 0 2rem;
+  font-size: 1rem;
+  width: 75%;
+  // opacity: 0.7;
+  font-weight: 400;
+}
 
 
 /*--------- CODE ---------*/
@@ -238,9 +242,20 @@ hr {
 code, .code {
   font-family: 'Fira Mono', monospace;
   font-size: 0.85em;
-  color: #000;
+  background: $gray1;
 }
 
+pre code {
+  display: block;
+  background: $gray1;
+  color: #4d4d4c;
+  font-family: 'Fira Mono', monospace;
+  //border: 1px solid #ccc;
+  padding: 1rem 1.5rem;
+  white-space: pre-wrap;
+}
+
+/*
 pre {
   font-size: 0.9em;
   overflow: auto;
@@ -249,6 +264,7 @@ pre {
   border-radius: 0.25em;
   margin-bottom: 1.8em;
   padding: 1em;
+  white-space: pre-wrap;
 }
 
 pre code {
@@ -263,12 +279,12 @@ p code {
   background: #fffff3;
   white-space: nowrap;
 }
-
-
+*/
 
 
 
 /*--------- SYNTAX HIGHLIGHTING STUFF ---------*/
+
 /*
 code.lang-markdown {
   color: #424242;
@@ -296,3 +312,4 @@ code.lang-markdown .bullet {
   color: #bbb;
 }
 */
+

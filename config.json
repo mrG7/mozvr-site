@@ -23,6 +23,7 @@
   ],
   "require": {
     "moment": "moment",
+    "config": "./config",
     "_": "underscore",
     "typogr": "typogr"
   },
