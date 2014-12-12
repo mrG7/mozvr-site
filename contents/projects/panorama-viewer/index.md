@@ -4,7 +4,7 @@ date: 2014-11-10 06:00
 template: project.jade
 link: --
 source: http://github.com/MozVR/panorama-viewer
-splash: project-splash.png
+splash: http://localhost:8000
 thumb: project-thumb.png
 tools:
   [

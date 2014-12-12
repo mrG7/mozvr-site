@@ -6,36 +6,36 @@ block append vars
 block prepend title
   | #{ page.title + " - "}
 
-block content   
+block content
 
   include project-creators
   include project-tools
 
   // Splash
-  .py3.white.bg-blue4
-    include header
+  div.height40.py0.white.bg-darkblue2.relative
+    iframe(src=page.metadata.splash, allowfullscreen="true").absolute.full-width.full-height
+
+    .py2.white.bg-darken5.absolute.full-width
+      include header
+
+    .absolute.bottom-2.full-width
+      .container
+        .clearfix
+         .col.col-12.m-col-8
+            h1.post-title.italic.ultralight.uppercase.mxn3
+              span.p2.bg-yellow.black
+                = page.metadata.title
+
+  // Content
+  .py3.darkblue2.bg-white
     .container
-      .clearfix.relative.p0.mb3
-        .col.col-12
-          img(src=page.metadata.splash).fit.rounded1
-          .absolute.right-2.bottom-2
-            include entervr
       .clearfix
-        .col.col-3
-          h5 Project
-          h1
-            =page.metadata.title
         .col.col-2
           h5 Creators
           mixin project-creators(page.metadata.creators)
         .col.col-2
           h5 Tools
           mixin project-tools(page.metadata.tools)
-        .col.col-5
-
-  // Content
-  .py3.darkblue2.bg-white
-    .container
       .clearfix
         .col-8
           p.f-large

@@ -91,6 +91,7 @@ $space-4: 4rem;
 .quarter-width { width: 25% }
 .half-width { width: 50% }
 .full-width { width: 100% }
+.full-height { height: 100% }
 
 
 /*--------- Margin ---------*/
@@ -225,6 +226,14 @@ $space-4: 4rem;
   left: 0;
   margin: auto;
   display: table;
+}
+
+.z-1 {
+  z-index: -1;
+}
+
+.pointer-events-none {
+  pointer-events:none;
 }
 
 
