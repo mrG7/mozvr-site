@@ -5,13 +5,13 @@
 
 .post-summary {
   background-color: $gray1;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   margin: 3rem 0;
   border-left: 0.8rem solid $yellow;
   font-style: italic;
 
   ol {
-    padding: 1rem;
+    padding: 0 1rem;
     font-weight: 300;
   }
 
@@ -21,6 +21,21 @@
   }
 
 }
+
+.post .post-assets {
+  background: $yellow;
+  padding: 0.8rem 1.6rem;
+  margin: 1rem 0.5rem 1rem 0;
+  display: inline-block;
+  box-sizing: border-box;
+  // border: 0.5rem solid $yellow;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: black;
+}
+
 
 .post-title { 
   font-size: 4rem;
@@ -48,7 +63,7 @@
   max-width: 100%;
 }
 
-.post a:hover {
+.post p a:hover, .post figcaption a:hover {
   background-color: $yellow;
   border-bottom: 1px solid $yellow;
 }

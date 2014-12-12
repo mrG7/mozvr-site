@@ -14,13 +14,17 @@ author: joshcarpenter
 After years of bouncing between Photoshop and Keynote I've happily settled on Illustrator as my primary interface design tool. I'm good with 3D apps like Cinema4D, but for all their power, they're painful to use for typography, interface layout, etc. So when it came time to design a VR web navigation UI, I wanted a workflow that let me rapidly iterate from mockups created in Illustrator to wrap-around web VR test scenes.
 
 <div class="post-summary">
-<h2>In Brief</h2>
-<ol>
-  <li>Create your layout in a 2D design app and export as a bitmap.</li>
-  <li>Create cylinder mesh in Three.js with a circumference/height ratio that matches the width/height ratio of the bitmap.</li>
-  <li>Apply the bitmap as a texture to the cylinder and flip the cylinder faces.</li>
-  <li>View in VR!</li>
-</ol>
+  <h2>In Brief</h2>
+  <ol>
+    <li>Create your layout in a 2D design app and export as a bitmap.</li>
+    <li>Create cylinder mesh in Three.js with a circumference/height ratio that matches the width/height ratio of the bitmap.</li>
+    <li>Apply the bitmap as a texture to the cylinder and flip the cylinder faces.</li>
+    <li>View in VR!</li>
+  </ol>
+  <a href="" class="post-assets">
+    <img src="/images/icon-download-1-white.svg" class="left w1">
+    View Demo</a>
+  <a href="" class="post-assets">Get Source</a>
 </div>
 
 We start in our preferred 2D design app. In my case, Illustrator. We create a canvas that is **360cm x 90cm**. When later viewed in the Rift, this canvas will wrap around us, mapped onto a cylinder which we (or the WebGL camera, more accurately) are in the center of. Like the following:
@@ -39,7 +43,6 @@ As we create our layouts, it's also important that we know where on the cylinder
 <figure>
   <img src="mockup2.png" alt="Top: our Illustrator layout. Bottom: our layout mapped ontp a WebGL cylinder.">
 </figure>
-
 
 But wait! How much of our layout will be visible to the user? Human field of view is [limited](http://xkcd.com/1080/), after all. We wouldn't want to make our users turn their heads 90° to read an important status indicator. The following diagram from Extron gives us some idea of what we have to work with.
 

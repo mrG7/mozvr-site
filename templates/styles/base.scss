@@ -68,15 +68,15 @@ p {
   font-weight: 300;
 }
 
+.list-reset { 
+  list-style: none;
+  padding-left:0
+}
+
 li {
   margin-bottom: 0.5em;
   line-height: 1.2em;
   font-weight: 300;
-}
-
-.list-reset { 
-  list-style: none;
-  padding-left:0
 }
 
 blockquote {
