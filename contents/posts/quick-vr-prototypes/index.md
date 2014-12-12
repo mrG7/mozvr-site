@@ -5,7 +5,7 @@ template: post.jade
 project-profile: sechelt
 project-link: http://mozvr.github.io/sechelt
 project-source: http://github.io/MozVR/sechelt
-splash: post-splash.png
+splash: post-splash-2.jpg
 thumb: post-thumb.png
 intro: Designing for web VR is completely unlike designing for the desktop and mobile web. Even the process of mocking up and testing an interface must be rethought. But with a few measurements and templates we can quickly create layouts in our favorite 2D design apps and test them in web VR.
 author: joshcarpenter
@@ -40,6 +40,11 @@ Working with real world units is important because sense of scale is integral to
 
 As we create our layouts, it's also important that we know where on the cylinder our elements will eventually appear. That's why a 360cm width is convenient: each centimeter on the horizontal of our composition will equal one degree on the circumference of the 3D cylinder. The center of our layout (180cm/180°) will appear directly in front of the viewer, while the left and right edges will appear behind them.
 
+<figure>
+  <img src="mockup2.png" alt="Top: our Illustrator layout. Bottom: our layout mapped ontp a WebGL cylinder.">
+</figure>
+
+
 But wait! How much of our layout will be visible to the user? Human field of view is [limited](http://xkcd.com/1080/), after all. We wouldn't want to make our users turn their heads 90° to read an important status indicator. The following diagram from Extron gives us some idea of what we have to work with.
 
 <figure>
@@ -52,10 +57,10 @@ But wait! How much of our layout will be visible to the user? Human field of vie
 To help us keep track of what our users can see, it's helpful to set up a few guides in our layout template that express these values. Most importantly, the center 60°, 30° and 10° of our vision, within which we can see color, shape and text, respectively.
 
 <figure>
-  <img src="visual-field-template.png" alt="Mockup of a 360x90cm layout template with overlays for important field of view measurements.">
+  <img src="mockup3.png" alt="Mockup of a 360x90cm layout template with overlays for important field of view measurements.">
 </figure>
 
-We also need to remember that current VR headsets have a fairly limited field of view. The DK2, for example, has an effective horizontal field of view of approximately 90°. This crops what we can see in the headset without turning our heads to the following:
+We also need to remember that current VR headsets have a fairly limited field of view. The DK2, for example, has an effective horizontal field of view of approximately 90°. This crops what we can see in the headset (without turning our heads) to the following:
 
 <figure>
   <img src="visual-field-DK2.png" alt="Diagram of Oculus Rift DK2 field of veiw. Source: Extron.">
@@ -123,7 +128,7 @@ We then create a material for our mesh:
 
 ```javascript
 /*
-Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to THREE.DoubleSide, so our material renders facing both inwards and outwards, relative to the  direction of the faces of the cylinder object). By default, materials and the faces of Three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visibile no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
+Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to THREE.DoubleSide, so our material renders facing both inwards and outwards (relative to the  direction of the faces of the cylinder object). By default, materials and the faces of Three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visibile no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
 */
 
 var material = new THREE.MeshBasicMaterial( { 
@@ -175,6 +180,46 @@ The [Oculus Best Practices Guide](http://static.oculus.com/sdk-downloads/documen
 
 ### 2. Add a background image
 
+By default the background of our scene is black, but it's easy to add a background image.
+
+```javascript
+/*
+To optionally add a background image to the scene, create a large sphere and apply a bitmap to it. First, create the geometry for the sphere. The SphereGeometry constructor takes several arguments, but we only need the basic three: radius, widthSegments, and heightSegments. We set radius to a big 5000 meters so the sphere is less likely to occlude other objects in our scene. We set width and height segments to 64 and 32 respectively to make it sphere surface smooth. And we then invert the geometry on the x-axis using THREE.Matrix4().makeScale(), to flip the geometry faces so they face "inwards", as we did with the mockup cylinder.
+*/
+
+var geometry = new THREE.SphereGeometry( 5000, 64, 32 );
+geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
+
+/*
+Create the material we will load our background image into.
+*/
+
+var material = new THREE.MeshBasicMaterial( {
+  map: THREE.ImageUtils.loadTexture( 'images/background.png' )
+} );
+
+/*
+Create the mesh of our background from the geometry and material, and add it to the scene.
+*/
+
+var mesh = new THREE.Mesh( geometry, material );
+scene.add( mesh );
+
+```
+
+And that's it! When we load the scene and put on our headset, we should by standing inside our mockup layout, with a distant background image wrapping everything.
+
+Play around with different background images to find one that gives you the constrast you want. I tend to use something that approximates the look of my final 3D scene, so I can judge colors, legibility, etc. For best results use panoramic images in equirectangular format, like the following. They will map perfectly (without distortion) to the WebGL sphere:
+
+<figure>
+  <img src="puydesancy.jpg" alt="Equirectangular panorama photo of mountain top in France by Alexandre Duret-Lutz">
+  <figcaption>
+    An example of an equirectangular image, taken by Alexandre Duret-Lutz. Find more of Alexandre's beautiful panos on <a href="https://www.flickr.com/photos/gadl/" target="_blank">Flickr</a>.
+  </figcaption>
+</figure>
+
+Flickr's [Equirectangular Pool](https://www.flickr.com/groups/equirectangular/) is a fantastic source for images (just be sure to check the licenses). You can also use 3D apps to render 3D scenes into equirectangular format. I used Cinema4D + Vray to create the blurred pano used in this tutorial, for example. Or if need just a simple gradient or solud color, use your favorite image editing app to fill a canvas with 2:1 width:height proportions.
+
 
 
 ### 3. Create multiple layers at different depths
@@ -196,10 +241,8 @@ This technique enables us to bridge the workflows we know with the new world of 
 ## TODO
 
 * Update author section
-* Update splash and thumbnail
+* Update thumbnail
 * Add screenshots of progress and result to code section
-* Update layouts shown to HIRO interface
-* Add "add background image" section
 * Create assets download section
   - Firefox with VR
   - Illustrator template (save as Illustrator 8 to ensure accessibility)
