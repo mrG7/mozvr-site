@@ -21,10 +21,26 @@ After years of bouncing between Photoshop and Keynote I've happily settled on Il
     <li>Apply the bitmap as a texture to the cylinder and flip the cylinder faces.</li>
     <li>View in VR!</li>
   </ol>
-  <a href="" class="post-assets">
-    <img src="/images/icon-download-1-white.svg" class="left w1">
-    View Demo</a>
-  <a href="" class="post-assets">Get Source</a>
+  <a href="" class="assets-link">
+    <div class="table">
+      <div class="table-cell">
+        View Demo
+      </div>
+      <div class="table-cell">
+        <img src="/images/icon-goggles-2-white.svg" class="left w3">
+      </div>
+    </div>
+  </a>
+  <a href="" class="assets-link">
+    <div class="table">
+      <div class="table-cell">
+        Get the files
+      </div>
+      <div class="table-cell">
+        <img src="/images/icon-download-2-white.svg" class="left w3">
+      </div>
+    </div>
+  </a>
 </div>
 
 We start in our preferred 2D design app. In my case, Illustrator. We create a canvas that is **360cm x 90cm**. When later viewed in the Rift, this canvas will wrap around us, mapped onto a cylinder which we (or the WebGL camera, more accurately) are in the center of. Like the following:

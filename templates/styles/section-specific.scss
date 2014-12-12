@@ -22,9 +22,9 @@
 
 }
 
-.post .post-assets {
+.post .assets-link {
   background: $yellow;
-  padding: 0.8rem 1.6rem;
+  padding: 0.4rem 0 0.4rem 1.2rem;
   margin: 1rem 0.5rem 1rem 0;
   display: inline-block;
   box-sizing: border-box;
@@ -34,7 +34,24 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: black;
+
+  img {
+    margin: 0 1rem 0 1rem;
+  }
 }
+
+.post .assets-link:hover {
+  text-decoration: none;
+  background: $blue1; border-color: $blue1;
+  color: $white;
+}
+
+.post .assets-link:active {
+  text-decoration: none;
+  background: $blue2; border-color: $blue2;
+  color: $white;
+}
+
 
 
 .post-title { 

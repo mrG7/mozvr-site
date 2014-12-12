@@ -1,0 +1,22 @@
+extends layout
+
+block append vars
+  - bodyclass = 'project-detail'
+
+block prepend title
+  | "- Projects"
+
+block content   
+
+  .py2.white.bg-darken4#header
+    include header
+
+  .py3.white.bg-blue4
+    .container
+      .clearfix
+        .col.col-10
+          h1.ultralight
+            | We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of 
+
+block prepend footer
+  include author
