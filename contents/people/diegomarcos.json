@@ -2,9 +2,9 @@
   "name": "Diego Marcos",
   "email": "dmarcos@mozilla.com",
   "twitter": "dmarcos",
-  "title": "Engineer, Mozilla",
   "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   "photo": "diego-1.jpg",
-  "location": "San Francisco",
-  "role": "Front End"
+  "title": "Developer",
+  "company": "Mozilla",
+  "location": "San Francisco"
 }

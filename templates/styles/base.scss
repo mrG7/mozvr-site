@@ -1,142 +1,4 @@
-.tldr {
-  // color: $white;
-  background-color: $gray1;
-  padding: 0.5rem 2rem;
-  margin: 3rem 0;
-  border-left: 0.8rem solid $yellow;
-  font-style: italic;
-
-  ol {
-    padding: 1rem;
-    font-weight: 300;
-  }
-
-  li {
-    line-height: 1.75;
-    font-size: 1rem;
-  }
-
-}
-
-.headlinks {
-  letter-spacing: 0.15em;
-}
-
-/*
-.notch {
-  width: 1rem;
-  height: 1rem;
-  transform: scale( 1.0 ) scaleZ( 1.0 ) rotateZ( 45deg ) translateY( -70% );
-  transform-origin: 50% 50%;
-}
-*/
-
-.list-reset { 
-  list-style: none;
-  padding-left:0
-}
-
-.logo {
-  width: 8rem;
-  // height: 4rem;
-}
-
-.title { 
-  font-size: 4rem;
-}
-
-.title span { 
-  display: inline;
-  line-height: 1.65;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-
-.basiclink {
-  border-width: 0 0 1px 0;
-  border-style: dotted;
-}
-
-
-.basiclink-white {
-  @extend .basiclink;
-  color: $white;
-  border-color: $white;
-}
-
-.basiclink-white:hover {
-  color: $white;
-  background-color: $lighten3;
-  text-decoration: none;
-}
-
-
-.basiclink-blue {
-  @extend .basiclink;
-  color: $blue1;
-  border-color: $blue1;
-}
-
-.basiclink-blue:hover {
-  color: $white;
-  background-color: $blue1;
-  text-decoration: none;
-}
-
-
-.basiclink-green {
-  @extend .basiclink;
-  color: $green2;
-  border-color: $green2;
-}
-
-.basiclink-green:hover {
-  color: $white;
-  background-color: $green2;
-  text-decoration: none;
-}
-
-
-.outline-blue1 {
-  box-sizing: border-box;
-  outline: 1rem solid rgba( 0, 0, 0, 0 );
-  outline-offset: -1rem;
-}
-
-.outline-blue1:hover {
-  outline-color: $blue1;
-}
-
-.outline-white {
-  box-sizing: border-box;
-  outline: 1rem solid rgba( 0, 0, 0, 0 );
-  outline-offset: -1rem;
-}
-
-.outline-white:hover {
-  outline-color: $lighten3;
-}
-
-.outline-green {
-  box-sizing: border-box;
-  outline: 1rem solid rgba( 0, 0, 0, 0 );
-  outline-offset: -1rem;
-}
-
-.outline-green:hover {
-  outline-color: $green2;
-}
-
-
-
-
-
-
-
-
 /*--------- Elements ---------*/
-
-
 
 html {
   font-size: 100%;
@@ -174,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.25em;
   letter-spacing: -0.015em;
-  margin-top: 1em;
+  margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
 
@@ -201,8 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
   font-weight: 300;
 }
 
@@ -210,6 +72,11 @@ li {
   margin-bottom: 0.5em;
   line-height: 1.2em;
   font-weight: 300;
+}
+
+.list-reset { 
+  list-style: none;
+  padding-left:0
 }
 
 blockquote {
@@ -225,12 +92,12 @@ hr {
 }
 
 figure {
-  margin: 0;
+  margin: 2rem 0;
 }
 
 figcaption {
   color: $gray4;
-  margin: 1rem 0 2rem;
+  margin: 0.5rem 0 0;
   font-size: 1rem;
   width: 75%;
   // opacity: 0.7;

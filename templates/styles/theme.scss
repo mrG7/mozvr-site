@@ -3,11 +3,14 @@ TODO:
 - Add transforms for rollovers
 */
 
+
+
 /*--------- Breakpoints ---------*/
 
 $breakpoint-sm: 40em;
 $breakpoint-m: 52em;
 $breakpoint-l: 64em;
+
 
 
 /*--------- Colors ---------*/
@@ -53,61 +56,6 @@ $darken5: rgba( 0, 0, 0, 0.7 );						.bg-darken5 { background-color: $darken5 }
 
 
 
-
-/*
-.darkblue1 { color: $darkblue1; }
-.darkblue2 { color: $darkblue2; }
-.green1 { color: $green1; }
-.yellow { color: $yellow; }
-.red { color: $red; }
-.orange { color: $orange; }
-.purple { color: $pink; }
-*/
-
-/*
-$blue4: #09559d;
-$darkblue1: #134a77;
-$darkblue2: #2c2c34;
-$pink: #c21983;
-*/
-
-
-/* Old FFOS palette*/
-/*
-$blue1: #b4f2fe;
-$blue2: #22caf0;
-$blue3: #1796da;
-$blue4: #09559d;
-$darkblue1: #134a77;
-$darkblue2: #2c2c34;
-$green1: #1db992;
-$yellow: #f8bc4a;
-$red: #e04540;
-$orange: #fd9426;
-$pink: #c21983;
-*/
-
-/*
-.lighten4 { color: $bg-lighten4; }
-.lighten5 { color: $bg-lighten5; }
-
-.bg-transparent { background-color: $bg-transparent; }
-.bg-white { background-color: $white; }
-.bg-blue1 { background-color: $blue1; }
-.bg-blue2 { background-color: $blue2; }
-.bg-blue3 { background-color: $blue3; }
-.bg-blue4 { background-color: $blue4; }
-.bg-darkblue1 { background-color: $darkblue1; }
-.bg-darkblue2 { background-color: $darkblue2; }
-.bg-darkblue2-transparent { background-color: rgba( 44, 44, 52, 0.9 ) }
-.bg-green1 { background-color: $green1; }
-.bg-yellow { background-color: $yellow; }
-.bg-red { background-color: $red; }
-.bg-orange { background-color: $orange; }
-.bg-purple { background-color: $pink; }
-*/
-
-
 /*--------- Borders ---------*/
 
 $rounded1: 0.2rem;
@@ -141,11 +89,13 @@ $b4: 0.4rem;
 .b-solid { border-style: solid; }
 
 .b-white { border-color: $white; }
+.b-blue0 { border-color: $blue0; }
 .b-blue1 { border-color: $blue1; }
 .b-gray1 { border-color: $gray1; }
 .b-gray2 { border-color: $gray2; }
 .b-gray3 { border-color: $gray3; }
 .b-gray4 { border-color: $gray4; }
+
 
 
 /*--------- Buttons ---------*/
@@ -155,6 +105,81 @@ $b4: 0.4rem;
 .hover-light:hover { background: rgba( 255, 255, 255, 0.1 ); }
 .hover-green1:hover { background: $green1; border-color: $green1; }
 .hover-blue3:hover { background: $blue3; border-color: $blue3; }
+
+
+
+/*--------- Links ---------*/
+
+.basiclink {
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+}
+
+.basiclink-white {
+  @extend .basiclink;
+  color: $white;
+  border-color: $white;
+}
+
+.basiclink-white:hover {
+  color: $white;
+  background-color: $lighten3;
+  text-decoration: none;
+}
+
+.basiclink-blue {
+  @extend .basiclink;
+  color: $blue1;
+  border-color: $blue1;
+}
+
+.basiclink-blue:hover {
+  color: $white;
+  background-color: $blue1;
+  text-decoration: none;
+}
+
+.basiclink-green {
+  @extend .basiclink;
+  color: $green2;
+  border-color: $green2;
+}
+
+.basiclink-green:hover {
+  color: $white;
+  background-color: $green2;
+  text-decoration: none;
+}
+
+.outline-blue1 {
+  box-sizing: border-box;
+  outline: 1rem solid rgba( 0, 0, 0, 0 );
+  outline-offset: -1rem;
+}
+
+.outline-blue1:hover {
+  outline-color: $blue1;
+}
+
+.outline-white {
+  box-sizing: border-box;
+  outline: 1rem solid rgba( 0, 0, 0, 0 );
+  outline-offset: -1rem;
+}
+
+.outline-white:hover {
+  outline-color: $lighten3;
+}
+
+.outline-green {
+  box-sizing: border-box;
+  outline: 1rem solid rgba( 0, 0, 0, 0 );
+  outline-offset: -1rem;
+}
+
+.outline-green:hover {
+  outline-color: $green2;
+}
 
 
 

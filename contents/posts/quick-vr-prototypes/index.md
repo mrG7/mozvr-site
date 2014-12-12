@@ -1,23 +1,19 @@
 ---
-title: Quick VR Mockups with Illustrator or Photoshop
+title: Quick VR Mockups with Illustrator
 date: 2014-12-10
 template: post.jade
-project-profile: sechelt
-project-link: http://mozvr.github.io/sechelt
-project-source: http://github.io/MozVR/sechelt
+project-profile: 
+project-link: 
+project-source: 
 splash: post-splash-2.jpg
 thumb: post-thumb.png
-intro: Designing for web VR is completely unlike designing for the desktop and mobile web. Even the process of mocking up and testing an interface must be rethought. But with a few measurements and templates we can quickly create layouts in our favorite 2D design apps and test them in web VR.
+intro: Designing for the VR web is nothing like designing for the desktop and mobile web. Every process and principle must be rethought, including how we prototype our ideas. With a simple cylinder and some precise measurements, however, we can move rapidly between our favorite 2D design apps and the virtual canvas of our headsets.
 author: joshcarpenter
 ---
 
-<!--The magic of designing for VR is creating experiences that wrap around the user. But the tools we use are two dimensional. We could use 3D content creation apps like Cinema 4D and export models into our web VR scenes, but for all their modeling, texturing and rendering power, 3D apps are not optimized for creating type and content-heavy layouts.-->
-
 After years of bouncing between Photoshop and Keynote I've happily settled on Illustrator as my primary interface design tool. I'm good with 3D apps like Cinema4D, but for all their power, they're painful to use for typography, interface layout, etc. So when it came time to design a VR web navigation UI, I wanted a workflow that let me rapidly iterate from mockups created in Illustrator to wrap-around web VR test scenes.
 
-<!--UI design requires tons of iterations. VR design doubly so, because it's so alien from the design arenas we're used to.-->
-
-<div class="tldr">
+<div class="post-summary">
 <h2>In Brief</h2>
 <ol>
   <li>Create your layout in a 2D design app and export as a bitmap.</li>
@@ -234,14 +230,12 @@ Adding additional layers to our scene is easy. We create additional meshes and l
 
 My tactic in creating the Mozvr.com layout was to start by building my layouts in a single Illustrator layer without thinking too much about 3D composition, and then group the elements into new layers towards the end of the process, with each layer representing a different depth. I then saved each layer individually as a bitmap with transparency. Each of these I then loaded into it's own cylinder mesh, which I then tweaked the scale of to find the desired separations. I found quickly that Depth is particularly spectacular when combined with the DK2's 3D camera, which enables us to instantly perceive the parallax effect between layers as we lean our bodies around inside the virtual world.
 
-## Have fun
+## Have fun!
 
 This technique enables us to bridge the workflows we know with the new world of virtual reality. It's a quick a simple way to iterate rapidly. Start hacking and have fun!
 
-## TODO
+<!--## TODO
 
-* Update author section
-* Update thumbnail
 * Add screenshots of progress and result to code section
 * Create assets download section
   - Firefox with VR
@@ -250,4 +244,5 @@ This technique enables us to bridge the workflows we know with the new world of 
   - Code (final scene)
 * Create GIF of user leaning in to HIRO, showing depth effect
 * Link to end result (open in VR mode)
+-->
 

@@ -2,9 +2,9 @@
   "name": "Casey Yee",
   "email": "caseyyee.ca@gmail.com",
   "twitter": "whoyee",
-  "title": "UX Engineer",
   "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   "photo": "casey-1.png",
-  "location": "Vancouver",
-  "role": "Front End"
+  "title": "UX Engineer",
+  "company": "Contributor",
+  "location": "Vancouver"
 }

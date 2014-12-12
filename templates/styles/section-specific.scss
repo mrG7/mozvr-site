@@ -1,0 +1,73 @@
+/* We use section-specific to define styles that do not fit cleanly into the OOCSS structure.*/
+
+
+/*--------- Posts ---------*/
+
+.post-summary {
+  background-color: $gray1;
+  padding: 0.5rem 2rem;
+  margin: 3rem 0;
+  border-left: 0.8rem solid $yellow;
+  font-style: italic;
+
+  ol {
+    padding: 1rem;
+    font-weight: 300;
+  }
+
+  li {
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+
+}
+
+.post-title { 
+  font-size: 4rem;
+}
+
+.post-title span { 
+  display: inline;
+  line-height: 1.65;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  box-shadow: -3px 3px 0px 0px rgba(0,0,0,0.15);
+}
+
+.post p, .post li {
+  line-height: 1.6;
+}
+
+.post p a, .post figcaption a {
+  color: black;
+  border-bottom: 1px dotted black;
+  text-decoration: none;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.post a:hover {
+  background-color: $yellow;
+  border-bottom: 1px solid $yellow;
+}
+
+.post a:visited {
+  
+}
+
+/*--------- Header & Splash ---------*/
+
+.header-link {
+  letter-spacing: 0.15em;
+}
+
+/*
+.notch {
+  width: 1rem;
+  height: 1rem;
+  transform: scale( 1.0 ) scaleZ( 1.0 ) rotateZ( 45deg ) translateY( -70% );
+  transform-origin: 50% 50%;
+}
+*/
