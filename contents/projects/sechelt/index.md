@@ -4,7 +4,7 @@ date: 2014-11-10 06:00
 template: project.jade
 link: https://mozvr.com/sechelt
 source: https://github.com/MozVR/sechelt
-splash: project-splash.jpg
+splash: http://mozvr.github.io/sechelt
 thumb: project-thumb.png
 tools:
   [
