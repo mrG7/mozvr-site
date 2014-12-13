@@ -12,7 +12,7 @@ block content
   include project-tools
 
   // Splash
-  div.height40.py0.white.bg-darkblue2.relative
+  .height40.py0.white.bg-darkblue2.relative#stage
     iframe(src=page.metadata.splash, allowfullscreen="true").absolute.full-width.full-height
 
     .py2.white.bg-darken5.absolute.full-width
@@ -27,7 +27,7 @@ block content
                 = page.metadata.title
 
   // Content
-  .py3.darkblue2.bg-white
+  .py3.darkblue2.bg-white#content-start
     .container
       .clearfix
         .col.col-2
@@ -49,11 +49,13 @@ block content
           if page.html
             != typogr(page.html).typogrify()
 
-  include author
 
-  // Author
-  //.author.standard-padding
-    mixin author(page.metadata.author)
-
-block prepend footer
-  include author
+block append scripts
+  script(src="/scripts/vendor/three.min.js")
+  script(src="/scripts/vendor/VRControls.js")
+  script(src="/scripts/vendor/VREffect.js")
+  script(src="/scripts/vendor/DeviceOrientationControls.js")
+  script(src="/scripts/vendor/StereoEffect.js")
+  script(src="/scripts/vendor/tween.min.js")
+  script.
+    console.log("Winner")

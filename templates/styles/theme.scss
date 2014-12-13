@@ -65,6 +65,7 @@ $rounded4: 10rem;
 $circle: 50%;
 
 $b1: 0.1rem;
+$b2: 0.2rem;
 $b4: 0.4rem;
 
 .rounded1 	{ border-radius: $rounded1; }
@@ -79,6 +80,12 @@ $b4: 0.4rem;
 .bb1 { border-width: 0 0 $b1 0 }
 .bl1 { border-width: 0 0 0 $b1 }
 
+.b2 { border-width: $b2; }
+.bt2 { border-width: $b2 0 0 0 }
+.br2 { border-width: 0 $b2 0 0 }
+.bb2 { border-width: 0 0 $b2 0 }
+.bl2 { border-width: 0 0 0 $b2 }
+
 .b4 { border-width: $b4 }
 .bt4 { border-width: $b4 0 0 0 }
 .br4 { border-width: 0 $b4 0 0 }
@@ -86,6 +93,7 @@ $b4: 0.4rem;
 .bl4 { border-width: 0 0 0 $b4 }
 
 .b-dotted { border-style: dotted; }
+.b-dashed { border-style: dashed; }
 .b-solid { border-style: solid; }
 
 .b-white { border-color: $white; }
