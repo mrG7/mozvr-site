@@ -28,6 +28,8 @@ $space-4: 4rem;
 .heavy { font-weight: 900; }
 .italic { font-style: italic; }
 .uppercase { text-transform: uppercase; }
+.decoration-none { text-decoration:none; }
+.decoration-none:hover { text-decoration:none; }
 
 .left-align { text-align: left; }
 .center-align { text-align: center; }

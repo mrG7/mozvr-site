@@ -4,18 +4,18 @@ block append vars
   - bodyclass = 'project-detail'
 
 block prepend title
-  |  Projects - 
+  |  Blog - 
 
 block content   
   include project-tile
 
-  .white.bg-blue4
-    .py2.white.bg-darken3
+  .blue4.white
+    .py2.white.bg-blue4
       include header
     .container
       .clearfix.py3
         .col.col-8.m-col-6
-          h1 Projects
+          h1 Blog
           p 
             | This is our full collection of virtual reality web projects, experiments, demos, etc. To enter the VR mode of these projects, be sure to use a VR-enabled browser, like 
             a(href=locals.downloads).basiclink-white Firefox with VR

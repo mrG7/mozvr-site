@@ -43,11 +43,11 @@ $green2: rgba( 0, 175, 132, 1 ); 					.green2{ color: $green2 }			.bg-green2{ ba
 $purple: rgba( 104, 38, 102, 1 ); 				.purple{ color: $purple }			.bg-purple{ background-color: $purple }
 $pink: rgba( 225, 65, 100, 1 ); 					.pink{ color: $pink }					.bg-pink{ background-color: $pink }
 
-$lighten1: rgba( 255, 255, 255, 0.062 );	.bg-lighten1 { background-color: $lighten1 }
-$lighten2: rgba( 255, 255, 255, 0.125 );	.bg-lighten2 { background-color: $lighten2 }
-$lighten3: rgba( 255, 255, 255, 0.25 );		.bg-lighten3 { background-color: $lighten3 }
-$lighten4: rgba( 255, 255, 255, 0.5 );		.bg-lighten4 { background-color: $lighten4 }
-$lighten5: rgba( 255, 255, 255, 0.7 );		.bg-lighten5 { background-color: $lighten5 }
+$lighten1: rgba( 255, 255, 255, 0.062 );	.lighten1 { color: $lighten1 } .bg-lighten1 { background-color: $lighten1 }
+$lighten2: rgba( 255, 255, 255, 0.125 );	.lighten2 { color: $lighten2 } .bg-lighten2 { background-color: $lighten2 }
+$lighten3: rgba( 255, 255, 255, 0.25 );		.lighten3 { color: $lighten3 } .bg-lighten3 { background-color: $lighten3 }
+$lighten4: rgba( 255, 255, 255, 0.5 );		.lighten4 { color: $lighten4 } .bg-lighten4 { background-color: $lighten4 }
+$lighten5: rgba( 255, 255, 255, 0.7 );		.lighten5 { color: $lighten5 } .bg-lighten5 { background-color: $lighten5 }
 $darken1: rgba( 0, 0, 0, 0.062 );					.bg-darken1 { background-color: $darken1 }
 $darken2: rgba( 0, 0, 0, 0.125 );					.bg-darken2 { background-color: $darken2 }
 $darken3: rgba( 0, 0, 0, 0.25 );					.bg-darken3 { background-color: $darken3 }
@@ -104,6 +104,7 @@ $b4: 0.4rem;
 .hover-dark:hover { background: rgba( 0, 0, 0, 0.1 ); }
 .hover-light:hover { background: rgba( 255, 255, 255, 0.1 ); }
 .hover-green1:hover { background: $green1; border-color: $green1; }
+.hover-blue1:hover { background: $blue1; border-color: $blue1; }
 .hover-blue3:hover { background: $blue3; border-color: $blue3; }
 .hover-orange2:hover { background: $orange2; border-color: $orange2; }
 
@@ -150,6 +151,18 @@ $b4: 0.4rem;
 .basiclink-green:hover {
   color: $white;
   background-color: $green2;
+  text-decoration: none;
+}
+
+.basiclink-black {
+  @extend .basiclink;
+  color: $black;
+  border-color: $black;
+}
+
+.basiclink-black:hover {
+  color: $white;
+  background-color: $black;
   text-decoration: none;
 }
 

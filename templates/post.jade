@@ -25,6 +25,7 @@ block content
 
   .py3.gray8.bg-white
     .container
+      
       //Author
       .table.mt3
         .table-cell.col-1.pr1
@@ -37,6 +38,7 @@ block content
           |  • 
           span.italic 
             = moment(page.metadata.date).format("dddd MMM DD, YYYY")
+      
       //Body
       .clearfix
         .post.col.col-12.m-col-8
@@ -50,8 +52,8 @@ block content
 
         .col.m-col-2
 
+      //Author
       .b-solid.b-blue0.bt4.mt4.mb0
-
 
       .clearfix.mb3
         include author
@@ -61,34 +63,3 @@ block content
 block prepend footer
   include author
 
-
-
-
-
-
-//
-
-  block content
-
-    include project-creators
-    include project-tools
-
-    h1
-      =page.metadata.title
-    p
-      =page.metadata.intro
-      
-    mixin project-creators(page.metadata.creators)
-    mixin project-tools(page.metadata.tools)
-    p.repo
-      a(href=page.metadata.source) Source
-
-    include author
-    article.article
-      section.content!= typogr(page.html).typogrify()
-    | By
-    .author
-      mixin author(page.metadata.author)
-
-  block prepend footer
-    include author

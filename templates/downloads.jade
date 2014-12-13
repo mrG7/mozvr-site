@@ -3,81 +3,119 @@ extends layout
 block content
 
   // Header
-  .py2.white.bg-darkblue2-transparent#header
+  .py2.white.bg-blue4
     include header
 
-  // Intro
+  
   .py4.bg-white
     .container
+      
+      // Intro
       .clearfix
-        .col.col-12.m-col-8
+        .col.col-10.m-col-6
           h1 Firefox with VR
-          h3 These are experimental builds of Firefox Desktop with support for new VR interfaces.
+          p Get experimental builds of Firefox Desktop with support for virtual reality. For more information on how web VR works, see Vlad Vukicevic's June 2014 post, 
+            a(href="http://blog.bitops.com/blog/2014/06/26/first-steps-for-vr-on-the-web/" target="blank").basiclink-black First Steps for VR on the Web
       .clearfix
         .col.col-12
-          h3.py2.mt2.mb0.inline-block.bt1.b-dotted.b-gray3
-            span.black.semi-bold 
-              =locals.build_version 
-            span.gray6.light.italic
-              |  — 
-              =locals.build_date
-           a(href=locals.build_windows).mt2.p2.sizing-borderbox.rounded3.inline-block.full-width.bg-green2
+          .py2.mt3.mb0.inline-block.bt1.b-dotted.b-gray3
+            h2.mt2.mb0.black 
+              =locals.build_version
+            .h2.gray4.italic.light
+              = moment(locals.build_date).format("MMM DD, YYYY")
+
+      //Download links
+      .clearfix.mxn2
+        .col.col-12.m-col-6.px2
+           a(href=locals.build_windows).mt2.p3.sizing-borderbox.rounded2.block.bg-green2.hover-blue1.decoration-none
             .table
               .table-cell
-                h3.m0.white.regular Windows 64-bit (Standard)
+                img(src='/images/icon-download-1-white.svg' alt='Mozilla').w2.mr2
+              .table-cell.full-width
+                h3.m0.white Windows 64-bit (Standard)
                 h5.m0.gray2 
                   = locals.build_windows_size
                   |  EXE
-              .table-cell.right-align
-                img(src='/images/icon-download-1-white.svg' alt='Mozilla').w2.m2
-           a(href=locals.build_mac).mt2.p2.sizing-borderbox.rounded3.inline-block.full-width.bg-green2
+        .col.col-12.m-col-6.px2
+           a(href=locals.build_mac).mt2.p3.sizing-borderbox.rounded2.block.bg-green2.hover-blue1.decoration-none
             .table
-              .table-cell
-                h3.m0.white.regular Mac
+              .table-cell.mr1
+                img(src='/images/icon-download-1-white.svg' alt='Mozilla').w2.mr2
+              .table-cell.full-width
+                h3.m0.white Mac
                 h5.m0.gray2 
                   = locals.build_mac_size
                   |  DMG
-              .table-cell.right-align
-                img(src='/images/icon-download-1-white.svg' alt='Mozilla').w2.m2
-          .gray3.mt2.p2.rounded2.bg-gray1.code
-            h5.m0.bold Release notes
+      
+      //Release notes
+        .clearfix.mt2.mb3
+        .col.col-12
+          .gray6.mt2.p2.rounded2.bg-gray1.code
+            .semi-bold Release notes:
             ul.px2
               li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               li Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               li Tempor incididunt ut labore et dolore magna aliqua.
+    
+  .bg-gray1.py3
+    .container
+      .clearfix
+        .col.col-12.m-col-8
+          h2 Display configuration
+          p For optimal performance, it is <strong class="red">very important</strong> to configure your displays as follows. Failure to do so can create excess judder, latency, and annoyance for the user. We are working on improving all of these aspects and making web VR truly plug-and-play, but for now, best results require the following manual configuration.
+
+      //Windows
       .clearfix
         .col.col-12
-          h1 Display configuration
-          h3 For optimal performance, configure your displays as follows.
-          h4.semi-bold.my2 Windows:
-          .bg-gray1.p2.rounded2.f-small
-            ul.light.m0.list-reset
+          h3 Windows:
+      .clearfix
+        .col.col-12.p3.bg-gray2.rounded1
+
+            img(src='/downloads/mac-display-1.png').fit
+            ul.light.m0.list-reset.mt2
               li.semi-bold Display
                 span.gray5.light.px1 &gt;
-                | Screen Resolution:
+                | Screen Resolution
               li Orientation: 90° rotation
               li Multiple displays:  Extended desktop
-            ul.light.mt2.list-reset
+
+            .b-dotted.b-gray4.bt1.my3
+            
+            img(src='/downloads/mac-display-1.png').fit
+            ul.light.mt2.list-reset.mt2
               li.semi-bold Display
                 span.gray5.light.px1 &gt;
-                | Screen Resolution:
+                | Screen Resolution
               li Refresh: 60Hz
-          h4.semi-bold.my2 Mac:
-          .bg-gray1.p2.rounded2.f-small
-            ul.light.m0.list-reset
-              li.semi-bold System Preferences
+
+
+
+      //Mac
+      .clearfix.mt3
+        .col.col-12
+          h3 Mac:
+      .clearfix.mb4
+        .col.col-12.p3.bg-gray2.rounded1
+
+            img(src='/downloads/mac-display-1.png').fit
+            ul.light.m0.list-reset.mt2
+              li.medium System Preferences
                 span.gray5.light.px1 &gt;
                 | Displays 
                 span.gray5.light.px1 &gt;
-                | Display:
+                | Display
               li Optimize for: Rift
               li Rotation: 90°
               li Refresh: 60Hz
-            ul.light.mt2.list-reset
-              li.semi-bold System Preferences
+
+            .b-dotted.b-gray4.bt1.my3
+            
+            img(src='/downloads/mac-display-2.png').fit
+            ul.light.mt2.list-reset.mt2
+              li.medium System Preferences
                 span.gray5.light.px1 &gt; 
                 | Displays
                 span.gray5.light.px1 &gt;
-                | Arrangement:
+                | Arrangement
               li Arrangement: Mirrored
 
