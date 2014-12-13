@@ -3,11 +3,16 @@ extends layout
 block content
 
   // Header
-  .py2.white.bg-blue4
+    .py2.white.bg-blue4
     include header
 
+
+  // Splash + Title
+  div(style="background-image: url('/downloads/splash-1.jpg'); background-size: cover; background-position: 50% 50%").height32.py0.white.bg-darkblue2.relative
+    .py2.white.bg-darken5
+      include header
   
-  .py4.bg-white
+  .mb4.py2.bg-white
     .container
       
       // Intro
@@ -19,10 +24,13 @@ block content
       .clearfix
         .col.col-12
           .py2.mt3.mb0.inline-block.bt1.b-dotted.b-gray3
-            h2.mt2.mb0.black 
+            p Latest version
+              span.gray5.italic.light
+                |  (
+                = moment(locals.build_date).format("MMM DD, YYYY")
+                | ):
+            h2.m0.mb0.black 
               =locals.build_version
-            .h2.gray4.italic.light
-              = moment(locals.build_date).format("MMM DD, YYYY")
 
       //Download links
       .clearfix.mxn2
@@ -71,24 +79,17 @@ block content
       .clearfix
         .col.col-12.p3.bg-gray2.rounded1
 
-            img(src='/downloads/mac-display-1.png').fit
+            img(src='/downloads/win-display-1.png').fit
             ul.light.m0.list-reset.mt2
               li.semi-bold Display
                 span.gray5.light.px1 &gt;
                 | Screen Resolution
               li Orientation: 90° rotation
               li Multiple displays:  Extended desktop
-
-            .b-dotted.b-gray4.bt1.my3
-            
-            img(src='/downloads/mac-display-1.png').fit
-            ul.light.mt2.list-reset.mt2
               li.semi-bold Display
                 span.gray5.light.px1 &gt;
                 | Screen Resolution
               li Refresh: 60Hz
-
-
 
       //Mac
       .clearfix.mt3
