@@ -4,6 +4,7 @@ $space-3: 2rem;
 $space-4: 4rem;
 
 
+
 /*--------- Typography ---------*/
 
 /*Open Sans weights*/
@@ -15,6 +16,8 @@ $space-4: 4rem;
 .italic { font-style: italic; }
 .uppercase { text-transform: uppercase; }
 */
+
+.f-huge { font-size: 4rem }
 
 /*Fira Sans weights*/
 .hair { font-weight: 100; }
@@ -36,6 +39,7 @@ $space-4: 4rem;
 .right-align { text-align: right; }
 
 .nowrap { white-space: nowrap; }
+
 
 
 /*--------- Layout ---------*/
@@ -96,6 +100,7 @@ $space-4: 4rem;
 .full-height { height: 100% }
 
 
+
 /*--------- Margin ---------*/
 
 .m0  { margin:        0 }
@@ -147,6 +152,7 @@ $space-4: 4rem;
 .mx-auto { margin-left: auto; margin-right: auto; }
 
 
+
 /*--------- Padding ---------*/
 
 .p-leftedge { padding-left: 10rem; } //TODO: remove
@@ -178,6 +184,7 @@ $space-4: 4rem;
 .p4  { padding:       $space-4 }
 .px4 { padding-left:  $space-4; padding-right:  $space-4 }
 .py4 { padding-top:   $space-4; padding-bottom: $space-4 }
+
 
 
 /*--------- Position ---------*/

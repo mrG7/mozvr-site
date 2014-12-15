@@ -48,11 +48,11 @@ $lighten2: rgba( 255, 255, 255, 0.125 );	.lighten2 { color: $lighten2 } .bg-ligh
 $lighten3: rgba( 255, 255, 255, 0.25 );		.lighten3 { color: $lighten3 } .bg-lighten3 { background-color: $lighten3 }
 $lighten4: rgba( 255, 255, 255, 0.5 );		.lighten4 { color: $lighten4 } .bg-lighten4 { background-color: $lighten4 }
 $lighten5: rgba( 255, 255, 255, 0.7 );		.lighten5 { color: $lighten5 } .bg-lighten5 { background-color: $lighten5 }
-$darken1: rgba( 0, 0, 0, 0.062 );					.bg-darken1 { background-color: $darken1 }
-$darken2: rgba( 0, 0, 0, 0.125 );					.bg-darken2 { background-color: $darken2 }
-$darken3: rgba( 0, 0, 0, 0.25 );					.bg-darken3 { background-color: $darken3 }
-$darken4: rgba( 0, 0, 0, 0.5 );						.bg-darken4 { background-color: $darken4 }
-$darken5: rgba( 0, 0, 0, 0.7 );						.bg-darken5 { background-color: $darken5 }
+$darken1: rgba( 0, 0, 0, 0.062 );					.darken1 { color: $darken1 } .bg-darken1 { background-color: $darken1 }
+$darken2: rgba( 0, 0, 0, 0.125 );					.darken2 { color: $darken2 } .bg-darken2 { background-color: $darken2 }
+$darken3: rgba( 0, 0, 0, 0.25 );					.darken3 { color: $darken3 } .bg-darken3 { background-color: $darken3 }
+$darken4: rgba( 0, 0, 0, 0.5 );						.darken4 { color: $darken4 } .bg-darken4 { background-color: $darken4 }
+$darken5: rgba( 0, 0, 0, 0.7 );						.darken5 { color: $darken5 } .bg-darken5 { background-color: $darken5 }
 
 
 
@@ -73,6 +73,8 @@ $b4: 0.4rem;
 .rounded3 	{ border-radius: $rounded3; }
 .rounded4		{ border-radius: $rounded4; }
 .circle			{ border-radius: $circle; }
+
+.b0 { border-width: 0 }
 
 .b1 { border-width: $b1; }
 .bt1 { border-width: $b1 0 0 0 }

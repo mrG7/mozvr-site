@@ -11,6 +11,8 @@ intro: Designing for the VR web is nothing like designing for the desktop and mo
 author: joshcarpenter
 ---
 
+<p class="intro h2">Designing for the VR web is nothing like designing for the desktop and mobile web. Every process and principle must be rethought, including how we prototype our ideas. With a simple cylinder and some precise measurements, however, we can move rapidly between our favorite 2D design apps and the virtual canvas of our headsets.</p>
+
 After years of bouncing between Photoshop and Keynote I've happily settled on Illustrator as my primary interface design tool. I'm good with 3D apps like Cinema4D, but for all their power, they're painful to use for typography, interface layout, etc. So when it came time to design a VR web navigation UI, I wanted a workflow that let me rapidly iterate from mockups created in Illustrator to wrap-around web VR test scenes.
 
 <div class="post-summary">
@@ -21,7 +23,7 @@ After years of bouncing between Photoshop and Keynote I've happily settled on Il
     <li>Apply the bitmap as a texture to the cylinder and flip the cylinder faces.</li>
     <li>View in VR!</li>
   </ol>
-  <a href="" class="assets-link">
+  <a href="http://mozvr.github.io/vr-web-examples/mockups-on-cylinders/" class="assets-link" target="_blank">
     <div class="table">
       <div class="table-cell">
         View Demo

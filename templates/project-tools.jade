@@ -3,8 +3,8 @@ mixin project-tools(toolList)
 	//if tools are listed, create one li for each
 	//else don't do anything
 
-	ul.list-reset
+	ul.m0.list-reset
 		- for (var i = 0; i < toolList.length; ++i) {
 			li
-				a(href= toolList[i].url).blue3= toolList[i].name
+				a(href= toolList[i].url).basiclink-blue= toolList[i].name
 		- }

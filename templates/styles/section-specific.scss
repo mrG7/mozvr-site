@@ -1,7 +1,28 @@
 /* We use section-specific to define styles that do not fit cleanly into the OOCSS structure.*/
 
 
-/*--------- Posts ---------*/
+/*--------- Posts & Project ---------*/
+
+.post-title span { 
+  display: inline;
+  line-height: 1.65;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  box-shadow: -3px 3px 0px 0px rgba(0,0,0,0.15);
+}
+
+.project .intro {
+  font-weight: 400;
+  padding: 3rem 0;
+  width: 75%;
+}
+
+.post .intro {
+  font-weight: 400;
+  padding: 2rem 0;
+  margin: 0 0 3rem;
+  border-bottom: 0.1rem dotted $gray3;
+}
 
 .post-summary {
   background-color: $gray1;
@@ -19,7 +40,6 @@
     line-height: 1.75;
     font-size: 1rem;
   }
-
 }
 
 .post .assets-link {
@@ -36,7 +56,7 @@
   color: black;
 
   img {
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem 0 0.5rem;
   }
 }
 
@@ -52,42 +72,39 @@
   color: $white;
 }
 
-
-
-.post-title { 
-  font-size: 4rem;
-}
-
-.post-title span { 
-  display: inline;
-  line-height: 1.65;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  box-shadow: -3px 3px 0px 0px rgba(0,0,0,0.15);
-}
-
-.post p, .post li {
+.post p, 
+.post li, 
+.project p {
   line-height: 1.6;
-}
-
-.post p a, .post figcaption a {
-  color: black;
-  border-bottom: 1px dotted black;
-  text-decoration: none;
 }
 
 .post img {
   max-width: 100%;
 }
 
-.post p a:hover, .post figcaption a:hover {
+.project img {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+.post p a, 
+.post figcaption a,
+.project p a,
+.project figcaption a {
+  color: $black;
+  border-bottom: 1px dotted $black;
+  text-decoration: none;
+}
+
+.post p a:hover, 
+.post figcaption a:hover,
+.project p a:hover,
+.project figcaption a:hover {
   background-color: $yellow;
   border-bottom: 1px solid $yellow;
 }
 
-.post a:visited {
-  
-}
+
 
 /*--------- Header & Splash ---------*/
 

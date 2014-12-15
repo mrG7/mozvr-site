@@ -1,7 +1,7 @@
 mixin project-creators(creatorList)
 
-		ul.list-reset
+		ul.m0.list-reset
 			- for (var i = 0; i < creatorList.length; ++i) {
 				li
-					a(href='http://twitter.com/' + creatorList[i].twitter target='blank').blue3= creatorList[i].name
+					a(href='http://twitter.com/' + creatorList[i].twitter target='blank').basiclink-blue= creatorList[i].name
 			- }

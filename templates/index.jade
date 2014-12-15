@@ -16,8 +16,6 @@ block content
     //"Enter VR" buttons and prompts
     .absolute.right-2.bottom-8
       include entervr
-    .absolute.right-2.bottom-8
-      include entervr
 
   // Header
   .py2.white.bg-darken4#header
@@ -35,9 +33,7 @@ block content
             a(href=locals.projects).basiclink-blue.light projects
             |  , view 
             a(href=locals.repo).basiclink-blue.light source
-            |  , and 
-            a(href='').basiclink-blue.light start creating
-            |  virtual worlds!
+            |  , and start hacking today!
         .col.col-2
       .clearfix
         .col.col-12.mt3
@@ -229,12 +225,13 @@ block append scripts
   script.
 
     function init() {
-      window.addEventListener( 'resize', onWindowResize, false );
+      window.addEventListener( "resize", onWindowResize, false );
       onWindowResize()
     }
 
     function onWindowResize() {
-      var header = document.getElementById("header")
-      header.setAttribute("style","margin-top:"+(window.innerHeight-header.offsetHeight)+"px");
+      var header = document.getElementById( "header" )
+      header.setAttribute( "style", "margin-top:" + ( window.innerHeight-header.offsetHeight ) + "px" );
     }
+
     window.addEventListener("load", init, false)

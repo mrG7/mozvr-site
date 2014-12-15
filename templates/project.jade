@@ -11,12 +11,24 @@ block content
   include project-creators
   include project-tools
 
-  // Splash
-  .height40.py0.white.bg-darkblue2.relative#stage
-    iframe(src=page.metadata.splash, allowfullscreen="true").absolute.full-width.full-height
-
-    .py2.white.bg-darken5.absolute.full-width
+  // Header + VR Embed
+  .white.bg-blue4
+    .py2.white.bg-darken2
       include header
+    .container.py3
+      .clearfix
+        .col.col-12.relative
+          iframe(src=page.metadata.embed, allowfullscreen="true").full-width.b0.rounded1.height40
+          .absolute.right-2.bottom-2
+            include entervr
+      .clearfix.mt3
+        .col.col-8
+          h5.lighten3.m0 Project
+          h1.m0.italic.ultralight.uppercase.f-huge
+            = page.metadata.title
+
+  //.py0.white.bg-blue4#stage
+    iframe(src=page.metadata.splash, allowfullscreen="true").full-width.full-height.b0
 
     .absolute.bottom-2.full-width
       .container
@@ -26,26 +38,28 @@ block content
               span.p2.bg-yellow.black
                 = page.metadata.title
 
-  // Content
-  .py3.darkblue2.bg-white#content-start
+  .py3.gray8.bg-white#content
     .container
       .clearfix
+        
+        // Creators & Tools
         .col.col-2
-          h5 Creators
+          h6.darken5 Creators
           mixin project-creators(page.metadata.creators)
         .col.col-2
-          h5 Tools
+          h6.darken5 Tools
           mixin project-tools(page.metadata.tools)
       .clearfix
         .col-8
-          p.f-large
+          //p.regular.h2.py3.black.m0
             =page.metadata.intro
             br
-            a(href=page.metadata.source).button.button-green1.mt3.px3
-              | GitHub
+          //a(href=page.metadata.source).px2.button.rounded1.bg-blue1.hover-lighten GitHub
         .col-4
-      .clearfix
-        .col-12.fit-imgs
+      .clearfix.mb3
+        
+        //Body
+        .project.col-12
           if page.html
             != typogr(page.html).typogrify()
 
@@ -57,5 +71,18 @@ block append scripts
   script(src="/scripts/vendor/DeviceOrientationControls.js")
   script(src="/scripts/vendor/StereoEffect.js")
   script(src="/scripts/vendor/tween.min.js")
+  
   script.
-    console.log("Winner")
+
+    function init() {
+      window.addEventListener( "resize", onWindowResize, false );
+      onWindowResize()
+    }
+
+    function onWindowResize() {
+      var stage = document.getElementById( "stage" )
+      stage.setAttribute( "style", "height:" + ( window.innerHeight-260 ) + "px" );
+    }
+
+    window.addEventListener("load", init, false)
+

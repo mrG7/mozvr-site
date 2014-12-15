@@ -18,7 +18,7 @@ block content
       .container
         .clearfix
          .col.col-12.m-col-8
-            h1.post-title.italic.ultralight.uppercase.mxn3
+            h1.post-title.italic.ultralight.uppercase.mxn3.f-huge
               span.p2.bg-yellow.black
                 = page.metadata.title
 
@@ -43,10 +43,10 @@ block content
       .clearfix
         .post.col.col-12.m-col-8
 
-          p.regular.h2.py3.black.m0
+          //p.regular.h2.py3.black.m0
             = page.metadata.intro
 
-          .bt1.b-dotted.b-gray3.mb3
+          //.bt1.b-dotted.b-gray3.mb3
           
           != typogr(page.html).typogrify()
 
@@ -57,6 +57,6 @@ block content
 
       .clearfix.mb3
         include author
-        h5.gray5.uppercase.mb3 About the author
+        h5.gray5.mb3 About the author
         mixin author(page.metadata.author)
 

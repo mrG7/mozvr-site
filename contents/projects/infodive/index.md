@@ -1,8 +1,8 @@
 ---
 title: Information Diving
-date: 2014-10-04 22:00
+date: 2014-12-16 06:00
 template: project.jade
-link: https://mozvr.com/infodive
+embed: http://mozvr.github.io/infodive
 source: https://github.com/MozVR/infodive
 thumb: project-thumb.png
 author: joshcarpenter
@@ -43,7 +43,6 @@ creators:
 intro: A visualization of data as art, inspired by the work of artist Tatiana Plakhova and built using the Vizi framework.
 ---
 
+<p class="intro h2">Information Diving is a visualization of data as art, inspired by the work of Moscow artist [Tatiana Plakhova](http://complexitygraphics.com/). It was designed by Josh Carpenter of Mozilla, and programmed by Tony Parisi and Eric Levin, using Tony's GLAM framework. The scene is currently a work in progress, with future improvements and additions to include live data feeds, more elements, and audio cues. The scene was  visualized in Cinema4D and then created using a series of flexible custom components in GLAM.</p>
 
-![](infodive-1.png)
-
-Tatiana Plakhova's information landscapes are presented in virtual reality using the power of Three.js and GLAM.
+![Screenshot of Information Diving](infodive-1.jpg)
