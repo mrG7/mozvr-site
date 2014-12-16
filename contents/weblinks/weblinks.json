@@ -19,13 +19,31 @@
 		  "url": "https://wemo.io/mozilla-virtual-reality-and-the-dawn-of-the-metaverse-511"
 		},
 		{
+		  "title": "Presentation: VR & The Web: Next Steps",
+		  "publication": "Air Mozilla",
+		  "publicationURL": "https://air.mozilla.org/",
+		  "thumb": "airmozilla.jpg",
+		  "date": "2014-10-23",
+		  "intro": "A presentation by Josh and Vlad on the current status of the VR web, and a preview of Mozilla's latest experiments.",
+		  "url": "https://air.mozilla.org/virtual-reality-the-web-next-steps/"
+		},
+		{
 		  "title": "Voices of VR Podcast: Josh Carpenter on the future of the VR web",
 		  "publication": "Voices of VR",
 		  "publicationURL": "http://voicesofvr.com/",
 		  "thumb": "voicesofvr.jpg",
-		  "date": "2014-10-20",
+		  "date": "2014-09-19",
 		  "intro": "Upcoming VR experiments from Mozilla including collaborative web browsing with TogetherJS",
 		  "url": "http://voicesofvr.com/81-josh-carpenter-on-webvr-to-combine-the-best-of-the-web-with-vr-vr-experiments-from-mozilla-including-collaborative-web-browsing-with-togetherjs/"
+		},
+		{
+		  "title": "Presentation: Virtual Reality & The Future of the Web",
+		  "publication": "Air Mozilla",
+		  "publicationURL": "https://air.mozilla.org/",
+		  "thumb": "airmozilla.jpg",
+		  "date": "2014-06-12",
+		  "intro": "A presentation by Josh and Vlad on the future of the open web.",
+		  "url": "https://air.mozilla.org/virtual-reality-the-future-of-the-web/"
 		},
 		{
 		  "title": "Voices of VR Podcast: Vlad Vukicevic on bringing VR to the web platform",
