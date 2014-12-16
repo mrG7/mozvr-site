@@ -1,6 +1,6 @@
 ---
 title: Information Diving
-date: 2014-12-16 06:00
+date: 2014-11-10 06:00
 template: project.jade
 embed: http://mozvr.github.io/infodive
 source: https://github.com/MozVR/infodive
