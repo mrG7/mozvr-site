@@ -15,7 +15,7 @@ block content
   .white.bg-blue4
     .py2.white.bg-darken2
       include header
-    .container.py3
+    .container.py4
       .clearfix
         .col.col-12.relative
           iframe(src=page.metadata.embed, allowfullscreen="true").full-width.b0.rounded1.height40
@@ -49,13 +49,11 @@ block content
         .col.col-2
           h6.darken5 Tools
           mixin project-tools(page.metadata.tools)
-      .clearfix
-        .col-8
-          //p.regular.h2.py3.black.m0
-            =page.metadata.intro
-            br
-          //a(href=page.metadata.source).px2.button.rounded1.bg-blue1.hover-lighten GitHub
-        .col-4
+        .col.col-2
+          h6.darken5 Source
+          ul.m0.list-reset
+            li
+              a(href=page.metadata.source).basiclink-blue GitHub
       .clearfix.mb3
         
         //Body
