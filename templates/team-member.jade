@@ -6,8 +6,9 @@ mixin team-member(name)
 		img(src='/people/' +member.metadata.photo).fit.rounded1.outline-white
 	h4
 		= member.metadata.name
-	p.h6
+	p.h5
 		= member.metadata.title
+		| ,
 		br
 		= member.metadata.company
 		br

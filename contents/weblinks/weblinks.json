@@ -1,9 +1,10 @@
 {
 	"weblinks": [
 		{
-		  "title": "Interview: Josh Carpenter on Web VR",
+		  "title": "CODAME Interview: Josh Carpenter on Web VR",
 		  "publication": "CODAME",
 		  "publicationURL": "http://www.codame.com/",
+		  "thumb": "codame.jpg",
 		  "date": "2014-11-18",
 		  "intro": "CODAME is bringing their VR artists to Mozilla HQ November 21st because Mozilla has just released VR enabled builds of Firefox. Why is Mozilla getting into VR?",
 		  "url": "https://medium.com/codame-art-tech/real-sci-fi-of-webvr-codame-interviews-josh-carpenter-vr-mozilla"
@@ -12,6 +13,7 @@
 		  "title": "Wemo Labs Interview: Josh Carpenter on web VR",
 		  "publication": "Wemo",
 		  "publicationURL": "https://wemo.io/",
+		  "thumb": "wemo.jpg",
 		  "date": "2014-11-10",
 		  "intro": "Josh Carpenter of Mozilla speaks to Wemo.io about VR on the web",
 		  "url": "https://wemo.io/mozilla-virtual-reality-and-the-dawn-of-the-metaverse-511"
@@ -20,6 +22,7 @@
 		  "title": "Voices of VR Podcast: Josh Carpenter on the future of the VR web",
 		  "publication": "Voices of VR",
 		  "publicationURL": "http://voicesofvr.com/",
+		  "thumb": "voicesofvr.jpg",
 		  "date": "2014-10-20",
 		  "intro": "Upcoming VR experiments from Mozilla including collaborative web browsing with TogetherJS",
 		  "url": "http://voicesofvr.com/81-josh-carpenter-on-webvr-to-combine-the-best-of-the-web-with-vr-vr-experiments-from-mozilla-including-collaborative-web-browsing-with-togetherjs/"
@@ -28,6 +31,7 @@
 		  "title": "Voices of VR Podcast: Vlad Vukicevic on bringing VR to the web platform",
 		  "publication": "Voices of VR",
 		  "publicationURL": "http://voicesofvr.com/",
+		  "thumb": "voicesofvr.jpg",
 		  "date": "2014-05-04",
 		  "intro": "Creating a plug-in free experience with Unity & UE4, and the future of responsive web deign for VR",
 		  "url": "http://voicesofvr.com/13-vlad-vukicevic-on-bringing-the-vr-revolution-to-the-web-with-webgl-creating-a-plug-in-free-experience-with-unity-ue4-javascript-performance-the-future-of-responsive-web-deign-for-vr/"

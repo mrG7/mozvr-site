@@ -78,6 +78,7 @@ $space-4: 4rem;
 .w5 { width: 5rem; }
 .w6 { width: 6rem; }
 .w8 { width: 8rem; }
+.w10 { width: 10rem; }
 
 .height1 { height: 1rem; }
 .height2 { height: 2rem; }
@@ -163,6 +164,16 @@ $space-4: 4rem;
 .pl2 { padding-left: $space-2; }
 .pl3 { padding-left: $space-3; }
 .pl4 { padding-left: $space-4; }
+
+.pb1 { padding-bottom: $space-1; }
+.pb2 { padding-bottom: $space-2; }
+.pb3 { padding-bottom: $space-3; }
+.pb4 { padding-bottom: $space-4; }
+
+.pt1 { padding-top: $space-1; }
+.pt2 { padding-top: $space-2; }
+.pt3 { padding-top: $space-3; }
+.pt4 { padding-top: $space-4; }
 
 .pr1 { padding-right: $space-1; }
 .pr2 { padding-right: $space-2; }

@@ -2,16 +2,17 @@ mixin post-tile(name)
 
   - var post = contents.posts[name]['index.md']
 
-  .b-solid.b-gray2.bt4.my3
+  //.b-solid.b-gray2.bt4.mt3.mb3
 
-  .clearfix
-    .col.col-8
-      h3.mt0
-        a(href=post.url).gray7
+  .clearfix.mxn2.mb4
+    .col.col-4.px2
+      a(href=post.url).w8
+        img(src='/posts/'+name+'/'+post.metadata.thumb).fit.rounded1.outline-white
+    .col.col-8.px2
+      h1.mt0
+        a(href=post.url).black
           = post.metadata.title
-  .clearfix
-    .col.col-8
-      p
+      p.h4.m0
         span.gray4
           |  By  
           a(href='http://twitter.com/@'+contents.people[post.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue
@@ -20,11 +21,8 @@ mixin post-tile(name)
           span.italic 
             = moment(post.metadata.date).format("dddd MMM DD, YYYY")
         br
-        span.gray5
+        span
           = post.metadata.intro
-    .col.col-4.pl3
-      a(href=post.url).w8
-        img(src='/posts/'+name+'/'+post.metadata.thumb).fit.rounded1.outline-white
 
   //a(href=post.url)
     .overflow-hidden

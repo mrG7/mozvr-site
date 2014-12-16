@@ -4,8 +4,8 @@ mixin project-tile(name)
 
 	a(href=project.url)
 		img(src='/projects/'+name+'/'+project.metadata.thumb).fit.rounded1.outline-blue1
-	h3
+	h3.mt2
 		a(href=project.url).white 
 			= project.metadata.title
-	p.f-small.lighten5
+	p.f-small.lighten5.light
 		= project.metadata.intro
