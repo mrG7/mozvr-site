@@ -17,8 +17,10 @@ block content
       include header
     .container.py4
       .clearfix
-        .col.col-12.relative
-          iframe(src=page.metadata.embed, allowfullscreen="true").full-width.b0.rounded1.height40
+        .col.col-12.relative.height40
+          #vrContainer.absolute.top-0.left-0.full-width.full-height
+            iframe(id="vrIframe" src=page.metadata.embed, allowfullscreen="true").full-width.full-height.b0.rounded1
+            include permissions
           .absolute.right-2.bottom-2
             include entervr
       .clearfix.mt3
@@ -41,7 +43,7 @@ block content
   .py3.gray8.bg-white#content
     .container
       .clearfix
-        
+
         // Creators & Tools
         .col.col-2
           h6.darken5 Creators
@@ -55,7 +57,7 @@ block content
             li
               a(href=page.metadata.source).basiclink-blue GitHub
       .clearfix.mb3
-        
+
         //Body
         .project.col-12
           if page.html
@@ -63,13 +65,13 @@ block content
 
 
 block append scripts
-  script(src="/scripts/vendor/three.min.js")
-  script(src="/scripts/vendor/VRControls.js")
-  script(src="/scripts/vendor/VREffect.js")
-  script(src="/scripts/vendor/DeviceOrientationControls.js")
-  script(src="/scripts/vendor/StereoEffect.js")
-  script(src="/scripts/vendor/tween.min.js")
-  
+  //- script(src="/scripts/vendor/three.min.js")
+  //- script(src="/scripts/vendor/VRControls.js")
+  //- script(src="/scripts/vendor/VREffect.js")
+  //- script(src="/scripts/vendor/DeviceOrientationControls.js")
+  //- script(src="/scripts/vendor/StereoEffect.js")
+  script(src="/scripts/lib/vrDetect.js")
+
   script.
 
     function init() {
@@ -82,5 +84,105 @@ block append scripts
       stage.setAttribute( "style", "height:" + ( window.innerHeight-260 ) + "px" );
     }
 
-    window.addEventListener("load", init, false)
+    // window.addEventListener("load", init, false)
 
+  script.
+    var container = document.getElementById('vrContainer');
+    var iframe = document.getElementById('vrIframe');
+    var permission = document.getElementById('vrPermissions');
+
+    var enterVr = document.getElementById('enterVR');
+    var enterVrBtn = document.getElementById('enterVRbtn');
+
+    var getVr = document.getElementById('getVR');
+
+    // detect wether we have VR.  Show appropriate controls.
+    vrDetect.enabled().then(function() {
+      enterVr.classList.remove('display-none');
+      getVr.classList.add('display-none');
+    }, function() {
+      enterVr.classList.add('display-none');
+      getVr.classList.remove('display-none');
+    });
+
+    // send post messages to iframe.
+    function sendPostmessage(data) {
+      iframe.contentWindow.postMessage(data, '*');
+    };
+
+    // check if we have prompted for permissions.   display instructions if we haven't.
+    function promptPermission() {
+      if (document.cookie == 'fsPrompted=true') {
+        // we've prompted the user before for fullscreen permissions.  let's go!
+        permission.classList.add('display-none');
+        sendPostmessage({ mode: 'vr' });
+        requestFullscreen(container, { vrDisplay: vrDetect.hmdDevice });
+      } else {
+        // set cookie so that we know user has been prompted for fs permission previously.
+        document.cookie = "fsPrompted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        permission.classList.remove('display-none');
+        requestFullscreen(container);
+      }
+    };
+
+    function requestFullscreen(el, opts) {
+      var options = opts || {};
+
+      console.log(el, opts);
+
+      if (el.requestFullscreen) {
+        el.requestFullscreen(options);
+      } else if (el.mozRequestFullScreen) {
+        el.mozRequestFullScreen(options);
+      } else if (el.webkitRequestFullscreen) {
+        /*
+        Chromium does not allow us to call requestFullscreen with vrDisplay on
+        anything except the webGL canvas element.  Because of this, we have the app
+        hosted in the iframe handle the requestFullscreen instead.
+
+        The main problem with this approach is that the permission is requested on
+        the iframe itself rather than the containing element that hosts the iframe on
+        this page.  This means that for every different hostname that the iframe is
+        pointed, the permissions need to be requested.
+
+        This is a non-issue for fullscreen only requests since the prompt does not
+        block the user from the experience.   It does however, become a problem when
+        other permissions are requested such as pointerlock, where the permission is
+        not granted until the user allows the permission.
+        */
+
+        sendPostmessage({ fullscreen: true });
+
+        focusIframe();
+      }
+    }
+
+    // when enterVR button is clicked, call fullscreen on the hmd device.
+    enterVrBtn.addEventListener('click', function() {
+      promptPermission();
+
+    });
+
+
+    // listen for fullscreen exit.
+    function handleFsChange(e) {
+      var fullscreenElement = document.fullscreenElement ||
+        document.mozFullScreenElement ||
+        document.webkitFullscreenElement;
+
+      if (fullscreenElement == null) {
+        permission.style.display = 'none';
+        sendPostmessage({ mode: 'mono' });
+      }
+    };
+
+    function focusIframe() {
+      iframe.contentWindow.focus();
+    };
+
+    document.addEventListener('mozfullscreenchange',handleFsChange);
+    document.addEventListener('webkitfullscreenchange',handleFsChange)
+
+    container.addEventListener('mouseover',focusIframe);
+
+    focusIframe();
