@@ -134,6 +134,9 @@ block append scripts
         el.requestFullscreen(options);
       } else if (el.mozRequestFullScreen) {
         el.mozRequestFullScreen(options);
+        //sendPostmessage({ fullscreen: true });
+
+        focusIframe();
       } else if (el.webkitRequestFullscreen) {
         /*
         Chromium does not allow us to call requestFullscreen with vrDisplay on
@@ -151,7 +154,8 @@ block append scripts
         not granted until the user allows the permission.
         */
 
-        sendPostmessage({ fullscreen: true });
+        // sendPostmessage({ fullscreen: true });
+        el.webkitRequestFullscreen(options);
 
         focusIframe();
       }
