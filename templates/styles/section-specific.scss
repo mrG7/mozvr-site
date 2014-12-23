@@ -1,9 +1,30 @@
 /* We use section-specific to define styles that do not fit cleanly into the OOCSS structure.*/
 
+#enterVR {
+  color: $white;
+  &::after {
+    content: "Enter VR";
+    text-align: center;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0px;
+    display: none;
+    width: 100%;
+  }
+
+  &:hover {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+
+
 
 /*--------- Posts & Project ---------*/
 
-.post-title span { 
+.post-title span {
   display: inline;
   line-height: 1.65;
   -webkit-box-decoration-break: clone;
@@ -72,8 +93,8 @@
   color: $white;
 }
 
-.post p, 
-.post li, 
+.post p,
+.post li,
 .project p {
   line-height: 1.6;
 }
@@ -87,7 +108,7 @@
   margin: 1.5rem 0;
 }
 
-.post p a, 
+.post p a,
 .post figcaption a,
 .project p a,
 .project figcaption a {
@@ -96,7 +117,7 @@
   text-decoration: none;
 }
 
-.post p a:hover, 
+.post p a:hover,
 .post figcaption a:hover,
 .project p a:hover,
 .project figcaption a:hover {

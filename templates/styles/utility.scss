@@ -3,7 +3,8 @@ $space-2: 1rem;
 $space-3: 2rem;
 $space-4: 4rem;
 
-
+$rem-min: 1;
+$rem-max: 15;
 
 /*--------- Typography ---------*/
 
@@ -40,7 +41,11 @@ $space-4: 4rem;
 
 .nowrap { white-space: nowrap; }
 
-
+@for $i from $rem-min through $rem-max {
+  .line-height-#{$i} {
+    line-height: #{$i}rem;
+  }
+}
 
 /*--------- Layout ---------*/
 
@@ -71,14 +76,11 @@ $space-4: 4rem;
 .translate-nxy100 { transform: translate( -100%, -100% ); }
 .translate-nx100y50 { transform: translate( -100%, -50% ); }
 
-.w1 { width: 1rem; }
-.w2 { width: 2rem; }
-.w3 { width: 3rem; }
-.w4 { width: 4rem; }
-.w5 { width: 5rem; }
-.w6 { width: 6rem; }
-.w8 { width: 8rem; }
-.w10 { width: 10rem; }
+@for $i from $rem-min through $rem-max {
+  .w#{$i} {
+    width: #{$i}rem;
+  }
+}
 
 .height1 { height: 1rem; }
 .height2 { height: 2rem; }
@@ -86,6 +88,7 @@ $space-4: 4rem;
 .height4 { height: 4rem; }
 .height5 { height: 5rem; }
 .height6 { height: 6rem; }
+.height7 { height: 7rem; }
 .height8 { height: 8rem; }
 .height16 { height: 16rem; }
 .height32 { height: 32rem; }
@@ -256,4 +259,6 @@ $space-4: 4rem;
   pointer-events:none;
 }
 
-
+.cursor-pointer {
+  cursor: pointer;
+}
