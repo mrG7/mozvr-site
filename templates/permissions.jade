@@ -1,22 +1,19 @@
 //
 #vrPermissions.white.p2.bg-pink.rounded2.absolute.bottom-2.right-2.display-none
-  #vrPermissionsContinue.right.b-solid.b-white.hover-blue3.rounded2.w6.cursor-pointer.center-align.line-height-4.height4.ml2
+  #vrPermissionsContinue.right.b-solid.b-white.hover-blue3.rounded2.w6.uppercase.cursor-pointer.center-align.line-height-4.height4.ml2
     | Continue
 
-  | This demo requires Fullscreen permissions.  After clicking Continue, you must:
-  br
-  | 1) Check the "Remember decision" option.
-  br
-  | 2) click "Allow".
+  | This demo requires Fullscreen permissions.  After clicking #[em Continue], you must:
+  ol.m0.pt1
+    li.m0 Check the #[em.medium Remember decision for mozvr.com] option.
+    li.m0 Click #[em.medium Allow ].
 
 #vrPermissionsReady.white.p2.bg-pink.rounded2.absolute.bottom-2.right-2.height7.w13.line-height-7.display-none
   | Ready to go!
 
-#vrPermissionsFs.white.rounded2.absolute.top-0.left-0.full-width.full-height.display-none(style='background: rgba(0,0,0,0.5)')
-  p
-  | 1) Check "Remember decision for mozvr.com"
-  br
-  | 2) Click "Allow"
-  br
-  | 3) Press [ESC] to exit Fullscreen.
+#vrPermissionsFs.white.absolute.top-0.left-0.full-width.full-height.f-large.display-none(style='background: rgba(41,44,56,0.8)')
+  ol(style='width: 850px; margin-top: 300px;').mx-auto
+    li Check #[span.medium  Remember decision for mozvr.com] option
+    li Click #[span.medium  Allow]
+    li Press #[span.medium  ESC] key to exit fullscreen.
 

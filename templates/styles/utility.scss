@@ -18,6 +18,7 @@ $rem-max: 15;
 .uppercase { text-transform: uppercase; }
 */
 
+.f-large { font-size: 2rem }
 .f-huge { font-size: 4rem }
 
 /*Fira Sans weights*/
@@ -76,12 +77,14 @@ $rem-max: 15;
 .translate-nxy100 { transform: translate( -100%, -100% ); }
 .translate-nx100y50 { transform: translate( -100%, -50% ); }
 
+// width
 @for $i from $rem-min through $rem-max {
   .w#{$i} {
     width: #{$i}rem;
   }
 }
 
+// height
 .height1 { height: 1rem; }
 .height2 { height: 2rem; }
 .height3 { height: 3rem; }
