@@ -70,6 +70,7 @@ function requestFullscreen(el, opts) {
 
   console.log(el, opts);
 
+  // fullscreen
   if (el.requestFullscreen) {
     el.requestFullscreen(options);
   } else if (el.mozRequestFullScreen) {
@@ -100,6 +101,13 @@ function requestFullscreen(el, opts) {
 
     focusIframe();
   }
+
+  // pointer lock
+  var bodyEl = document.body;
+  bodyEl.requestPointerLock = bodyEl.requestPointerLock || bodyEl.mozRequestPointerLock || bodyEl.webkitRequestPointerLock;
+  bodyEl.requestPointerLock();
+
+
 };
 
 function handleFsChange(e) {
