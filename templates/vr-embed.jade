@@ -1,0 +1,41 @@
+mixin vr-embed(url, offsetBottom)
+  #vrContainer.absolute.top-0.left-0.full-width.full-height
+    iframe(id="vrIframe" src=url, scrolling="no", seamless="seamless").full-width.full-height.b0.rounded1.overflow-hidden
+    #vrPermissions.white.p2.bg-pink.rounded2.absolute.bottom-2.right-2.display-none(style='bottom: #{offsetBottom}')
+      #vrPermissionsContinue.right.b-solid.b-white.hover-blue3.rounded2.w6.uppercase.cursor-pointer.center-align.line-height-4.height4.ml2
+        | Continue
+
+      | This demo requires Fullscreen permissions.  After clicking #[em Continue], you must:
+      ol.m0.pt1
+        li.m0 Check the #[em.medium Remember decision for mozvr.com] option.
+        li.m0 Click #[em.medium Allow ].
+
+    #vrPermissionsReady.white.p2.bg-pink.rounded2.absolute.bottom-2.right-2.height7.w13.line-height-7.display-none(style='bottom: #{offsetBottom}')
+      | Ready to go!
+
+    #vrPermissionsFs.white.absolute.top-0.left-0.full-width.full-height.f-large.display-none(style='background: rgba(41,44,56,0.8)')
+      ol(style='width: 850px; margin-top: 300px;').mx-auto
+        li Check #[span.medium  Remember decision for mozvr.com] option
+        li Click #[span.medium  Allow]
+        li Press #[span.medium  ESC] key to exit fullscreen.
+  .absolute.right-2.bottom-2(style='bottom: #{offsetBottom}')
+    .relative.right-align
+      #enterVR.p2.cursor-pointer
+        .table
+          .inline-block.b-solid.b-white.hover-blue3.rounded2
+            img(src='/images/icon-goggles-2-white.svg' alt='Enter VR').w6
+
+      #getVR.white.p2.bg-pink.rounded2.display-none
+        .table
+          .table-cell.left-align.pr2.f-small
+            span.light.nowrap Your browser does not support virtual reality.
+              br
+              | Use #[a(href=locals.downloads).medium.nowrap.basiclink-white Firefox with VR] and an Oculus Rift
+              br
+              | to enter the full VR web experience.
+          .table-cell
+            a(href=locals.downloads).inline-block.bg-lighten2.b2.b-solid.b-white.hover-blue1.rounded2
+              img(src='/images/icon-goggles-1-outlinewhite.svg' alt='Enter VR').w5.p2
+
+  script(src="/scripts/lib/vrDetect.js")
+  script(src="/scripts/lib/vrEmbed.js")

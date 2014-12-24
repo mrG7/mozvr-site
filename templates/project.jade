@@ -10,6 +10,7 @@ block content
 
   include project-creators
   include project-tools
+  include vr-embed
 
   // Header + VR Embed
   .white.bg-blue4
@@ -18,11 +19,7 @@ block content
     .container.py4
       .clearfix
         .col.col-12.relative.height40
-          #vrContainer.absolute.top-0.left-0.full-width.full-height
-            iframe(id="vrIframe" src=page.metadata.embed).full-width.full-height.b0.rounded1
-            include permissions
-          .absolute.right-2.bottom-2
-            include entervr
+          +vr-embed(page.metadata.embed)
       .clearfix.mt3
         .col.col-12
           h5.lighten3.m0 Project
@@ -65,13 +62,6 @@ block content
 
 
 block append scripts
-  //- script(src="/scripts/vendor/three.min.js")
-  //- script(src="/scripts/vendor/VRControls.js")
-  //- script(src="/scripts/vendor/VREffect.js")
-  //- script(src="/scripts/vendor/DeviceOrientationControls.js")
-  //- script(src="/scripts/vendor/StereoEffect.js")
-  script(src="/scripts/lib/vrDetect.js")
-
   script.
 
     function init() {
@@ -86,153 +76,3 @@ block append scripts
 
     // window.addEventListener("load", init, false)
 
-  script.
-    // container that fullscreen will be called on.
-    var container = document.getElementById('vrContainer');
-
-    // iframe which hosts remote content.
-    var iframe = document.getElementById('vrIframe');
-
-    // permission insturctions before requestFullscreen.
-    var permission = document.getElementById('vrPermissions');
-    var permissionContinue = document.getElementById('vrPermissionsContinue');
-
-    // permission instructions inside requestFullscreen.
-    var permissionFs = document.getElementById('vrPermissionsFs');
-
-    // shows after permission flow is finished.
-    var readyVr = document.getElementById('vrPermissionsReady');
-
-    // enterVR button
-    var enterVr = document.getElementById('enterVR');
-
-    // displays when VR is not detected
-    var getVr = document.getElementById('getVR');
-
-    var inPermissionFlow = false;
-
-    function show(el) {
-      el.classList.remove('display-none');
-    };
-
-    function hide(el) {
-      el.classList.add('display-none');
-    };
-
-
-    vrDetect.enabled().then(function() {
-      // vr detected
-      hide(getVr)
-    }, function() {
-      // vr not detected
-      hide(enterVr);
-      show(getVr);
-    });
-
-    function sendPostmessage(data) {
-      iframe.contentWindow.postMessage(data, '*');
-    };
-
-    // check if we have prompted for permissions.   display instructions if we haven't.
-    function permissions() {
-      if (document.cookie.indexOf('fsPrompted=true') !== -1) {
-        // we've prompted the user before for fullscreen permissions.  let's go!
-        inPermissionFlow = false;
-        hide(permission);
-        hide(readyVr);
-        sendPostmessage({ mode: 'vr' });
-        requestFullscreen(container, { vrDisplay: vrDetect.hmdDevice });
-      } else {
-        // set cookie so that we know user has been prompted for fs permission previously.
-        document.cookie = "fsPrompted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-        inPermissionFlow = true;
-
-        hide(enterVr);
-        show(permission);
-      }
-    };
-
-    function permissionsFs() {
-      hide(permission);
-      show(vrPermissionsFs);
-      requestFullscreen(container);
-    }
-
-    function exitPermissionFs() {
-      hide(vrPermissionsFs);
-      show(enterVr);
-      sendPostmessage({ mode: 'mono' });
-      if (inPermissionFlow) {
-        show(readyVr);
-        inPermissionFlow = false;
-      }
-    }
-
-    function requestFullscreen(el, opts) {
-      var options = opts || {};
-
-      console.log(el, opts);
-
-      if (el.requestFullscreen) {
-        el.requestFullscreen(options);
-      } else if (el.mozRequestFullScreen) {
-        el.mozRequestFullScreen(options);
-        //sendPostmessage({ fullscreen: true });
-
-        focusIframe();
-      } else if (el.webkitRequestFullscreen) {
-        /*
-        Chromium does not allow us to call requestFullscreen with vrDisplay on
-        anything except the webGL canvas element.  Because of this, the viewport
-        distortion is not applied and user only gets stereo view.
-
-        see issue: https://github.com/MozVR/MozVR.com-issues/issues/8
-
-
-        As an alternative:
-
-        Call fullscreen on canvas element from within the iframe.  The permission
-        is then requested from the content URL.   The problem with this is
-        that this permission handling happens within the HMD which makes it
-        inaccessible for the user.
-        */
-
-        // sendPostmessage({ fullscreen: true });
-
-        el.webkitRequestFullscreen(options);
-
-        focusIframe();
-      }
-    }
-
-
-    enterVr.addEventListener('click', function() {
-      permissions();
-    });
-
-    permissionContinue.addEventListener('click', function() {
-      permissionsFs();
-    })
-
-
-    function handleFsChange(e) {
-      var fullscreenElement = document.fullscreenElement ||
-        document.mozFullScreenElement ||
-        document.webkitFullscreenElement;
-
-      if (fullscreenElement == null) {
-        // after exiting fullscreen.
-        exitPermissionFs();
-      }
-    };
-
-    function focusIframe() {
-      iframe.contentWindow.focus();
-    };
-
-    document.addEventListener('mozfullscreenchange',handleFsChange);
-    document.addEventListener('webkitfullscreenchange',handleFsChange)
-
-    container.addEventListener('mouseover',focusIframe);
-
-    focusIframe();

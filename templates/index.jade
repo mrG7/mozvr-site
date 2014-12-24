@@ -1,7 +1,7 @@
 extends layout
 
 block content
-
+  include vr-embed
   //.container.bg-transparent
     .absolute.top-0.py4
       .clearfix
@@ -12,11 +12,7 @@ block content
 
   // Container for canvas
   .fixed.top-0.right-0.bottom-0.left-0.z-1#stage
-    iframe(id="vrIframe" src="http://mozvr.github.io/sechelt", allowfullscreen="true").full-width.full-height.b0.overflow-hidden.pointer-events-none
-
-    //"Enter VR" buttons and prompts
-    .absolute.right-2.bottom-8
-      include entervr
+    +vr-embed('http://mozvr.github.io/sechelt', '150px')
 
   // Header
   .py2.white.bg-darken4#header
@@ -219,7 +215,6 @@ block content
               li First person controls
 
 block append scripts
-
   script.
 
     function init() {
