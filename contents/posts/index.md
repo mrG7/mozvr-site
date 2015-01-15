@@ -1,3 +1,0 @@
----
-template: posts-landing.jade
----
