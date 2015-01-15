@@ -1,6 +1,15 @@
 {
 	"weblinks": [
 		{
+		  "title": "Scientific American on Future of WebVR",
+		  "publication": "Scientific American",
+		  "publicationURL": "http://www.scientificamerican.com/",
+		  "thumb": "scientificamerican.jpg",
+		  "date": "2014-12-29",
+		  "intro": "Backed by Google and Mozilla, VR-enabled browsers and gear could soon immerse Web users in 3-D worlds",
+		  "url": "http://www.scientificamerican.com/article/virtual-reality-comes-to-the-web-maybe-for-real-this-time/"
+		},
+		{
 		  "title": "CODAME Interview: Josh Carpenter on Web VR",
 		  "publication": "CODAME",
 		  "publicationURL": "http://www.codame.com/",
