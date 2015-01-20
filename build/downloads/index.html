@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>MozVR
+    <title> Downloads - MozVR
     </title>
     <link rel="alternate" href="http://mozvr.com/feed.xml" type="application/rss+xml" title="A virtual reality website about virtual reality websites">
     <link rel="stylesheet" href="http://code.cdn.mozilla.net/fonts/fira.css">
@@ -41,21 +41,28 @@
           <div class="col col-10 m-col-6">
             <h1>Firefox Nightly with VR</h1>
             <p>In order to experience Web VR content with an Oculus Rift with Firefox Nightly you'll need:</p>
-            <ol>
-              <li>Download most recent&nbsp;<a href="http://nightly.mozilla.org/">Firfox Nightly</a></li>
-              <li>Install&nbsp;<a href="http://mozvr.com/downloads/webvr-oculus-addon-0.4.4.xpi">WebVR Oculus Rift Enabler</a></li>
-            </ol>
           </div>
         </div>
         <!--Download links-->
         <div class="clearfix mxn2">
-          <div class="col col-12 m-col-6 px2"><a href="http://nightly.mozilla.org/" style="background-image: url(&quot;/downloads/nightly.png&quot;); background-size: 50%; background-repeat: no-repeat; background-position: center center" class="mt2 p3 sizing-borderbox rounded2 block bg-gray1 hover-blue1 decoration-none height7"></a></div>
+          <!--.col.col-12.m-col-6.px2
+          a(href=locals.nightly, style='background-image: url("/downloads/nightly.png"); background-size: 50%; background-repeat: no-repeat; background-position: center center').mt2.p3.sizing-borderbox.rounded2.block.bg-gray1.hover-blue1.decoration-none.height7
+          
+          -->
+          <div class="col col-12 m-col-6 px2"><a href="http://nightly.mozilla.org/" class="mt2 p3 sizing-borderbox rounded2 block bg-green2 hover-blue1 decoration-none">
+              <div class="table">
+                <div class="table-cell mr1"><img src="/images/icon-download-1-white.svg" alt="Mozilla" class="w2 mr2"></div>
+                <div class="table-cell full-width">
+                  <h3 class="m0 white">1. Firefox Nightly&nbsp;</h3>
+                  <h5 class="m0 lighten5">Install Latest version</h5>
+                </div>
+              </div></a></div>
           <div class="col col-12 m-col-6 px2"><a href="http://mozvr.com/downloads/webvr-oculus-addon-0.4.4.xpi" class="mt2 p3 sizing-borderbox rounded2 block bg-green2 hover-blue1 decoration-none">
               <div class="table">
                 <div class="table-cell mr1"><img src="/images/icon-download-1-white.svg" alt="Mozilla" class="w2 mr2"></div>
                 <div class="table-cell full-width">
-                  <h3 class="m0 white">Install WebVR Oculus Rift Enabler&nbsp;</h3>
-                  <h5 class="m0 lighten5">Version&nbsp;0.4.4
+                  <h3 class="m0 white">2. WebVR Oculus Rift Enabler&nbsp;</h3>
+                  <h5 class="m0 lighten5">Install Version&nbsp;0.4.4
                   </h5>
                 </div>
               </div></a></div>
@@ -78,7 +85,9 @@
         <div class="clearfix">
           <div class="col col-12 m-col-8">
             <h2>Viewing WebVR content</h2>
-            <p> In order to view WebVR content, a <strong class="red">non-e10s window must be used</strong>.</p><img src="/downloads/e10s.png" class="fit">
+            <p> In order to view WebVR content, a <strong class="red">non-e10s window must be used</strong>.</p>
+            <h3>Mac:</h3><img src="/downloads/e10s.png" class="fit">
+            <h3>Windows:</h3><img src="/downloads/e10s-windows.png">
           </div>
         </div>
         <div class="clearfix">

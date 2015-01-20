@@ -1,5 +1,8 @@
 extends layout
 
+block prepend title
+  |  Downloads - 
+
 block content
 
   // Header
@@ -66,7 +69,11 @@ block content
           h2 Viewing WebVR content
           p  In order to view WebVR content, a <strong class="red">non-e10s window must be used</strong>.
 
+          h3 Mac:
           img(src='/downloads/e10s.png').fit
+
+          h3 Windows:
+          img(src='/downloads/e10s-windows.png')
 
       .clearfix
         .col.col-12.m-col-8

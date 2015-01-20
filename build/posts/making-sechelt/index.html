@@ -59,7 +59,7 @@
 <li>Scene optimized by combinig geometries and eliminating unnecessary&nbsp;materials.</li>
 <li>Scene models exported from Cinema 4D to Collada&nbsp;.<span class="caps">DAE</span>.</li>
 <li><span class="caps">DAE</span> file opened in <a href="http://threejs.org/editor/">Three.js&nbsp;Editor</a></li>
-<li>Scene setup, animation, interactivity and sound created in <a href="http://threejs.org/">Three.js</a></li>
+<li>Scene setup, animation, interactivity and sound created in <a href="http://threejs.org">Three.js</a></li>
 <li><span class="caps">VR</span> support implemented with VRControls and VREffect Three.js&nbsp;extras.</li>
 </ul>
 <h2 id="pre-production">Pre&nbsp;Production</h2>
@@ -113,7 +113,7 @@ loader.load( <span class="string">'c4d-scene.json'</span>, <span class="function
 </code></pre>
 <p>To create the effect of the lanscape reflecting on the “water”, Ricardo actually duplicated the landscape, inverted it on the Y-axis, and moved it down. This seems more convoluted than simply created a water surface with a reflection shader (as we did in the original Cinema 4D scene), but within WebGL this approach is faster and enables finer control over the look of the reflection by modifying the reflection object’s materials and other scene&nbsp;objects.</p>
 <h3 id="ambient-sounds">Ambient&nbsp;sounds</h3>
-<p>As the user moves through the scene they hear waves, wildlife, and wind. These sounds are mapped to the environment itself, helping to create a sense of immersion within the 3D world. This effect was achieved by Ricardo, who created null objects in the 3D world, mapped sounds to them, and mapped the playback volume of the sounds to the distance of the user. Sound clips were sourced from <a href="http://www.freesound.org/">Freesound.org</a>.</p>
+<p>As the user moves through the scene they hear waves, wildlife, and wind. These sounds are mapped to the environment itself, helping to create a sense of immersion within the 3D world. This effect was achieved by Ricardo, who created null objects in the 3D world, mapped sounds to them, and mapped the playback volume of the sounds to the distance of the user. Sound clips were sourced from <a href="http://www.freesound.org">Freesound.org</a>.</p>
 <pre><code class="lang-javascript"><span class="keyword">var</span> listener = <span class="keyword">new</span> <span class="caps">THREE</span>.AudioListener();
 camera.add( listener );
 
