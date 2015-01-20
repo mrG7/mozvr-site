@@ -39,36 +39,23 @@
         <!-- Intro-->
         <div class="clearfix">
           <div class="col col-10 m-col-6">
-            <h1>Firefox with VR</h1>
-            <p>Get experimental builds of Firefox Desktop with support for virtual reality. For more information on how web VR works, see Vlad Vukicevic's June 2014 post, <a href="http://blog.bitops.com/blog/2014/06/26/first-steps-for-vr-on-the-web/" target="blank" class="basiclink-black">First Steps for VR on the Web</a></p>
-          </div>
-        </div>
-        <div class="clearfix">
-          <div class="col col-12">
-            <div class="mt3 mb0 inline-block bt1 b-dotted b-gray3">
-              <p>Latest version<span class="gray5 italic light"> (Nov 09, 2014):</span></p>
-              <h3 class="m0 mb0 black">Version 36.0a1
-              </h3>
-            </div>
+            <h1>Firefox Nightly with VR</h1>
+            <p>In order to experience Web VR content with an Oculus Rift with Firefox Nightly you'll need:</p>
+            <ol>
+              <li>Download most recent&nbsp;<a href="http://nightly.mozilla.org/">Firfox Nightly</a></li>
+              <li>Install&nbsp;<a href="http://mozvr.com/downloads/webvr-oculus-addon-0.4.4.xpi">WebVR Oculus Rift Enabler</a></li>
+            </ol>
           </div>
         </div>
         <!--Download links-->
         <div class="clearfix mxn2">
-          <div class="col col-12 m-col-6 px2"><a href="http://people.mozilla.org/~vladimir/vr/5/firefox-36.0a1.en-US.win64-x86_64.zip" class="mt2 p3 sizing-borderbox rounded2 block bg-green2 hover-blue1 decoration-none">
-              <div class="table">
-                <div class="table-cell"><img src="/images/icon-download-1-white.svg" alt="Mozilla" class="w2 mr2"></div>
-                <div class="table-cell full-width">
-                  <h3 class="m0 white">Windows 64-bit (Standard)</h3>
-                  <h5 class="m0 lighten5">42MB EXE
-                  </h5>
-                </div>
-              </div></a></div>
-          <div class="col col-12 m-col-6 px2"><a href="http://people.mozilla.org/~vladimir/vr/5/firefox-36.0a1.en-US.mac.dmg" class="mt2 p3 sizing-borderbox rounded2 block bg-green2 hover-blue1 decoration-none">
+          <div class="col col-12 m-col-6 px2"><a href="http://nightly.mozilla.org/" style="background-image: url(&quot;/downloads/nightly.png&quot;); background-size: 50%; background-repeat: no-repeat; background-position: center center" class="mt2 p3 sizing-borderbox rounded2 block bg-gray1 hover-blue1 decoration-none height7"></a></div>
+          <div class="col col-12 m-col-6 px2"><a href="http://mozvr.com/downloads/webvr-oculus-addon-0.4.4.xpi" class="mt2 p3 sizing-borderbox rounded2 block bg-green2 hover-blue1 decoration-none">
               <div class="table">
                 <div class="table-cell mr1"><img src="/images/icon-download-1-white.svg" alt="Mozilla" class="w2 mr2"></div>
                 <div class="table-cell full-width">
-                  <h3 class="m0 white">Mac</h3>
-                  <h5 class="m0 lighten5">93MB DMG
+                  <h3 class="m0 white">Install WebVR Oculus Rift Enabler&nbsp;</h3>
+                  <h5 class="m0 lighten5">Version&nbsp;0.4.4
                   </h5>
                 </div>
               </div></a></div>
@@ -88,6 +75,12 @@
     </div>
     <div class="bg-gray1 py3">
       <div class="container">
+        <div class="clearfix">
+          <div class="col col-12 m-col-8">
+            <h2>Viewing WebVR content</h2>
+            <p> In order to view WebVR content, a <strong class="red">non-e10s window must be used</strong>.</p><img src="/downloads/e10s.png" class="fit">
+          </div>
+        </div>
         <div class="clearfix">
           <div class="col col-12 m-col-8">
             <h2>Display setup</h2>
@@ -120,14 +113,14 @@
         <div class="clearfix mb4">
           <div class="col col-12 p3 bg-gray2 rounded1"><img src="/downloads/mac-display-1.png" class="fit">
             <ul class="light m0 list-reset mt2">
-              <li class="medium">System Preferences<span class="gray5 light px1">&gt;</span>Displays <span class="gray5 light px1">&gt;</span>Display</li>
+              <li class="medium">System Preferences<span class="gray5 light px1">&gt;</span>Displays<span class="gray5 light px1">&gt;</span>Display</li>
               <li>Optimize for: Rift</li>
               <li>Rotation: 90°</li>
               <li>Refresh: 60Hz</li>
             </ul>
             <div class="b-dotted b-gray4 bt1 my3"></div><img src="/downloads/mac-display-2.png" class="fit">
             <ul class="light mt2 list-reset mt2">
-              <li class="medium">System Preferences<span class="gray5 light px1">&gt; </span>Displays<span class="gray5 light px1">&gt;</span>Arrangement</li>
+              <li class="medium">System Preferences<span class="gray5 light px1">&gt;</span>Displays<span class="gray5 light px1">&gt;</span>Arrangement</li>
               <li>Arrangement: Mirrored</li>
             </ul>
           </div>
