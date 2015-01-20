@@ -46,5 +46,3 @@ intro: A visualization of data as art, inspired by the work of artist Tatiana Pl
 <p class="intro h2">Information Diving is a visualization of data as art, inspired by the work of Moscow artist [Tatiana Plakhova](http://complexitygraphics.com/). It was designed by Josh Carpenter of Mozilla, and programmed by Tony Parisi and Eric Levin, using Tony's GLAM framework. The scene is currently a work in progress, with future improvements and additions to include live data feeds, more elements, and audio cues. The scene was  visualized in Cinema4D and then created using a series of flexible custom components in GLAM.</p>
 
 ![Screenshot of Information Diving](infodive-1.jpg)
-
-![Screenshot of Information Diving](infodive-screencap-1.gif)

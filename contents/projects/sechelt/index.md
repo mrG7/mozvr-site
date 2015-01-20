@@ -37,8 +37,6 @@ intro: An exploration of British Columbia's southern coast built with Cinema 4D 
 
 ![Screenshot of Sechelt project](sechelt-4.png)
 
-![Screen capture of Sechelt project](sechelt-capture-1.gif)
-
 ![Screenshot of Sechelt project](sechelt-1.png)
 
 ![Screenshot of Sechelt project](sechelt-2.png)

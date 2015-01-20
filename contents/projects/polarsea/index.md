@@ -29,8 +29,6 @@ intro: A documentary by DEEP in  that takes users to the Arctic in 360° VR vide
 
 ![Screenshot of the Polar Sea documentary](polarsea-1.jpg)
 
-![Screenshot of the Polar Sea documentary](polarsea-screencap-1.gif)
-
 ![Screenshot of the Polar Sea documentary](polarsea-2.jpg)
 
 ![Screenshot of the Polar Sea documentary](polarsea-3.jpg)

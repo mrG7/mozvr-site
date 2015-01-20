@@ -39,8 +39,6 @@ intro: eleVR and Mozilla discuss the future of web VR as the sun rises over  Moz
 
 ![Screenshot of eleVR Talk Chat Show Thing, episode 4](elevr-ep4-1.jpg)
 
-![Screen capture of eleVR Talk Chat Show Thing, episode 4](elevr-screencap-1.gif)
-
 ![Screenshot of eleVR Talk Chat Show Thing, episode 4](elevr-ep4-2.jpg)
 
 ![Screenshot of eleVR Talk Chat Show Thing, episode 4](elevr-ep4-3.jpg)
