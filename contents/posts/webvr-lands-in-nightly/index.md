@@ -18,7 +18,7 @@ Previously, users and content creators had to download a separate build of Firef
 <div class="post-summary">
   <h4>
     To experience Web VR content with an Oculus Rift<br/> with
-    Firefox Nightly builds, you’ll need:
+    Firefox Nightly builds, you’ll need to:
   </h4>
 
   <ol>
