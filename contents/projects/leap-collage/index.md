@@ -2,7 +2,7 @@
 title: Leap Motion Collage
 date: 2014-11-10 06:00
 template: project.jade
-embed: http://caseyyee.github.io/VRCollage
+embed: http://leapmotion.github.io/VRCollage
 source: https://github.com/leapmotion/VRCollage
 thumb: project-thumb.png
 author: joshcarpenter
