@@ -22,8 +22,9 @@ Previously, users and content creators had to download a separate build of Firef
   </h4>
 
   <ol>
-    <li>Download most recent [Firfox Nightly](http://nightly.mozilla.org/)</li>
+    <li>Install most recent [Firefox Nightly](http://nightly.mozilla.org/)</li>
     <li>Install [WebVR Oculus Rift Enabler](/downloads/webvr-oculus-addon-0.4.4.xpi) add-on</li>
+    <li>Open a non-e10s browser window.</li>
   </ol>
 </div>
 
@@ -45,4 +46,5 @@ You can create a new non-e10s window by going to the File menu and selecting “
 
 Now that we're able to work directly in our Nightly builds, we hope to have Direct-to-Rift support soon, as well as support for Linux, Firefox for Android, and the Cardboard device for mobile VR experiences.  We'll also be starting to revisit VR support using CSS and the DOM, to maximize compatibility with existing Web content and Web development knowledge.  You'll also soon be able to report bugs to us via bugzilla.mozilla.org in a new WebVR component.  And as always, please join the discussion on the [web-vr-discuss mailing list](https://mail.mozilla.org/listinfo/web-vr-discuss)!
 
+Finally, today we are launching a new and improved version of mozvr.com with more resources for web developers and faster access to demos. Our first tutorial is from Josh Carpenter, on how to create [Quick VR Mockups with Illustrator](/posts/quick-vr-prototypes/). We'll have more to come soon, with the goal of helping make it easier for everyone to create new VR web experiences.
 
