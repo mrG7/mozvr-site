@@ -33,7 +33,7 @@ After years of bouncing between Photoshop and Keynote I've happily settled on Il
       </div>
     </div>
   </a>
-  <a href="" class="assets-link">
+  <a href="/posts/quick-vr-prototypes/webvr-illustrator-template.zip" class="assets-link">
     <div class="table">
       <div class="table-cell">
         Get the files
