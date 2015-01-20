@@ -13,6 +13,7 @@
     "run-wintersmith": "0.0.2",
     "gulp-util": "~3.0.2",
     "gulp-livereload": "~3.4.0",
-    "tiny-lr": "~0.1.4"
+    "tiny-lr": "~0.1.4",
+    "gulp-rimraf": "~0.1.1"
   }
 }

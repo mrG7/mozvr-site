@@ -2,7 +2,7 @@
 title: Talk Chat Show Thing Ep 4
 date: 2014-11-10 06:00
 template: project.jade
-embed: http://mozvr.com/content/elevr4
+embed: content/
 source: https://github.com/MozVR/elevr4
 thumb: project-thumb.png
 author: joshcarpenter
