@@ -10,10 +10,10 @@
     "wintersmith-node-sass": "^0.2.1",
     "gulp": "~3.8.10",
     "reduce-image": "0.0.3",
-    "run-wintersmith": "0.0.2",
     "gulp-util": "~3.0.2",
     "gulp-livereload": "~3.4.0",
     "tiny-lr": "~0.1.4",
-    "gulp-rimraf": "~0.1.1"
+    "gulp-rimraf": "~0.1.1",
+    "run-wintersmith": "git://github.com/caseyyee/run-wintersmith"
   }
 }
