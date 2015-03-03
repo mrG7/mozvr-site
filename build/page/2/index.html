@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="/css/global.css">
   </head>
   <body>
+    <div class="absolute top-0 left-4">
+      <div class="full-width">
+        <div class="col col-12">
+          <h1 class="post-title italic ultralight uppercase f-big"><span style="line-height: 5.5rem" class="p2 bg-yellow black nowrap">We are the Mozilla VR team.<br>Our goal is to help bring high<br>performance virtual reality <br>to the open web.</span></h1>
+        </div>
+        <div class="col col-12 m-col-8 lg-col-5">
+          <div class="p2 white bg-darken4 h4 light">To get started with web VR, grab the latest <a href="/downloads" class="basiclink-white light">Firefox Nightly</a>, explore our <a href="/projects" class="basiclink-white light">projects</a>, view <a href="http://github.com/MozVR" class="basiclink-white light">source</a>, and start building your own experiences.</div>
+        </div>
+      </div>
+    </div>
     <!-- Container for canvas-->
     <div id="stage" class="fixed top-0 right-0 bottom-0 left-0 z-1">
           <!-- ------------ Container element that requestFullscreen is called on-->
@@ -73,16 +83,17 @@
     <!-- Intro-->
     <div class="py4 white bg-blue4">
       <div class="container">
-        <div class="clearfix">
-          <div class="col col-10">
-            <h1 class="ultralight">We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of <a href="/downloads" class="basiclink-blue light">Firefox with VR</a>, explore our <a href="/projects" class="basiclink-blue light">projects</a>, view <a href="http://github.com/MozVR" class="basiclink-blue light">source</a>, and start hacking today!</h1>
-          </div>
-          <div class="col col-2"></div>
-        </div>
+        <!--.clearfix
+        .col.col-10
+          h1.ultralight
+            | To get started with web VR, grab the latest build of <a href="/downloads" class="basiclink-blue light">Firefox with VR</a>, explore our <a href="/projects" class="basiclink-blue light">projects</a>, view <a href="http://github.com/MozVR" class="basiclink-blue light">source</a>, and start building your own experiences.
+        .col.col-2
+        
+        -->
         <!-- Projects-->
         <div class="clearfix">
           <div class="col col-12">
-            <div class="b-solid b-lighten2 bt2 mt4 mb3"></div>
+            <!--.b-solid.b-lighten2.bt2.mt4.mb3-->
             <h5>Latest Projects</h5>
           </div>
         </div>
@@ -149,7 +160,7 @@
                   <div class="col col-4 px2"><a href="/posts/webvr-lands-in-nightly/" class="w8"><img src="/posts/webvr-lands-in-nightly/post-thumb.png" class="fit rounded1 outline-white"></a></div>
                   <div class="col col-8 px2">
                     <h1 class="mt0"><a href="/posts/webvr-lands-in-nightly/" class="black">Web VR Lands in Firefox Nightly</a></h1>
-                    <p class="h4 m0"><span class="gray4"> By  <a href="http://twitter.com/@vvuk" target="_blank" class="basiclink-blue">Vlad Vukicevic</a> - <span class="italic">Thursday Jan 15, 2015</span></span><br><span>Today we're adding core VR support directly to Firefox Nightly builds.  Previously, users and content creators had to download a separate build of Firefox, which usually lagged behind ongoing development. From now on, VR capabilities will be developed alongside other continuous Firefox improvements.</span></p>
+                    <p class="h4 m0"><span class="gray4"> By  <a href="http://twitter.com/@vvuk" target="_blank" class="basiclink-blue">Vlad Vukicevic</a> - <span class="italic">Thursday Jan 15, 2015</span></span><br><span>Today we're adding core VR support directly to Firefox Nightly builds.  Users and content creators will be able to download the latest Firefox Nightly builds and enjoy access to both experimental WebVR functionality alongside continuous Firefox improvements.</span></p>
                   </div>
                 </div>
                 <!--a(href=post.url)

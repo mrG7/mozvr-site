@@ -33,7 +33,7 @@ After years of bouncing between Photoshop and Keynote I've happily settled on Il
       </div>
     </div>
   </a>
-  <a href="" class="assets-link">
+  <a href="/posts/quick-vr-prototypes/webvr-illustrator-template.zip" class="assets-link">
     <div class="table">
       <div class="table-cell">
         Get the files
@@ -54,7 +54,7 @@ We start in our preferred 2D design app. In my case, Illustrator. We create a ca
   </figcaption>
 </figure>
 
-Working with real world units is important because sense of scale is integral to virtual reality, and the scale your users will perceive will be determined primarily by size of the elements in your scene relative to the distance between the user's eyes. A distance which is defined in real world measurements (meters, to be precise). Working in real world units throughout our pipeline ensures we don't encounter any weird surprises, like text blocks that suddenly appear 10 stories tall (unless of course you _want_ that). <!--That measurement is the refered as the interpupilary distance, and it is 60mm on average in adults. The Rift reports this to the browser as 0.064 meters. by the . A VR HMD is displaying a different image to each eye,  rendering of virtual reality creates the perception of genuine scale. Your eyes can perceive the difference between a virtual cup a table versus a mountain miles away.-->
+Working with real world units is important because sense of scale is integral to virtual reality, and the scale your users will perceive will be determined primarily by size of the elements in your scene relative to the distance between the user's eyes. A distance which is defined in real world measurements (meters, to be precise). Working in real world units throughout our pipeline ensures we don't encounter any weird surprises, like text blocks that suddenly appear 10 stories tall (unless of course you _want_ that). <!--That measurement is the referred as the interpupilary distance, and it is 60mm on average in adults. The Rift reports this to the browser as 0.064 meters. by the . A VR HMD is displaying a different image to each eye,  rendering of virtual reality creates the perception of genuine scale. Your eyes can perceive the difference between a virtual cup a table versus a mountain miles away.-->
 
 As we create our layouts, it's also important that we know where on the cylinder our elements will eventually appear. That's why a 360cm width is convenient: each centimeter on the horizontal of our composition will equal one degree on the circumference of the 3D cylinder. The center of our layout (180cm/180°) will appear directly in front of the viewer, while the left and right edges will appear behind them.
 
@@ -145,7 +145,7 @@ We then create a material for our mesh:
 
 ```javascript
 /*
-Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to THREE.DoubleSide, so our material renders facing both inwards and outwards (relative to the  direction of the faces of the cylinder object). By default, materials and the faces of Three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visibile no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
+Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to THREE.DoubleSide, so our material renders facing both inwards and outwards (relative to the  direction of the faces of the cylinder object). By default, materials and the faces of Three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visible no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
 */
 
 var material = new THREE.MeshBasicMaterial( { 
@@ -193,7 +193,7 @@ As you experiment, also consider the potential for other objects in your scene t
 
 The [Oculus Best Practices Guide](http://static.oculus.com/sdk-downloads/documents/Oculus_Best_Practices_Guide.pdf) (which is required reading for any creator of VR content) suggests the following:
 
-> "Bringing UIs in closer (eg 20cm) can help prevent occlusion (where in-world objects come closer to the user than HUD objects), but require the user to "...shift their focus between the close-up HUD and the much more distant scene whenever they check the HUD. These kinds of shifts in eye convergence and accomm odation (eye lens focus) can quickly lead to fatigue and eyestrain."
+> "Bringing UIs in closer (eg 20cm) can help prevent occlusion (where in-world objects come closer to the user than HUD objects), but require the user to "...shift their focus between the close-up HUD and the much more distant scene whenever they check the HUD. These kinds of shifts in eye convergence and accommodation (eye lens focus) can quickly lead to fatigue and eyestrain."
 
 ### 2. Add a background image
 
@@ -226,7 +226,7 @@ scene.add( mesh );
 
 And that's it! When we load the scene and put on our headset, we should by standing inside our mockup layout, with a distant background image wrapping everything.
 
-Play around with different background images to find one that gives you the constrast you want. I tend to use something that approximates the look of my final 3D scene, so I can judge colors, legibility, etc. For best results use panoramic images in equirectangular format, like the following. They will map perfectly (without distortion) to the WebGL sphere:
+Play around with different background images to find one that gives you the contrast you want. I tend to use something that approximates the look of my final 3D scene, so I can judge colors, legibility, etc. For best results use panoramic images in equirectangular format, like the following. They will map perfectly (without distortion) to the WebGL sphere:
 
 <figure>
   <img src="puydesancy.jpg" alt="Equirectangular panorama photo of mountain top in France by Alexandre Duret-Lutz">
@@ -235,13 +235,13 @@ Play around with different background images to find one that gives you the cons
   </figcaption>
 </figure>
 
-Flickr's [Equirectangular Pool](https://www.flickr.com/groups/equirectangular/) is a fantastic source for images (just be sure to check the licenses). You can also use 3D apps to render 3D scenes into equirectangular format. I used Cinema4D + Vray to create the blurred pano used in this tutorial, for example. Or if need just a simple gradient or solud color, use your favorite image editing app to fill a canvas with 2:1 width:height proportions.
+Flickr's [Equirectangular Pool](https://www.flickr.com/groups/equirectangular/) is a fantastic source for images (just be sure to check the licenses). You can also use 3D apps to render 3D scenes into equirectangular format. I used Cinema4D + Vray to create the blurred pano used in this tutorial, for example. Or if you need just a simple gradient or solid color, use your favorite image editing app to fill a canvas with 2:1 width:height proportions.
 
 
 
 ### 3. Create multiple layers at different depths
 
-Depth is a fundamental element of design for virtual reality. Through the two separate eyes of a VR headset we can perceive even slight differences in z-position between elements. We can see  a glowing button is hovering 0.5cm above the surface of it's parent dialothatgue, for example, or that a UI stretches off into the horizon. Depth in VR does naturally what drop shadows do skeumorphically in 2D layouts: create visual contrast between stacked layers.
+Depth is a fundamental element of design for virtual reality. Through the two separate eyes of a VR headset we can perceive even slight differences in z-position between elements. We can see that a glowing button hovers 0.5cm above the surface of it's parent dialogue, for example, or that a UI stretches off into the horizon. Depth in VR does naturally what drop shadows do skeumorphically in 2D layouts: create visual contrast between stacked layers.
 
 Adding additional layers to our scene is easy. We create additional meshes and load a different bitmaps into their materials.
 

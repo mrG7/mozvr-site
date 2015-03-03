@@ -1,5 +1,8 @@
 extends layout
 
+block prepend title
+  |  Downloads - 
+
 block content
 
   // Header
@@ -20,16 +23,21 @@ block content
         .col.col-10.m-col-6
           h1 Firefox Nightly with VR
           p In order to experience Web VR content with an Oculus Rift with Firefox Nightly you'll need:
-          ol
-            li Download most recent&nbsp;
-              a(href=locals.nightly) Firfox Nightly
-            li Install&nbsp;
-              a(href=locals.rift_vr_addon) WebVR Oculus Rift Enabler
 
       //Download links
       .clearfix.mxn2
-        .col.col-12.m-col-6.px2
+        //.col.col-12.m-col-6.px2
            a(href=locals.nightly, style='background-image: url("/downloads/nightly.png"); background-size: 50%; background-repeat: no-repeat; background-position: center center').mt2.p3.sizing-borderbox.rounded2.block.bg-gray1.hover-blue1.decoration-none.height7
+
+        .col.col-12.m-col-6.px2
+           a(href=locals.nightly).mt2.p3.sizing-borderbox.rounded2.block.bg-green2.hover-blue1.decoration-none
+            .table
+              .table-cell.mr1
+                img(src='/images/icon-download-1-white.svg' alt='Mozilla').w2.mr2
+              .table-cell.full-width
+                h3.m0.white 1. Firefox Nightly&nbsp;
+                h5.m0.lighten5
+                  | Install Latest version
 
 
         .col.col-12.m-col-6.px2
@@ -38,10 +46,10 @@ block content
               .table-cell.mr1
                 img(src='/images/icon-download-1-white.svg' alt='Mozilla').w2.mr2
               .table-cell.full-width
-                h3.m0.white Install WebVR Oculus Rift Enabler&nbsp;
+                h3.m0.white 2. WebVR Oculus Rift Enabler&nbsp;
 
                 h5.m0.lighten5
-                  | Version&nbsp;
+                  | Install Version&nbsp;
                   = locals.rift_vr_addon_version
 
       //Release notes
@@ -61,7 +69,11 @@ block content
           h2 Viewing WebVR content
           p  In order to view WebVR content, a <strong class="red">non-e10s window must be used</strong>.
 
+          h3 Mac:
           img(src='/downloads/e10s.png').fit
+
+          h3 Windows:
+          img(src='/downloads/e10s-windows.png')
 
       .clearfix
         .col.col-12.m-col-8

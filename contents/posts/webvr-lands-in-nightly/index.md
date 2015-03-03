@@ -18,7 +18,7 @@ Previously, users and content creators had to download a separate build of Firef
 <div class="post-summary">
   <h4>
     To experience Web VR content with an Oculus Rift<br/> with
-    Firefox Nightly builds, you’ll need:
+    Firefox Nightly builds, you’ll need to:
   </h4>
 
   <ol>
@@ -36,7 +36,7 @@ Because there is ongoing development on Firefox in many directions, there is one
 
 <figure>
   <img src="/downloads/e10s.png" alt="File &gt; New Non-e10s Window">
-  <img src="windows-new-non-e10s.png">
+  <img src="/downloads/e10s-windows.png" alt="New Non-e10s Window">
   <figcaption>
     Creating non-e10s browser windows.
   </figcaption>

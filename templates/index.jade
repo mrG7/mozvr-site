@@ -3,6 +3,20 @@ extends layout
 block content
   include vr-embed
 
+  .absolute.top-0.left-4
+      h1.post-title.italic.ultralight.uppercase.f-big
+        span(style='line-height: 5.5rem').p2.bg-yellow.black.nowrap
+          | We are the Mozilla VR team.
+          br
+          | Our goal is to help bring high
+          br
+          | performance virtual reality 
+          br
+          | to the open web.
+
+      .p2.white.bg-darken4.h4.light(style='width:27rem;')
+        | To get started with web VR, grab the latest #[a(href=locals.downloads).basiclink-white.light Firefox Nightly], explore our #[a(href=locals.projects).basiclink-white.light projects], view #[a(href=locals.repo).basiclink-white.light source], and start building your own experiences.
+
   // Container for canvas
   .fixed.top-0.right-0.bottom-0.left-0.z-1#stage
     +vr-embed('http://mozvr.github.io/sechelt', '150px')
@@ -14,17 +28,18 @@ block content
   // Intro
   .py4.white.bg-blue4
     .container
-      .clearfix
+      
+      //.clearfix
         .col.col-10
           h1.ultralight
-            | We are the Mozilla Research VR team. Our goal is to bring high performance virtual reality to the web. This is our lab, where we publish experiments and resources. Grab the latest build of #[a(href=locals.downloads).basiclink-blue.light Firefox with VR], explore our #[a(href=locals.projects).basiclink-blue.light projects], view #[a(href=locals.repo).basiclink-blue.light source], and start hacking today!
+            | To get started with web VR, grab the latest build of #[a(href=locals.downloads).basiclink-blue.light Firefox with VR], explore our #[a(href=locals.projects).basiclink-blue.light projects], view #[a(href=locals.repo).basiclink-blue.light source], and start building your own experiences.
         .col.col-2
 
       include project-tile
       // Projects
       .clearfix
         .col.col-12
-          .b-solid.b-lighten2.bt2.mt4.mb3
+          //.b-solid.b-lighten2.bt2.mt4.mb3
           h5 Latest Projects
       .clearfix.mxn2
         .col.col-6.m-col-3.px2.py2
