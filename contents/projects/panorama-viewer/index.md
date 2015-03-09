@@ -1,8 +1,8 @@
 ---
 title: Panorama Viewer
 date: 2014-11-10 06:00
-template: project.jade
-embed: http://mozvr.github.io/panorama-viewer
+template: project-embed.jade
+link: http://mozvr.github.io/panorama-viewer
 source: http://github.com/MozVR/panorama-viewer
 thumb: project-thumb.png
 author: joshcarpenter

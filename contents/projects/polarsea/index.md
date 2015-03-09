@@ -1,8 +1,8 @@
 ---
 title: The Polar Sea
 date: 2014-11-10 15:00
-template: project.jade
-embed: content/
+template: project-embed.jade
+link: content/
 source: https://github.com/MozVR/polarsea
 thumb: project-thumb.png
 author: joshcarpenter

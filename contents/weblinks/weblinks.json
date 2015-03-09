@@ -1,6 +1,24 @@
 {
 	"weblinks": [
 		{
+		  "title": "Have an Oculus Rift and Leap Motion? Try This Web VR Demo Right Now",
+		  "publication": "Road to VR",
+		  "publicationURL": "http://www.roadtovr.com/",
+		  "thumb": "roadtovr.jpg",
+		  "date": "2015-03-03",
+		  "intro": "Mozilla is making impressive progress in bringing virtual reality to the web. Today I got to see a surreal new experience that makes use of the Oculus Rift and the Leap Motion directly in the web browser.",
+		  "url": "http://www.roadtovr.com/oculus-rift-leap-motion-web-vr-demo-rainbow-membrane-mozvr/"
+		},
+		{
+		  "title": "Reinventing the Web in Virtual Reality with Josh Carpenter and Vladimir Vukicevic",
+		  "publication": "The Web Ahead",
+		  "publicationURL": "http://thewebahead.net",
+		  "thumb": "webahead.jpg",
+		  "date": "2015-02-18",
+		  "intro": "What could a cross-platform web of Virtual Reality look like? What might web designers do with a fully-immersive web experience? There's a team at Mozilla working on WebVR. Jen Simmons talks to Josh Carpenter and Vladimir Vukicevic to find out what they are doing.",
+		  "url": "http://thewebahead.net/96"
+		},
+		{
 		  "title": "Scientific American on Future of WebVR",
 		  "publication": "Scientific American",
 		  "publicationURL": "http://www.scientificamerican.com/",

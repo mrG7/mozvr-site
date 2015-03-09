@@ -1,8 +1,8 @@
 ---
 title: Information Diving
 date: 2014-11-10 06:00
-template: project.jade
-embed: http://mozvr.github.io/infodive
+template: project-embed.jade
+link: http://mozvr.github.io/infodive
 source: https://github.com/MozVR/infodive
 thumb: project-thumb.png
 author: joshcarpenter

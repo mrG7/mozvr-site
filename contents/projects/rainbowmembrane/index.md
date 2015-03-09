@@ -1,10 +1,10 @@
 ---
 title: Rainbow Membrane
 date: 2015-03-03 06:00
-template: project.jade
-embed: rainbow-1.jpg
-projectlink: http://cabbi.bo/RainbowMembrane/
+template: project-link.jade
+link: http://cabbi.bo/RainbowMembrane/
 source: https://github.com/cabbibo/RainbowMembrane
+splash: rainbow-1.jpg
 thumb: project-thumb.png
 author: joshcarpenter
 tools:
