@@ -1,5 +1,5 @@
 ---
-title: Web VR Lands in Firefox Nightly
+title: WebVR Lands in Firefox Nightly
 date: 2015-01-16
 template: post.jade
 project-profile:
@@ -17,7 +17,7 @@ Previously, users and content creators had to download a separate build of Firef
 
 <div class="post-summary">
   <h4>
-    To experience Web VR content with an Oculus Rift<br/> with
+    To experience WebVR content with an Oculus Rift<br/> with
     Firefox Nightly builds, you’ll need to:
   </h4>
 

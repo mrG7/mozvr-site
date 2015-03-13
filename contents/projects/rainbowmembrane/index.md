@@ -10,7 +10,7 @@ author: joshcarpenter
 tools:
   [
     {
-      "name": "Three.js",
+      "name": "three.js",
       "url": "http://threejs.org/"
     },
     {

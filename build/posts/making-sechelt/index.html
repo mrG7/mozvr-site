@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Making Sechelt With Three.js and Cinema4D - MozVR
+    <title>Making Sechelt With three.js and Cinema 4D - MozVR
     </title>
     <link rel="alternate" href="http://mozvr.com/feed.xml" type="application/rss+xml" title="A virtual reality website about virtual reality websites">
     <link rel="stylesheet" href="http://code.cdn.mozilla.net/fonts/fira.css">
@@ -20,9 +20,9 @@
           <div class="table">
             <div class="table-cell"><a href="/"><img src="/images/logo-mozvr-fira-white.svg" alt="Mozilla" class="mxn1 mt1 w10"></a></div>
             <div class="table-cell full-width px3 nowrap"><a href="/downloads" class="px2 light rounded1 button hover-light uppercase header-link h5">Downloads</a><a href="/projects" class="px2 light rounded1 button hover-light uppercase header-link h5">Projects</a><a href="/posts" class="px2 light rounded1 button hover-light uppercase header-link h5">Blog</a></div>
-            <div class="table-cell right-align nowrap mxn2 pl2"><a href="http://github.com/MozVR" target="_blank" class="rounded4 button hover-light px2"><img src="/images/icon-github-white.svg" alt="Twitter" class="w2"></a><a href="http://twitter.com/hashtag/mozvr" target="_blank" class="rounded4 button hover-light px2"><img src="/images/icon-twitter-white.svg" alt="Twitter" class="w2"></a>
-              <!--a(href='http://wiki.mozilla.org/IRC' target='_blank').rounded1.button.hover-light IRC-->
-              <!--a(href='http://mail.mozilla.org/listinfo/web-vr-discuss' target='_blank').rounded1.button.hover-light Mailing List-->
+            <div class="table-cell right-align nowrap mxn2 pl2"><a href="https://github.com/MozVR/" target="_blank" class="rounded4 button hover-light px2"><img src="/images/icon-github-white.svg" alt="Twitter" class="w2"></a><a href="https://twitter.com/hashtag/mozvr" target="_blank" class="rounded4 button hover-light px2"><img src="/images/icon-twitter-white.svg" alt="Twitter" class="w2"></a>
+              <!--a(href='https://wiki.mozilla.org/IRC' target='_blank').rounded1.button.hover-light IRC-->
+              <!--a(href='https://mail.mozilla.org/listinfo/web-vr-discuss' target='_blank').rounded1.button.hover-light Mailing List-->
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="container">
           <div class="clearfix">
             <div class="col col-12 m-col-8">
-              <h1 class="post-title italic ultralight uppercase mxn3 f-huge"><span class="p2 bg-yellow black">Making Sechelt With Three.js and Cinema4D</span></h1>
+              <h1 class="post-title italic ultralight uppercase mxn3 f-huge"><span class="p2 bg-yellow black">Making Sechelt With three.js and Cinema 4D</span></h1>
             </div>
           </div>
         </div>
@@ -58,9 +58,9 @@
 <li>Scene modeled in Cinema&nbsp;4D</li>
 <li>Scene optimized by combinig geometries and eliminating unnecessary&nbsp;materials.</li>
 <li>Scene models exported from Cinema 4D to Collada&nbsp;.<span class="caps">DAE</span>.</li>
-<li><span class="caps">DAE</span> file opened in <a href="http://threejs.org/editor/">Three.js&nbsp;Editor</a></li>
-<li>Scene setup, animation, interactivity and sound created in <a href="http://threejs.org">Three.js</a></li>
-<li><span class="caps">VR</span> support implemented with VRControls and VREffect Three.js&nbsp;extras.</li>
+<li><span class="caps">DAE</span> file opened in <a href="http://threejs.org/editor/">three.js&nbsp;Editor</a></li>
+<li>Scene setup, animation, interactivity and sound created in <a href="http://threejs.org">three.js</a></li>
+<li><span class="caps">VR</span> support implemented with VRControls and VREffect three.js&nbsp;extras.</li>
 </ul>
 <h2 id="pre-production">Pre&nbsp;Production</h2>
 <h3 id="inspiration-and-art-direction">Inspiration and art&nbsp;direction</h3>
@@ -85,17 +85,17 @@ Journey, Shape of the World&nbsp;Sketches</p>
 <p>The camera animation was defined with Cinema 4D’s Motion Camera tool. A spline was carefully modeled, sweeping through the scene. The Motion Camera’s path was set to the spline, and the Camera Position then animated from 0 to 100$. At the end I wanted the camera to come to rest in a very precise position, which proved difficult to achieve by tweaking the spline points. So we instead created a second camera, framed it just right, then set the Motion Camera to switch between aligning itself to the spline, and aligning itself to this second camera, at the very end of the sequence. The final effect was&nbsp;seamless.</p>
 <p><img src="/posts/making-sechelt/c4d-6.png" alt="The Motion Camera settings"></p>
 <h3 id="exporting-the-cinema-4d-assets">Exporting the Cinema 4D&nbsp;assets</h3>
-<p>To exporting the assets from Cinema 4D to Three.js it was important to get several things right, or we found the results were unwieldy, mismatched, slow, etc. The steps we took were&nbsp;to:</p>
+<p>To exporting the assets from Cinema 4D to three.js it was important to get several things right, or we found the results were unwieldy, mismatched, slow, etc. The steps we took were&nbsp;to:</p>
 <h4 id="1-adjust-the-scale">1. Adjust the&nbsp;scale</h4>
 <p>The original scene was modeled to match the actual landscape, in meters. This made the units too massive to easily handle, however, so we scaled the scene down to centimeters before&nbsp;exporting.</p>
 <h4 id="2-reduce-the-number-of-individual-objects-by-merging">2. Reduce the number of individual objects by&nbsp;merging</h4>
-<p>In Cinema 4D the trees were dozens of individual objects each with their own instance of the tree material. It is important to reduce the number of unique geometries and materials when working with Three.js, however, for both performance and logistics reasons. So before we exported the scene, we deleted any unused objects and merged the trees into one single object with one material&nbsp;instance.</p>
+<p>In Cinema 4D the trees were dozens of individual objects each with their own instance of the tree material. It is important to reduce the number of unique geometries and materials when working with three.js, however, for both performance and logistics reasons. So before we exported the scene, we deleted any unused objects and merged the trees into one single object with one material&nbsp;instance.</p>
 <h4 id="3-clean-up-the-geometry">3. Clean up the&nbsp;geometry</h4>
 <p>If the camera was not going to see something, we deleted it. The meant carving out sections of the landscape, such as the backside of the mountains flanking the&nbsp;vallies.</p>
 <p><img src="/posts/making-sechelt/c4d-4.png" alt="The final Sechelt model landscape model. The white line is the camera&#39;s path. "></p>
-<h2 id="three-js-implementation">Three.js&nbsp;Implementation</h2>
+<h2 id="three-js-implementation">three.js&nbsp;Implementation</h2>
 <h3 id="importing-scene-models">Importing scene&nbsp;models</h3>
-<p>We recreated the Cinema 4D scene in Three.js by importing the objects inside the .<span class="caps">DAE</span> file with the&nbsp;following:</p>
+<p>We recreated the Cinema 4D scene in three.js by importing the objects inside the .<span class="caps">DAE</span> file with the&nbsp;following:</p>
 <pre><code class="lang-javascript"><span class="keyword">var</span> loader = <span class="keyword">new</span> <span class="caps">THREE</span>.ObjectLoader();
 loader.load( <span class="string">'c4d-scene.json'</span>, <span class="function"><span class="keyword">function</span> <span class="params">( object )</span> {</span>
 
@@ -126,7 +126,7 @@ scene.add( sound );
 </code></pre>
 <h3 id="camera-system">Camera&nbsp;system</h3>
 <p>We were inspired by the app Eden River to implement a control scheme that was completely hands free and intuitive. As users fly through the Sechelt scene, their position travels along the path that was defined in Cinema 4D. By tilting their head, however, they can “bank” the camera, like a plane, to steer left and right, deviating slightly in the direction they wish to go. This feels a bit like flying a plane. We love this control scheme because 1) it takes advantage of the head set’s innate head tracking capabilities, 2) it is entirely optional, with new users able to enjoy their experience even if they never discover the head-tilt mechanic, 3) it does not require an external input device, and 4) it is so&nbsp;satisfying.</p>
-<p>Ricardo implemented this control scheme in Three.js by creating a dolly system that tracks both the user’s headset data and the position of the camera on the pre-defined path, and then averages&nbsp;them.</p>
+<p>Ricardo implemented this control scheme in three.js by creating a dolly system that tracks both the user’s headset data and the position of the camera on the pre-defined path, and then averages&nbsp;them.</p>
 <pre><code class="lang-javascript"><span class="keyword">if</span> ( cameraPath !== <span class="literal">undefined</span> ) {
 
   <span class="keyword">var</span> time = ( performance.now() / <span class="number">40000</span> ) % <span class="number">1</span>;
@@ -153,7 +153,7 @@ water.position.z = dolly.position.z;
 
 effect.render( scene, camera );
 </code></pre>
-<p>To bring camera data from Cinema 4D into Three.js, we exported the individual points that define the camera path in <span class="caps">C4D</span> as ASCII text, and then imported them into Three.js using an importer that Ricardo&nbsp;wrote:</p>
+<p>To bring camera data from Cinema 4D into three.js, we exported the individual points that define the camera path in <span class="caps">C4D</span> as ASCII text, and then imported them into three.js using an importer that Ricardo&nbsp;wrote:</p>
 <pre><code class="lang-javascript"><span class="keyword">var</span> loader = <span class="keyword">new</span> <span class="caps">THREE</span>.C4DLineLoader();
 loader.load( <span class="string">'flightpath-ascii.txt'</span>, <span class="function"><span class="keyword">function</span> <span class="params">( line )</span> {</span>
 
@@ -163,7 +163,7 @@ loader.load( <span class="string">'flightpath-ascii.txt'</span>, <span class="fu
 </code></pre>
 <h2 id="testing-optimization">Testing <span class="amp">&amp;</span>&nbsp;Optimization</h2>
 <h3 id="adding-vr-headset-support">Adding <span class="caps">VR</span> headset&nbsp;support</h3>
-<p>Support for <span class="caps">VR</span> headsets was implemented with two Three.js components: VRControls and VREffect. These take the scene&nbsp;and…</p>
+<p>Support for <span class="caps">VR</span> headsets was implemented with two three.js components: VRControls and VREffect. These take the scene&nbsp;and…</p>
 <h3 id="testing">Testing</h3>
 <p>We tested the results with <span class="caps">DK1</span> and DK2 headsets and random co-workers, trying to find people who were particularly sensitive to the nauseau and disorientation that VR can produce if not properly&nbsp;calibrated.</p>
 <h3 id="deployment">Deployment</h3>
@@ -181,7 +181,7 @@ loader.load( <span class="string">'flightpath-ascii.txt'</span>, <span class="fu
                       <h3 class="m0">Josh Carpenter
                       </h3>
                       <p>VR Researcher, Mozilla<br><a href="http://www.twitter.com/joshcarpenter" class="basiclink-blue">@joshcarpenter</a>
-                        <p class="semibold"></p>Josh works full time on the UX of web VR. His background is in motion graphics, visual design and architectural visualization, and he was previously UX Lead of Firefox OS.
+                        <p class="semibold"></p>Josh works full time on the UX of WebVR. His background is in motion graphics, visual design and architectural visualization, and he was previously UX Lead of Firefox OS.
                       </p>
                     </div>
         </div>

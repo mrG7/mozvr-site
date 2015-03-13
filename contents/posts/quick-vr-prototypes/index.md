@@ -13,13 +13,13 @@ author: joshcarpenter
 
 <p class="intro h2">Designing for the VR web is nothing like designing for the desktop and mobile web. Every process and principle must be rethought, including how we prototype our ideas. With a simple cylinder and some precise measurements, however, we can move rapidly between our favorite 2D design apps and the virtual canvas of our headsets.</p>
 
-After years of bouncing between Photoshop and Keynote I've happily settled on Illustrator as my primary interface design tool. I'm good with 3D apps like Cinema4D, but for all their power, they're painful to use for typography, interface layout, etc. So when it came time to design a VR web navigation UI, I wanted a workflow that let me rapidly iterate from mockups created in Illustrator to wrap-around web VR test scenes.
+After years of bouncing between Photoshop and Keynote I've happily settled on Illustrator as my primary interface design tool. I'm good with 3D apps like Cinema 4D, but for all their power, they're painful to use for typography, interface layout, etc. So when it came time to design a VR web navigation UI, I wanted a workflow that let me rapidly iterate from mockups created in Illustrator to wrap-around WebVR test scenes.
 
 <div class="post-summary">
   <h2>In Brief</h2>
   <ol>
     <li>Create your layout in a 2D design app and export as a bitmap.</li>
-    <li>Create cylinder mesh in Three.js with a circumference/height ratio that matches the width/height ratio of the bitmap.</li>
+    <li>Create cylinder mesh in three.js with a circumference/height ratio that matches the width/height ratio of the bitmap.</li>
     <li>Apply the bitmap as a texture to the cylinder and flip the cylinder faces.</li>
     <li>View in VR!</li>
   </ol>
@@ -87,13 +87,13 @@ Once we have a layout ready, we want to export it as a bitmap. We can scale at e
 
 ## Viewing our layout in VR
 
-The good news is we don't need much JS to create our WebGL VR scene. The following scene is built on the MozVR Three.js web VR boilerplate, available from our [vr-web-examples repo](https://github.com/MozVR/vr-web-examples). It uses [Three.js](https://github.com/mrdoob/three.js) and two extra libraries that handle detecting, communicating and rendering to an attached VR headset.
+The good news is we don't need much JS to create our WebGL VR scene. The following scene is built on the MozVR three.js WebVR boilerplate, available from our [vr-web-examples repo](https://github.com/MozVR/vr-web-examples). It uses [three.js](https://github.com/mrdoob/three.js) and two extra libraries that handle detecting, communicating and rendering to an attached VR headset.
 
 To preview our mockup, we simply copy the bitmap we saved into the `/images` directory and rename it `mockup.png`, overwriting the existing file. We then load `index.html` into our VR-enabled browser (like [Firefox with VR](http://mozvr.com/downloads)), and enter VR mode by pressing `F` or double-clicking. In our headset the scene the browser should render our scene, and we should see our layout wrapped around us on a cylinder.
 
 ### The code
 
-Let's look at `index.html` to see how this works. Most of the code is standard boilerplate for a Three.js scene with VR support. To add our layouts, we need to: 
+Let's look at `index.html` to see how this works. Most of the code is standard boilerplate for a three.js scene with VR support. To add our layouts, we need to: 
 
 1. Create a cylinder geometry with a circumference/height ratio that matches the width/height ratio of the bitmap.
 1. Create a material and load our mockup as a texture
@@ -145,7 +145,7 @@ We then create a material for our mesh:
 
 ```javascript
 /*
-Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to THREE.DoubleSide, so our material renders facing both inwards and outwards (relative to the  direction of the faces of the cylinder object). By default, materials and the faces of Three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visible no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
+Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to THREE.DoubleSide, so our material renders facing both inwards and outwards (relative to the  direction of the faces of the cylinder object). By default, materials and the faces of three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visible no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
 */
 
 var material = new THREE.MeshBasicMaterial( { 
@@ -165,7 +165,7 @@ Create the mesh of our cylinder object from the geometry and material.
 var mesh = new THREE.Mesh( geometry, material );
 
 /*
-Add our cylinder object to the scene. The default position of elements added to a Three.js scene is 0,0,0, which is also the default position of our scene's camera. So our camera sits inside our cylinder.
+Add our cylinder object to the scene. The default position of elements added to a three.js scene is 0,0,0, which is also the default position of our scene's camera. So our camera sits inside our cylinder.
 */
 
 scene.add( mesh );
@@ -235,7 +235,7 @@ Play around with different background images to find one that gives you the cont
   </figcaption>
 </figure>
 
-Flickr's [Equirectangular Pool](https://www.flickr.com/groups/equirectangular/) is a fantastic source for images (just be sure to check the licenses). You can also use 3D apps to render 3D scenes into equirectangular format. I used Cinema4D + Vray to create the blurred pano used in this tutorial, for example. Or if you need just a simple gradient or solid color, use your favorite image editing app to fill a canvas with 2:1 width:height proportions.
+Flickr's [Equirectangular Pool](https://www.flickr.com/groups/equirectangular/) is a fantastic source for images (just be sure to check the licenses). You can also use 3D apps to render 3D scenes into equirectangular format. I used Cinema 4D + Vray to create the blurred pano used in this tutorial, for example. Or if you need just a simple gradient or solid color, use your favorite image editing app to fill a canvas with 2:1 width:height proportions.
 
 
 
@@ -261,7 +261,7 @@ This technique enables us to bridge the workflows we know with the new world of 
 * Create assets download section
   - Firefox with VR
   - Illustrator template (save as Illustrator 8 to ensure accessibility)
-  - Three.js & VR libs (latest)
+  - three.js & VR libs (latest)
   - Code (final scene)
 * Create GIF of user leaning in to HIRO, showing depth effect
 * Link to end result (open in VR mode)
