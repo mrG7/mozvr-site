@@ -9,7 +9,7 @@ author: joshcarpenter
 tools:
   [
     {
-      "name": "Three.js",
+      "name": "three.js",
       "url": "http://threejs.org/"
     },
     {
@@ -25,15 +25,15 @@ creators:
       "twitter": "joshcarpenter"
     },
     {
-      "name": "Mr.DOOB",
+      "name": "Mr.doob",
       "email": "ricardo.cabello@gmail.com",
       "twitter": "mrdoob"
     }
   ]
-intro: A visualization of British Columbia's coast built with Cinema 4D and Three.js.
+intro: A visualization of British Columbia's coast built with three.js and Cinema 4D.
 ---
 
-<p class="intro h2">"Sechelt" is a virtual reality visualization of an inlet near the town of [Sechelt](http://en.wikipedia.org/wiki/Sechelt_Inlet), on British Columbia's southern coast, rendered in gradients and colors inspired by the work of renowned Canadian painter [Roy Henry Vickers](http://www.royhenryvickers.com/). It was designed and built by Josh Carpenter of Mozilla in collaboration with [Mr.DOOB](http://twitter.com/mrdoob) of Three.js. Cinema4D was used to first design the look and feel of the world, and then models, textures and camera paths were imported into a Three.js scene programmed by DOOB.</p>
+<p class="intro h2">"Sechelt" is a virtual reality visualization of an inlet near the town of [Sechelt](http://en.wikipedia.org/wiki/Sechelt_Inlet), on British Columbia's southern coast, rendered in gradients and colors inspired by the work of renowned Canadian painter [Roy Henry Vickers](http://www.royhenryvickers.com/). It was designed and built by Josh Carpenter of Mozilla in collaboration with [Mr.doob](http://twitter.com/mrdoob) of three.js. Cinema 4D was used to first design the look and feel of the world, and then models, textures and camera paths were imported into a three.js scene programmed by doob.</p>
 
 ![Screenshot of Sechelt project](sechelt-4.png)
 

@@ -12,7 +12,7 @@ tools:
     "url": "http://github.com/tparisi/vizi/"
   },
   {
-    "name": "Three.js",
+    "name": "three.js",
     "url": "http://threejs.org/"
   },
   {
@@ -43,6 +43,6 @@ creators:
 intro: A visualization of data as art, inspired by the work of artist Tatiana Plakhova and built using the Vizi framework.
 ---
 
-<p class="intro h2">Information Diving is a visualization of data as art, inspired by the work of Moscow artist [Tatiana Plakhova](http://complexitygraphics.com/). It was designed by Josh Carpenter of Mozilla, and programmed by Tony Parisi and Eric Levin, using Tony's GLAM framework. The scene is currently a work in progress, with future improvements and additions to include live data feeds, more elements, and audio cues. The scene was  visualized in Cinema4D and then created using a series of flexible custom components in GLAM.</p>
+<p class="intro h2">Information Diving is a visualization of data as art, inspired by the work of Moscow artist [Tatiana Plakhova](http://complexitygraphics.com/). It was designed by Josh Carpenter of Mozilla, and programmed by Tony Parisi and Eric Levin, using Tony's GLAM framework. The scene is currently a work in progress, with future improvements and additions to include live data feeds, more elements, and audio cues. The scene was visualized in Cinema 4D and then created using a series of flexible custom components in GLAM.</p>
 
 ![Screenshot of Information Diving](infodive-1.jpg)

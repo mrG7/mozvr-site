@@ -9,7 +9,7 @@ thumb: project-thumb.png
 tools:
   [
     {
-      "name": "Three.js",
+      "name": "three.js",
       "url": "http://threejs.org/"
     },
     {
@@ -24,6 +24,6 @@ creators:
       "twitter": "joshcarpenter"
     }
   ]
-intro: The first version of MozVR's home page, built with Cinema 4D, Illustrator, and Three.js.
+intro: The first version of MozVR's home page, built with Cinema 4D, Illustrator, and three.js.
 author: joshcarpenter
 ---

@@ -20,9 +20,9 @@
           <div class="table">
             <div class="table-cell"><a href="/"><img src="/images/logo-mozvr-fira-white.svg" alt="Mozilla" class="mxn1 mt1 w10"></a></div>
             <div class="table-cell full-width px3 nowrap"><a href="/downloads" class="px2 light rounded1 button hover-light uppercase header-link h5">Downloads</a><a href="/projects" class="px2 light rounded1 button hover-light uppercase header-link h5">Projects</a><a href="/posts" class="px2 light rounded1 button hover-light uppercase header-link h5">Blog</a></div>
-            <div class="table-cell right-align nowrap mxn2 pl2"><a href="http://github.com/MozVR" target="_blank" class="rounded4 button hover-light px2"><img src="/images/icon-github-white.svg" alt="Twitter" class="w2"></a><a href="http://twitter.com/hashtag/mozvr" target="_blank" class="rounded4 button hover-light px2"><img src="/images/icon-twitter-white.svg" alt="Twitter" class="w2"></a>
-              <!--a(href='http://wiki.mozilla.org/IRC' target='_blank').rounded1.button.hover-light IRC-->
-              <!--a(href='http://mail.mozilla.org/listinfo/web-vr-discuss' target='_blank').rounded1.button.hover-light Mailing List-->
+            <div class="table-cell right-align nowrap mxn2 pl2"><a href="https://github.com/MozVR/" target="_blank" class="rounded4 button hover-light px2"><img src="/images/icon-github-white.svg" alt="Twitter" class="w2"></a><a href="https://twitter.com/hashtag/mozvr" target="_blank" class="rounded4 button hover-light px2"><img src="/images/icon-twitter-white.svg" alt="Twitter" class="w2"></a>
+              <!--a(href='https://wiki.mozilla.org/IRC' target='_blank').rounded1.button.hover-light IRC-->
+              <!--a(href='https://mail.mozilla.org/listinfo/web-vr-discuss' target='_blank').rounded1.button.hover-light Mailing List-->
             </div>
           </div>
         </div>
@@ -53,12 +53,12 @@
             -->
             <!--.bt1.b-dotted.b-gray3.mb3--><p class="intro h2">Designing for the <span class="caps">VR</span> web is nothing like designing for the desktop and mobile web. Every process and principle must be rethought, including how we prototype our ideas. With a simple cylinder and some precise measurements, however, we can move rapidly between our favorite 2D design apps and the virtual canvas of our&nbsp;headsets.</p>
 
-<p>After years of bouncing between Photoshop and Keynote I’ve happily settled on Illustrator as my primary interface design tool. I’m good with 3D apps like Cinema4D, but for all their power, they’re painful to use for typography, interface layout, etc. So when it came time to design a <span class="caps">VR</span> web navigation UI, I wanted a workflow that let me rapidly iterate from mockups created in Illustrator to wrap-around web VR test&nbsp;scenes.</p>
+<p>After years of bouncing between Photoshop and Keynote I’ve happily settled on Illustrator as my primary interface design tool. I’m good with 3D apps like Cinema 4D, but for all their power, they’re painful to use for typography, interface layout, etc. So when it came time to design a <span class="caps">VR</span> web navigation UI, I wanted a workflow that let me rapidly iterate from mockups created in Illustrator to wrap-around WebVR test&nbsp;scenes.</p>
 <div class="post-summary">
   <h2>In&nbsp;Brief</h2>
   <ol>
     <li>Create your layout in a 2D design app and export as a&nbsp;bitmap.</li>
-    <li>Create cylinder mesh in Three.js with a circumference/height ratio that matches the width/height ratio of the&nbsp;bitmap.</li>
+    <li>Create cylinder mesh in three.js with a circumference/height ratio that matches the width/height ratio of the&nbsp;bitmap.</li>
     <li>Apply the bitmap as a texture to the cylinder and flip the cylinder&nbsp;faces.</li>
     <li>View in&nbsp;<span class="caps">VR</span>!</li>
   </ol>
@@ -118,10 +118,10 @@
 
 <p>Once we have a layout ready, we want to export it as a bitmap. We can scale at export-time as much as we need, so long as we do not change the same layout’s width/height&nbsp;ratio. </p>
 <h2 id="viewing-our-layout-in-vr">Viewing our layout in&nbsp;<span class="caps">VR</span></h2>
-<p>The good news is we don’t need much <span class="caps">JS</span> to create our WebGL VR scene. The following scene is built on the MozVR Three.js web VR boilerplate, available from our <a href="https://github.com/MozVR/vr-web-examples">vr-web-examples repo</a>. It uses <a href="https://github.com/mrdoob/three.js">Three.js</a> and two extra libraries that handle detecting, communicating and rendering to an attached <span class="caps">VR</span>&nbsp;headset.</p>
+<p>The good news is we don’t need much <span class="caps">JS</span> to create our WebGL VR scene. The following scene is built on the MozVR three.js WebVR boilerplate, available from our <a href="https://github.com/MozVR/vr-web-examples">vr-web-examples repo</a>. It uses <a href="https://github.com/mrdoob/three.js">three.js</a> and two extra libraries that handle detecting, communicating and rendering to an attached <span class="caps">VR</span>&nbsp;headset.</p>
 <p>To preview our mockup, we simply copy the bitmap we saved into the <code>/images</code> directory and rename it <code>mockup.png</code>, overwriting the existing file. We then load <code>index.html</code> into our <span class="caps">VR</span>-enabled browser (like <a href="http://mozvr.com/downloads">Firefox with <span class="caps">VR</span></a>), and enter <span class="caps">VR</span> mode by pressing <code>F</code> or double-clicking. In our headset the scene the browser should render our scene, and we should see our layout wrapped around us on a&nbsp;cylinder.</p>
 <h3 id="the-code">The&nbsp;code</h3>
-<p>Let’s look at <code>index.html</code> to see how this works. Most of the code is standard boilerplate for a Three.js scene with <span class="caps">VR</span> support. To add our layouts, we need&nbsp;to: </p>
+<p>Let’s look at <code>index.html</code> to see how this works. Most of the code is standard boilerplate for a three.js scene with <span class="caps">VR</span> support. To add our layouts, we need&nbsp;to: </p>
 <ol>
 <li>Create a cylinder geometry with a circumference/height ratio that matches the width/height ratio of the&nbsp;bitmap.</li>
 <li>Create a material and load our mockup as a&nbsp;texture</li>
@@ -163,7 +163,7 @@ geometry.applyMatrix( <span class="keyword">new</span> <span class="caps">THREE<
 </code></pre>
 <p>We then create a material for our&nbsp;mesh:</p>
 <pre><code class="lang-javascript"><span class="comment">/*
-Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to <span class="caps">THREE</span>.DoubleSide, so our material renders facing both inwards and outwards (relative to the  direction of the faces of the cylinder object). By default, materials and the faces of Three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visible no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
+Create the material that we will load our mockup into and apply to our cylinder object. We set `transparent` to true, enabling us to optionally use mockups with alpha channels. We set `side` to <span class="caps">THREE</span>.DoubleSide, so our material renders facing both inwards and outwards (relative to the  direction of the faces of the cylinder object). By default, materials and the faces of three.js meshes face outwards and are invisible from the reverse. Setting THREE.DoubleSide ensures the cylinder and it's material will be visible no matter which direction (inside or out) we are viewing it from. This step is not strictly necessary, since we are actually going to invert the faces of the object to face inwards in a later step, but it is good to be aware of the `side` material attribute and how to define it. We then load our mockup as a texture.
 */</span>
 
 <span class="keyword">var</span> material = <span class="keyword">new</span> <span class="caps">THREE</span>.MeshBasicMaterial( { 
@@ -180,7 +180,7 @@ Create the mesh of our cylinder object from the geometry and material.
 <span class="keyword">var</span> mesh = <span class="keyword">new</span> <span class="caps">THREE</span>.Mesh( geometry, material );
 
 <span class="comment">/*
-Add our cylinder object to the scene. The default position of elements added to a Three.js scene is 0,0,0, which is also the default position of our scene's camera. So our camera sits inside our cylinder.
+Add our cylinder object to the scene. The default position of elements added to a three.js scene is 0,0,0, which is also the default position of our scene's camera. So our camera sits inside our cylinder.
 */</span>
 
 scene.add( mesh );
@@ -234,7 +234,7 @@ scene.add( mesh );
   </figcaption>
 </figure>
 
-<p>Flickr’s <a href="https://www.flickr.com/groups/equirectangular/">Equirectangular Pool</a> is a fantastic source for images (just be sure to check the licenses). You can also use 3D apps to render 3D scenes into equirectangular format. I used Cinema4D + Vray to create the blurred pano used in this tutorial, for example. Or if you need just a simple gradient or solid color, use your favorite image editing app to fill a canvas with 2:1 width:height&nbsp;proportions.</p>
+<p>Flickr’s <a href="https://www.flickr.com/groups/equirectangular/">Equirectangular Pool</a> is a fantastic source for images (just be sure to check the licenses). You can also use 3D apps to render 3D scenes into equirectangular format. I used Cinema 4D + Vray to create the blurred pano used in this tutorial, for example. Or if you need just a simple gradient or solid color, use your favorite image editing app to fill a canvas with 2:1 width:height&nbsp;proportions.</p>
 <h3 id="3-create-multiple-layers-at-different-depths">3. Create multiple layers at different&nbsp;depths</h3>
 <p>Depth is a fundamental element of design for virtual reality. Through the two separate eyes of a <span class="caps">VR</span> headset we can perceive even slight differences in z-position between elements. We can see that a glowing button hovers 0.5cm above the surface of it’s parent dialogue, for example, or that a UI stretches off into the horizon. Depth in VR does naturally what drop shadows do skeumorphically in 2D layouts: create visual contrast between stacked&nbsp;layers.</p>
 <p>Adding additional layers to our scene is easy. We create additional meshes and load a different bitmaps into their&nbsp;materials.</p>
@@ -252,7 +252,7 @@ scene.add( mesh );
 * Create assets download section
   - Firefox with VR
   - Illustrator template (save as Illustrator 8 to ensure accessibility)
-  - Three.js & VR libs (latest)
+  - three.js & VR libs (latest)
   - Code (final scene)
 * Create GIF of user leaning in to HIRO, showing depth effect
 * Link to end result (open in VR mode)
@@ -271,7 +271,7 @@ scene.add( mesh );
                       <h3 class="m0">Josh Carpenter
                       </h3>
                       <p>VR Researcher, Mozilla<br><a href="http://www.twitter.com/joshcarpenter" class="basiclink-blue">@joshcarpenter</a>
-                        <p class="semibold"></p>Josh works full time on the UX of web VR. His background is in motion graphics, visual design and architectural visualization, and he was previously UX Lead of Firefox OS.
+                        <p class="semibold"></p>Josh works full time on the UX of WebVR. His background is in motion graphics, visual design and architectural visualization, and he was previously UX Lead of Firefox OS.
                       </p>
                     </div>
         </div>

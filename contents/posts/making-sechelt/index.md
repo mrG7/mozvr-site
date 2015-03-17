@@ -1,5 +1,5 @@
 ---
-title: Making Sechelt With Three.js and Cinema4D
+title: Making Sechelt With three.js and Cinema 4D
 date: 2014-12-10
 template: post.jade
 project-profile: sechelt
@@ -7,7 +7,7 @@ project-link: http://mozvr.github.io/sechelt
 project-source: http://github.io/MozVR/sechelt
 splash: post-splash.jpg
 thumb: post-thumb.png
-intro: A collaboration with Ricardo Cabello of Three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, Three.js.
+intro: A collaboration with Ricardo Cabello of three.js. Inspired by the coastline of British Columbia and the work of Roy Henry Vickers. Created with Cinema 4D, three.js.
 author: joshcarpenter
 ---
 
@@ -20,9 +20,9 @@ The high level process that brough Sechelt to life:
 * Scene modeled in Cinema 4D
 * Scene optimized by combinig geometries and eliminating unnecessary materials.
 * Scene models exported from Cinema 4D to Collada .DAE.
-* DAE file opened in [Three.js Editor](http://threejs.org/editor/)
-* Scene setup, animation, interactivity and sound created in [Three.js](http://threejs.org)
-* VR support implemented with VRControls and VREffect Three.js extras.
+* DAE file opened in [three.js Editor](http://threejs.org/editor/)
+* Scene setup, animation, interactivity and sound created in [three.js](http://threejs.org)
+* VR support implemented with VRControls and VREffect three.js extras.
 
 ## Pre Production
 
@@ -69,7 +69,7 @@ The camera animation was defined with Cinema 4D's Motion Camera tool. A spline w
 
 ### Exporting the Cinema 4D assets
 
-To exporting the assets from Cinema 4D to Three.js it was important to get several things right, or we found the results were unwieldy, mismatched, slow, etc. The steps we took were to:
+To exporting the assets from Cinema 4D to three.js it was important to get several things right, or we found the results were unwieldy, mismatched, slow, etc. The steps we took were to:
 
 #### 1. Adjust the scale
 
@@ -77,7 +77,7 @@ The original scene was modeled to match the actual landscape, in meters. This ma
 
 #### 2. Reduce the number of individual objects by merging
 
-In Cinema 4D the trees were dozens of individual objects each with their own instance of the tree material. It is important to reduce the number of unique geometries and materials when working with Three.js, however, for both performance and logistics reasons. So before we exported the scene, we deleted any unused objects and merged the trees into one single object with one material instance.
+In Cinema 4D the trees were dozens of individual objects each with their own instance of the tree material. It is important to reduce the number of unique geometries and materials when working with three.js, however, for both performance and logistics reasons. So before we exported the scene, we deleted any unused objects and merged the trees into one single object with one material instance.
 
 #### 3. Clean up the geometry
 
@@ -86,11 +86,11 @@ If the camera was not going to see something, we deleted it. The meant carving o
 ![The final Sechelt model landscape model. The white line is the camera's path. ](c4d-4.png)
 
 
-## Three.js Implementation
+## three.js Implementation
 
 ### Importing scene models
 
-We recreated the Cinema 4D scene in Three.js by importing the objects inside the .DAE file with the following:
+We recreated the Cinema 4D scene in three.js by importing the objects inside the .DAE file with the following:
 
 ```javascript
 var loader = new THREE.ObjectLoader();
@@ -131,7 +131,7 @@ scene.add( sound );
 
 We were inspired by the app Eden River to implement a control scheme that was completely hands free and intuitive. As users fly through the Sechelt scene, their position travels along the path that was defined in Cinema 4D. By tilting their head, however, they can "bank" the camera, like a plane, to steer left and right, deviating slightly in the direction they wish to go. This feels a bit like flying a plane. We love this control scheme because 1) it takes advantage of the head set's innate head tracking capabilities, 2) it is entirely optional, with new users able to enjoy their experience even if they never discover the head-tilt mechanic, 3) it does not require an external input device, and 4) it is so satisfying.
 
-Ricardo implemented this control scheme in Three.js by creating a dolly system that tracks both the user's headset data and the position of the camera on the pre-defined path, and then averages them.
+Ricardo implemented this control scheme in three.js by creating a dolly system that tracks both the user's headset data and the position of the camera on the pre-defined path, and then averages them.
 
 ```javascript
 if ( cameraPath !== undefined ) {
@@ -161,7 +161,7 @@ water.position.z = dolly.position.z;
 effect.render( scene, camera );
 ```
 
-To bring camera data from Cinema 4D into Three.js, we exported the individual points that define the camera path in C4D as ASCII text, and then imported them into Three.js using an importer that Ricardo wrote:
+To bring camera data from Cinema 4D into three.js, we exported the individual points that define the camera path in C4D as ASCII text, and then imported them into three.js using an importer that Ricardo wrote:
 
 ```javascript
 var loader = new THREE.C4DLineLoader();
@@ -177,7 +177,7 @@ loader.load( 'flightpath-ascii.txt', function ( line ) {
 
 ### Adding VR headset support
 
-Support for VR headsets was implemented with two Three.js components: VRControls and VREffect. These take the scene and...
+Support for VR headsets was implemented with two three.js components: VRControls and VREffect. These take the scene and...
 
 ### Testing
 

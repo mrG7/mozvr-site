@@ -13,7 +13,7 @@ tools:
       "url": "https://developer.leapmotion.com/gallery/tags/javascript/"
     },
     {
-      "name": "Three.js",
+      "name": "three.js",
       "url": "http://threejs.org/"
     }
   ]

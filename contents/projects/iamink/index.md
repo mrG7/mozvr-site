@@ -13,7 +13,7 @@ tools:
       "url": "https://www.adobe.com/products/flash.html"
     },
     {
-      "name": "Three.js",
+      "name": "three.js",
       "url": "http://threejs.org/"
     }
   ]
