@@ -14,10 +14,10 @@ To install the [Node](https://nodejs.org/) dependencies:
 
 To generate a build of the site running on a local server:
 
-    wintersmith preview
+    gulp preview
 
 To generate a build of the site in the `build/` directory, ready to be uploaded to a server:
 
-    wintersmith build
+    gulp build
 
 > **Note:** To review the build output, run a local server (e.g., [`http-server`](https://www.npmjs.com/package/http-server)) from the `build/` directory after `wintersmith build` completes. Simply loading `build/index.html` in the browser will not work, as relative paths break (e.g., `/css/`, `/images/`, etc.).
