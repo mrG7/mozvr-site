@@ -1,6 +1,15 @@
 {
 	"weblinks": [
 		{
+		  "title": "Josh Carpenter on The Future of WebVR and Enabling the Metaverse",
+		  "publication": "Voices of VR",
+		  "publicationURL": "http://voicesofvr.com/",
+		  "thumb": "voicesofvr.jpg",
+		  "date": "2015-03-16",
+		  "intro": "Mozilla wants to enable web developers with the tools and infrastructure so they can help build out the metaverse of interconnected virtual worlds.",
+		  "url": "http://voicesofvr.com/106-josh-carpenter-on-the-future-of-webvr-and-enabling-the-metaverse/"
+		},
+		{
 		  "title": "Have an Oculus Rift and Leap Motion? Try This WebVR Demo Right Now",
 		  "publication": "Road to VR",
 		  "publicationURL": "http://www.roadtovr.com/",
