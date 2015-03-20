@@ -16,6 +16,7 @@ var refresh = require('gulp-livereload');
 var runWintersmith = require('run-wintersmith');
 var lr = require('tiny-lr');
 var server = lr();
+var shell = require('gulp-shell');
 
 //
 // Directories
@@ -61,6 +62,15 @@ gulp.task('build', ['clean'], function(cb) {
         cb();
     });
 });
+
+
+//
+// Deploy task
+//
+
+// See setup instructions for s3cmd here: http://s3tools.org/s3cmd-howto
+// You will need to setup access keys for s3 buckets you will be syncing to.
+gulp.task('deploy', shell.task('s3cmd sync build/ s3://mozvr.com'));
 
 //
 // Preview task
