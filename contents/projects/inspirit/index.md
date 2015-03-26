@@ -38,7 +38,7 @@ creators:
 intro: A surreal interactive audio/visual experience.
 ---
 
-<p class="intro h2">[Inspirit](http://inspirit.unboring.net/) takes us into a beautiful and surreal low poly landscape where a character attempts to light up the world with some help from the user. Built by Arturo Paracuellos, Founder and Interactive Director at [Unboring](http://unboring.net/), it provides a uniquely considerate onboarding experience, presenting visitors with viewing options for a range of devices: from Cardboard to Oculus to mobile phones to standard 2D desktop. All within a beautiful, professional interface. The experience even thoughtfully pausing when the user exists pointer lock mode. It's a wonderful example of beauty + care of presentation. And the audio is killer :)</p>
+<p class="intro h2">[Inspirit](http://inspirit.unboring.net/) takes us into a beautiful and surreal low poly landscape where a character attempts to light up the world with some help from the user. Built by Arturo Paracuellos, Founder and Interactive Director at [Unboring](http://unboring.net/), it provides a uniquely considerate onboarding experience, presenting visitors with viewing options for a range of devices: from Cardboard to Oculus to mobile phones to standard 2D desktop. All within a beautiful, professional interface. The experience even thoughtfully pausing when the user exists pointer lock mode. It's a wonderful example of beauty + care of presentation. And the audio is killer :) Also worth checking out is the excellent ["making of" case study](http://unboring.net/cases/inspirit.html).</p>
 
 ![Screenshot of Inspirit project](inspirit-1.jpg)
 
