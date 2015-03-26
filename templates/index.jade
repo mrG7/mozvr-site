@@ -6,7 +6,7 @@ block content
   .absolute.top-0.left-4
       h1.post-title.italic.ultralight.uppercase.f-large
         span.p2.bg-yellow.black.nowrap
-          | We are the Mozilla VR team. Our goal 
+          | We are the Mozilla VR team. Our goal
           br
           |  is to help bring high performance
           br
@@ -26,7 +26,7 @@ block content
   // Intro
   .py3.white.bg-blue4
     .container
-      
+
       //.clearfix
         .col.col-10.pb2
           h1.ultralight
@@ -38,7 +38,7 @@ block content
       .clearfix
         .col.col-12
           //.b-solid.b-lighten2.bt2.mt4.mb3
-          h5 Latest Projects
+          h2.mb2.h--section Latest Projects
       .clearfix.mxn2
         .col.col-6.m-col-3.px2.py2
           mixin project-tile('rainbowmembrane')
@@ -78,7 +78,7 @@ block content
     .container
       .clearfix
         .col.col-12
-          h5.gray6.mb3 Latest Posts
+          h2.gray6.mb3.h--section Latest Posts
       //.clearfix
         .col.col-12
           mixin post-tile('making-sechelt')
@@ -97,8 +97,8 @@ block content
       // Web links
       .clearfix
         .col.col-12
-          .b-solid.b-gray1.bt2.mb3
-          h5.gray6.mb3 Around the Web
+          .b-solid.b-gray1.bt2.mb4
+          h2.gray6.mb3.h--section Around the Web
       .clearfix.mxn2
         .col.col-2.sm-col-3.m-col-2.px2
           mixin weblink-tile(0)
@@ -118,7 +118,7 @@ block content
     .container
       .clearfix
         .col.col-12
-          h5.gray6.mb3 Frequently Asked Questions
+          h2.gray6.mb3.h--section Frequently Asked Questions
       .clearfix.mxn3
         .col.col-6.px3
 
@@ -126,7 +126,7 @@ block content
           p.gray6.pl2.mt2.mb3.bl4.b-solid.b-blue1 Support for other headsets is coming soon. We are using the Rift as our initial test and development HMD because it is the best supported and most widely distributed headset on the market (over 200,000 DK1 and DK2 units shipped). We are deeply committed to device-agnostic WebVR, and are next working on support for Google Cardboard and other devices.
 
           h4.light The demos run slow or choppy for me. How can I improve performance?
-          p.gray6.pl2.mt2.mb3.bl4.b-solid.b-blue1 Start with our 
+          p.gray6.pl2.mt2.mb3.bl4.b-solid.b-blue1 Start with our
             a(href=locals.downloads).basiclink-blue display setup tips.
             |  VR is a very new technology, and a few settings can make the difference between a smooth or choppy experience.
 
@@ -137,9 +137,9 @@ block content
 
           h4.light Can I use other browsers?
           p.gray6.pl2.mt2.mb3.bl4.b-solid.b-blue1
-            | Yes, in addition to VR-enabled Firefox, mozvr.com also works with experimental VR-enabled 
+            | Yes, in addition to VR-enabled Firefox, mozvr.com also works with experimental VR-enabled
             a(href=locals.build_chrome target='_blank').basiclink-blue builds of Chromium
-            |  being created by 
+            |  being created by
             a(href='https://twitter.com/Tojiro' target='_blank').basiclink-blue Brandon Jones
             |  of the Chrome team. No other browsers currently support WebVR, but we're hopeful that they will start experimenting as well.
 
@@ -157,7 +157,7 @@ block content
     .container
       .clearfix
         .col.col-12
-          h2 Our Team
+          h2.gray6.h--section Our Team
       .clearfix
         .col.col-8.mb2
           p The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians, and we work with partners and contributors from around the world.
@@ -172,7 +172,7 @@ block content
           mixin team-member('diegomarcos')
         .col.col-0.m-col-4.px2
 
-    
+
 block append scripts
   script.
 
