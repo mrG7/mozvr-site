@@ -53,10 +53,13 @@ block content
                   = locals.webvr_addon_version
         .col.col-12.m-col-8.px2.mt3
 
-          p Firefox Nightly includes core WebVR functionality. It is disabled by default. The WebVR Add-On enables WebVR and disables multiprocess browsing (
-            a(href='https://wiki.mozilla.org/Electrolysis') E10S
+          p <strong>Firefox Nightly</strong> includes core WebVR functionality, but it is disabled by default. The WebVR Add-On enables WebVR and disables multiprocess browsing (
+            a(href='https://wiki.mozilla.org/Electrolysis').basiclink-blue E10S
             | ), a new feature which is currently incompatible with WebVR. Once you have installed Firefox Nightly, open it, install the Add-On, and then follow the prompt to restart the browser. Once you've configured your displays (see below) you will be ready to start experiencing the VR web! 
-          p Note: the previous version of the Add-On ("WebVR Oculus Enabler") is now obsolete. It will not interfere with the new add-on, but it can optionally be uninstalled from Tools &#62 Add-ons &#62 Extensions.
+          p For mobile users, <strong>Firefox for Android</strong> now also support WebVR in 
+            a(href='http://nightly.mozilla.org/') Nightly builds
+            | . The current implementation is rough and will evolve over time, so feedback is welcome!
+          p.gray5 Note: The previous version of the Add-On ("WebVR Oculus Enabler") is now obsolete. It will not interfere with the new add-on, but it can optionally be uninstalled from Tools &#62 Add-ons &#62 Extensions.
 
       //Release notes
         .clearfix.mt2.mb3
