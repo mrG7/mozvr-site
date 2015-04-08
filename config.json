@@ -9,7 +9,7 @@
     "projects": "/projects",
     "blog": "/posts",
     "nightly": "http://nightly.mozilla.org/",
-    "webvr_addon": "http://people.mozilla.com/~vladimir/misc/webvr-addon-0.1.0.xpi",
+    "webvr_addon": "http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi",
     "webvr_addon_version": "0.1.0",
     "build_version": "Version 36.0a1",
     "build_date": "2014-11-09",
