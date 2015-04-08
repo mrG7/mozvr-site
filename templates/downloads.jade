@@ -5,7 +5,7 @@ block prepend title
 
 block content
 
-  // Header
+  //- Header
     .py2.white.bg-blue4
     include header
 
@@ -24,10 +24,9 @@ block content
           h1 Getting started
           p In order to experience WebVR, you'll need the following:
 
-      //Download links
+      // Download links
       .clearfix.mxn2
-        //.col.col-12.m-col-6.px2
-           a(href=locals.nightly, style='background-image: url("/downloads/nightly.png"); background-size: 50%; background-repeat: no-repeat; background-position: center center').mt2.p3.sizing-borderbox.rounded2.block.bg-gray1.hover-blue1.decoration-none.height7
+      
 
         .col.col-12.m-col-6.px2
            a(href=locals.nightly).mt2.p3.sizing-borderbox.rounded2.block.bg-green2.hover-blue1.decoration-none
@@ -38,7 +37,6 @@ block content
                 h3.m0.white 1. Firefox Nightly&nbsp;
                 h5.m0.lighten5
                   | Install Latest version
-
 
         .col.col-12.m-col-6.px2
            a(href=locals.webvr_addon).mt2.p3.sizing-borderbox.rounded2.block.bg-green2.hover-blue1.decoration-none
@@ -56,12 +54,13 @@ block content
           p <strong>Firefox Nightly</strong> includes core WebVR functionality, but it is disabled by default. The WebVR Add-On enables WebVR and disables multiprocess browsing (
             a(href='https://wiki.mozilla.org/Electrolysis').basiclink-blue E10S
             | ), a new feature which is currently incompatible with WebVR. Once you have installed Firefox Nightly, open it, install the Add-On, and then follow the prompt to restart the browser. Once you've configured your displays (see below) you will be ready to start experiencing the VR web! 
-          p For mobile users, <strong>Firefox for Android</strong> now also support WebVR in 
+          p For mobile users, <strong>Firefox for Android</strong> now also supports WebVR in 
             a(href='http://nightly.mozilla.org/') Nightly builds
             | . The current implementation is rough and will evolve over time, so feedback is welcome!
-          p.gray5 Note: The previous version of the Add-On ("WebVR Oculus Enabler") is now obsolete. It will not interfere with the new add-on, but it can optionally be uninstalled from Tools &#62 Add-ons &#62 Extensions.
+          p.gray5 Note: The previous version of the Add-On ("WebVR Oculus Enabler") is now obsolete. It will not interfere with the new add-on, but it can optionally be uninstalled from Tools &#62; Add-ons &#62 Extensions.
 
-      //Release notes
+      //-
+        Release notes
         .clearfix.mt2.mb3
         .col.col-12
           .gray6.mt2.p2.rounded2.bg-gray1.code
@@ -75,7 +74,7 @@ block content
     
     .container
       
-      //
+      //-
         .clearfix
           .col.col-12.m-col-8
             h2 Viewing WebVR content
