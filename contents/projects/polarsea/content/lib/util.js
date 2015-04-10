@@ -1,4 +1,6 @@
 (function(global) {
+  'use strict';
+
   var util = {
     getScreenOrientation: function() {
       switch (window.screen.orientation || window.screen.mozOrientation) {
@@ -49,10 +51,44 @@
     },
 
     isFullscreen: function() {
-     return document.fullscreenElement
-          || document.webkitFullscreenElement
-          || document.mozFullScreenElement
-          || document.webkitCurrentFullScreenElement;
+     return document.fullscreenElement ||
+            document.webkitFullscreenElement||
+            document.mozFullScreenElement ||
+            document.webkitCurrentFullScreenElement;
+    },
+
+    setCanvasSize: function() {
+      var screenWidth, screenHeight;
+      screenWidth = window.innerWidth;
+      screenHeight = window.innerHeight;
+
+      if (typeof vrHMD !== 'undefined' && typeof util.isFullscreen() !== 'undefined' && util.isFullscreen()) {
+        var canvasWidth, canvasHeight;
+
+        var rectHalf = vrHMD.getEyeParameters('right').renderRect;
+        canvas.width = rectHalf.width * 2;
+        canvas.height = rectHalf.height;
+
+        canvas.style.width = screenWidth + 'px';
+        canvas.style.height = screenHeight + 'px';
+      } else {
+        // query the various pixel ratios
+        var devicePixelRatio = window.devicePixelRatio || 1;
+        var backingStoreRatio = webGL.gl.webkitBackingStorePixelRatio ||
+                                webGL.gl.mozBackingStorePixelRatio ||
+                                webGL.gl.msBackingStorePixelRatio ||
+                                webGL.gl.oBackingStorePixelRatio ||
+                                webGL.gl.backingStorePixelRatio || 1;
+        var ratio = devicePixelRatio / backingStoreRatio;
+
+        if (canvas.width != screenWidth * ratio || canvas.height != screenHeight * ratio) {
+            canvas.width = screenWidth * ratio;
+            canvas.height = screenHeight * ratio;
+
+            canvas.style.width = screenWidth + 'px';
+            canvas.style.height = screenHeight + 'px';
+        }
+      }
     }
   };
 

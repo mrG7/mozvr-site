@@ -3,8 +3,6 @@
 
 ###[Click here to view VR video](http://mozvr.github.io/polarsea/index.html)
 
-
-
 More information about this video by Deep Inc:
 
 * [The POLAR SEA 360° INTERACTIVE JOURNEY](http://deep-inc.com/portfolio/the-polar-sea/).
@@ -21,7 +19,7 @@ VR 360 video player by ELEVR:
 
 Best viewed using a VR enabled browser using a Oculus Rift DK1 or DK2 VR headset.
 
-* [Download Firefox experimental VR build](http://vrhelloworld.com/builds/) 
+* [Download Firefox experimental VR build](http://vrhelloworld.com/builds/)
 
     or
 
