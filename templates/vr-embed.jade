@@ -1,7 +1,7 @@
 mixin vr-embed(url, offsetBottom)
   // ------------ Container element that requestFullscreen is called on
   #vrContainer.absolute.top-0.left-0.full-width.full-height
-    iframe(id="vrIframe" src=url, scrolling="no", seamless="seamless").full-width.full-height.b0.rounded1.overflow-hidden
+    iframe(id="vrIframe" src=url, scrolling="no", seamless="seamless").full-width.full-height.b0.overflow-hidden
     // ------------ Permissions ------------
     #vrPermissions.white.p2.bg-pink.rounded2.absolute.bottom-2.right-2.display-none(style='bottom: #{offsetBottom}')
       #vrPermissionsContinue.right.b-solid.b-white.hover-blue3.rounded2.w6.uppercase.cursor-pointer.center-align.line-height-4.height4.ml2
