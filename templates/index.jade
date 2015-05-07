@@ -27,7 +27,7 @@ block content
   .py3.white.bg-blue4
     .container
 
-      //-.clearfix
+      //.clearfix
         .col.col-10.pb2
           h1.ultralight
             | To get started with WebVR, grab the latest build of #[a(href=locals.downloads).basiclink-blue.light Firefox with VR], explore our #[a(href=locals.projects).basiclink-blue.light projects], view #[a(href=locals.repo).basiclink-blue.light source], and start building your own experiences.
@@ -37,7 +37,8 @@ block content
       // Projects
       .clearfix
         .col.col-12
-          h5 Latest Projects
+          //.b-solid.b-lighten2.bt2.mt4.mb3
+          h2.mb2.h--section Latest Projects
       .clearfix.mxn2
         .col.col-6.m-col-3.px2.py2
           mixin project-tile('monkeys')
@@ -95,8 +96,8 @@ block content
     .container
       .clearfix
         .col.col-12
-          h5.gray6.mb3 Latest Posts
-      //-.clearfix
+          h2.gray6.mb3.h--section Latest Posts
+      //.clearfix
         .col.col-12
           mixin post-tile('making-sechelt')
       .clearfix
@@ -114,8 +115,8 @@ block content
       // Web links
       .clearfix
         .col.col-12
-          .b-solid.b-gray1.bt2.mb3
-          h5.gray6.mb3 Around the Web
+          .b-solid.b-gray1.bt2.mb4
+          h2.gray6.mb3.h--section Around the Web
       .clearfix.mxn2
         .col.col-2.sm-col-3.m-col-2.px2
           mixin weblink-tile(0)
@@ -135,7 +136,7 @@ block content
     .container
       .clearfix
         .col.col-12
-          h5.gray6.mb3 Frequently Asked Questions
+          h2.gray6.mb3.h--section Frequently Asked Questions
       .clearfix.mxn3
         .col.col-6.px3
 
@@ -176,7 +177,7 @@ block content
     .container
       .clearfix
         .col.col-12
-          h2 Our Team
+          h2.gray6.h--section Our Team
       .clearfix
         .col.col-8.mb2
           p The goal of the virtual reality team at Mozilla Research is to explore and foster the virtual reality open web. We are a small core team of Mozillians, and we work with partners and contributors from around the world.

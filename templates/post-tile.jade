@@ -14,11 +14,11 @@ mixin post-tile(name)
           = post.metadata.title
       p.h4.m0
         span.gray4
-          |  By  
+          |  By
           a(href='http://twitter.com/@'+contents.people[post.metadata.author + '.json'].metadata.twitter target='_blank').basiclink-blue
             = contents.people[post.metadata.author + '.json'].metadata.name
-          |  - 
-          span.italic 
+          |  -
+          span.italic
             = moment(post.metadata.date).format("dddd MMM DD, YYYY")
         br
         span

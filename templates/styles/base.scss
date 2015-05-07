@@ -5,21 +5,21 @@ html {
 }
 
 @media (min-width: $breakpoint-sm) {
-  
+
   html {
     font-size: 80%;
   }
 }
 
 @media (min-width: $breakpoint-m) {
-  
+
   html {
     font-size: 90%;
   }
 }
 
 @media (min-width: $breakpoint-l) {
-  
+
   html {
     font-size: 100%;
   }
@@ -42,15 +42,15 @@ a, a:visited {
 }
 
 a:active {
-  
+
 }
 
-h1,.h1 { font-size: 2.07rem; }
-h2,.h2 { font-size: 1.72rem; }
-h3,.h3 { font-size: 1.44rem; }
-h4,.h4 { font-size: 1.2rem; }
-h5,.h5 { font-size: 1rem; }
-h6,.h6 { font-size: 0.83rem; }
+h1, .h1 { font-size: 2.07rem; }
+h2, .h2 { font-size: 1.72rem; }
+h3, .h3 { font-size: 1.44rem; }
+h4, .h4 { font-size: 1.2rem; }
+h5, .h5, .h--section { font-size: 1rem; }
+h6, .h6 { font-size: 0.83rem; }
 .h7 { font-size: 0.69rem; }
 
 h1, h2, h3, h4 {
@@ -61,7 +61,7 @@ h1, h2, h3, h4 {
   margin-bottom: 0.5em;
 }
 
-h5, h6, .h7 {
+h5, h6, .h7, .h--section {
   font-weight: 400;
   line-height: 1.25em;
   letter-spacing: 0.05rem;
@@ -99,7 +99,7 @@ p {
   font-weight: 300;
 }
 
-.list-reset { 
+.list-reset {
   list-style: none;
   padding-left:0
 }
